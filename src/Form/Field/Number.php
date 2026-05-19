@@ -18,7 +18,18 @@ class Number extends Text
 
     public function render()
     {
-        $this->defaultAttribute('type', 'number');
+        $value = $this->getOld();
+        $isNumericValue = !isset($value) || $value === '' || is_numeric($value);
+
+        if ($isNumericValue) {
+            // Only apply as default; callers may override with another type.
+            $this->defaultAttribute('type', 'number');
+        } else {
+            // Force type="text" so the browser doesn't discard the non-numeric value.
+            // Using attribute() (not defaultAttribute()) so this always wins.
+            $this->attribute('type', 'text');
+            $this->attribute('data-allow-nonnumeric', '1');
+        }
         // $this->append("<i class='fa fa-plus plus'></i>");
         // $this->prepend("<i class='fa fa-minus minus'></i>");
         $this->default($this->default);

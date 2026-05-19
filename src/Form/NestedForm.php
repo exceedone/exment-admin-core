@@ -387,6 +387,10 @@ class NestedForm
             elseif ($value === 0 && $value !== $field->original()) {
                 $isSet = true;
             }
+            // ""($value) != null($field->original()) is false in PHP loose comparison, so if value is empty string, especially check.
+            elseif ($value === "" && $value !== $field->original()) {
+                $isSet = true;
+            }
 
             if ($isSet) {
                 if (is_array($columns)) {

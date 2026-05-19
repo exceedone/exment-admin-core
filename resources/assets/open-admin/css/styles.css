@@ -2640,9 +2640,9 @@ textarea.form-control-lg {
 .input-group {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: stretch;
-  width: 100%;
+  /* width: 100%; */
 }
 .input-group > .form-control,
 .input-group > .form-select,

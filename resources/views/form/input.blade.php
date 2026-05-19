@@ -6,7 +6,7 @@
 
         @include('admin::form.error')
 
-        <div class="input-group flex-nowrap ">
+        <div class="input-group">
 
             @if ($prepend)
             <span class="input-group-addon d-flex align-items-center justify-content-center">{!! $prepend !!}</span>
