@@ -864,8 +864,7 @@ hr {
     border-top: 3px solid #00c0ef !important
 }
 
-.modal-lg,
-.modal-xl {
+.modal-lg {
     --bs-modal-width: 900px
 }
 

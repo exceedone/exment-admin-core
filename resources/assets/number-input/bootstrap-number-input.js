@@ -68,7 +68,7 @@
             var down = $("<button type='button'>-</button>").attr('class', 'btn btn-' + settings.downClass).click(function () {
                 var val = clone.val();
                 if (val === '') return; 
-                if (allowNonNumeric) {
+                if (allowNonNumeric || datePattern.test(val)) {
                     setYearDateDelta(-1);
                     return;
                 }
@@ -78,7 +78,7 @@
             var up = $("<button type='button'>+</button>").attr('class', 'btn btn-' + settings.upClass).click(function () {
                 var val = clone.val();
                 if (val === '') return;
-                if (allowNonNumeric) {
+                if (allowNonNumeric || datePattern.test(val)) {
                     setYearDateDelta(1);
                     return;
                 }
