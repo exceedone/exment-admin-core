@@ -4788,7 +4788,7 @@ textarea.form-control-lg {
   --bs-pagination-disabled-color: var(--bs-secondary-color);
   --bs-pagination-disabled-bg: var(--bs-secondary-bg);
   --bs-pagination-disabled-border-color: var(--bs-border-color);
-  display: flex;
+  /* display: flex; */
   padding-left: 0;
   list-style: none;
 }
