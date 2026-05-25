@@ -61,6 +61,8 @@
 .col-xs-9 {
   position: relative;
   min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .nav-tabs-custom>.nav-tabs>.nav-item>.nav-link {
@@ -333,6 +335,10 @@ a#menu-toggle {
 .col-form-label {
   text-align: right;
   font-weight: 700 !important;
+
+  @media (max-width: 767.98px) {
+    text-align: left;
+  }
 }
 
 .btn-default {

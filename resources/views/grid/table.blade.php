@@ -1,4 +1,4 @@
-<div class=" box  p-0">
+<div class=" box p-0">
     @if(isset($title))
         <div class="container-fluid card-header no-border col d-flex justify-content-start">
             <h3 class="box-title"> {{ $title }}</h3>

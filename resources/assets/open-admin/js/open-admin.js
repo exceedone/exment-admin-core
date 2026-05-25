@@ -551,6 +551,15 @@ $(document).on('pjax:end', function () {
         if (instance) instance.dispose();
     });
 });
+
+// On mobile, tapping a tooltip trigger that opens a modal leaves the tooltip visible
+// because no mouseleave/blur fires. Hide all visible tooltips when any modal starts to show.
+document.addEventListener('show.bs.modal', function () {
+    document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (el) {
+        var instance = bootstrap.Tooltip.getInstance(el);
+        if (instance) instance.hide();
+    });
+});
 $(document).on('pjax:send', function (xhr) {
     if (xhr.relatedTarget && xhr.relatedTarget.tagName && xhr.relatedTarget.tagName.toLowerCase() === 'form') {
         const $form = $(xhr.relatedTarget);        

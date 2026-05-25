@@ -854,7 +854,7 @@ progress {
 }
 
 .row {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x: 2rem;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
@@ -3116,9 +3116,9 @@ textarea.form-control-lg {
 .input-group {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: stretch;
-    width: 100%
+    /* width: 100% */
 }
 
 .input-group>.form-control,
