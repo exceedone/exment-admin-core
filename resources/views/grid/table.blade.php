@@ -1,4 +1,4 @@
-<div class=" box p-0">
+<div class=" box">
     @if(isset($title))
         <div class="container-fluid card-header no-border col d-flex justify-content-start">
             <h3 class="box-title"> {{ $title }}</h3>
@@ -6,9 +6,9 @@
     @endif
 
     @if ($grid->showTools() || $grid->showExportBtn() || $grid->showCreateBtn())
-        <div class="container-fluid card-header no-border custom-border-info card">
-            <div class="row align-items-center pe-3">
-                <div class="pull-right order-3 p-0">
+        {{-- <div class="container-fluid card-header no-border custom-border-info card"> --}}
+            <div class="box-header with-border">
+                <div class="pull-right">
                     {!! $grid->renderColumnSelector() !!}
                     {!! $grid->renderExportButton() !!}
                     {!! $grid->renderCreateButton() !!}
@@ -19,7 +19,7 @@
             </div>
 
 
-        </div>
+        {{-- </div> --}}
     @endif
 
     {!! $grid->renderFilter() !!}

@@ -61,7 +61,7 @@ class FilterButton extends AbstractTool
                 }
                 if (target.hasClass('loaded')) {
                     $('#{$id}').removeClass('hide');
-                    Exment.CustomScriptEvent.bindSubmitButtons();
+                    // Exment.CustomScriptEvent.bindSubmitButtons(); // method does not exist
                     return;
                 }
 

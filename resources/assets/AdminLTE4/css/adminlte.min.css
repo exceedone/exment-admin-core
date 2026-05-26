@@ -1364,10 +1364,10 @@ progress {
         width: 41.66666667%
     }
 
-    .col-md-6 {
+    /* .col-md-6 {
         flex: 0 0 auto;
         width: 50%
-    }
+    } */
 
     .col-md-7 {
         flex: 0 0 auto;
@@ -1719,6 +1719,9 @@ progress {
     .g-lg-5,
     .gy-lg-5 {
         --bs-gutter-y: 3rem
+    }
+    .col-md-6 {
+        width: 50%
     }
 }
 

@@ -1,5 +1,5 @@
-<div class="card p-2 custom-border-info">
-    <div class="box-header with-border d-flex border-bottom border-light p-1 pt-4 mb-1 mt-n1">
+<div class="box box-info">
+    <div class="box-header with-border">
         <h3 class="box-title text-nowrap">{{ $form->title() }}</h3>
 
         <div class="box-tools d-flex flex-wrap flex-row-reverse align-items-center">

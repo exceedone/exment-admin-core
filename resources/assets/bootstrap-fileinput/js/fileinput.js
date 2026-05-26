@@ -103,7 +103,7 @@
       return srcPath.substring(0, srcPath.lastIndexOf("/") + 1) + "img/loading.gif" + zoomVar;
     },
     defaultButtonCss: function (fill) {
-      return "btn-default btn-" + (fill ? "" : "outline-") + "secondary";
+      return "btn-default btn-secondary";
     },
     isBs: function (ver) {
       var chk = $h.trim(($.fn.fileinputBsVersion || "") + "");

@@ -981,3 +981,13 @@ hr {
 .card.box-info{
     border-top: 3px solid #00c0ef !important;
 }
+
+/* Fix: iPad Mini (768px) ~ iPad Air (820px) portrait
+   Tại tablet range (768-991px), col-md-6 bên trong filter panel
+   trả về full-width thay vì 50%, tránh label bị giãn dọc */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .box-header.with-border .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
