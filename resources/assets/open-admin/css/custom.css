@@ -805,6 +805,11 @@ a.fa.fa-fw.fa-sort:focus {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.box-body.table-responsive .table > tbody > tr:last-child > *,
+.box-body.no-padding .table > tbody > tr:last-child > * {
+    border-bottom-width: 0;
+}
+
 body>div.wrapper>header>div>ul>li.navbar-notify.dropdown.notifications-menu>ul {
   width: 400px;
 }
