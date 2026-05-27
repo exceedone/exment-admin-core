@@ -2070,6 +2070,7 @@ progress {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
 }
 
 @media (max-width: 575.98px) {
@@ -4899,6 +4900,11 @@ textarea.form-control-lg {
 .pagination-sm>li:last-child>span {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px
+}
+
+.pagination .page-item.disabled .page-link {
+  pointer-events: auto;
+  cursor: not-allowed !important;
 }
 
 .pager {
@@ -13860,3 +13866,7 @@ form .card-footer {
 }
 
 /*# sourceMappingURL=styles.css.map */
+
+.pagination .page-item.disabled {
+  cursor: not-allowed;
+}

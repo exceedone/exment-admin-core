@@ -2352,7 +2352,8 @@ progress {
 
 .table-responsive {
     overflow-x: auto;
-    -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch;
+    overflow-y: hidden;
 }
 
 @media (max-width:575.98px) {

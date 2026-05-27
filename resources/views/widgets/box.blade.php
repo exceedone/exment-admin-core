@@ -1,5 +1,5 @@
 <div {!! $attributes !!}>
-    <div class="card p-1">
+    <div class="box">
         @if($title || $tools)
             <div class="box-header with-border d-flex box-header with-border">
                 <h3 class="box-title">{{ $title }}</h3>
