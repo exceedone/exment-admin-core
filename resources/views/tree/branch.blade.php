@@ -1,4 +1,8 @@
 <li class="dd-item" data-id="{{ $branch[$keyName] }}">
+    @if(isset($branch['children']))
+    <button data-action="collapse" type="button">Collapse</button>
+    <button data-action="expand" type="button" style="display:none">Expand</button>
+    @endif
     <div class="dd-handle">
         {!! $branchCallback($branch) !!}
 

@@ -30,6 +30,34 @@ admin.tree = {
                 this.sortable = setSortable;
             }
         }
+
+        let container = document.getElementById(elm);
+        if (container) {
+            container.addEventListener('click', function(e) {
+                let btn = e.target.closest('button[data-action="collapse"], button[data-action="expand"]');
+                if (!btn) return;
+                let action = btn.dataset.action;
+                let li = btn.closest('li.dd-item');
+                let ol = li ? li.querySelector(':scope > ol.dd-list') : null;
+                if (!ol) return;
+
+                if (action === 'collapse') {
+                    li.classList.add('dd-collapsed');
+                    ol.style.display = 'none';
+                    let colBtn = li.querySelector(':scope > button[data-action="collapse"]');
+                    let expBtn = li.querySelector(':scope > button[data-action="expand"]');
+                    if (colBtn) colBtn.style.display = 'none';
+                    if (expBtn) expBtn.style.display = '';
+                } else {
+                    li.classList.remove('dd-collapsed');
+                    ol.style.display = '';
+                    let colBtn = li.querySelector(':scope > button[data-action="collapse"]');
+                    let expBtn = li.querySelector(':scope > button[data-action="expand"]');
+                    if (colBtn) colBtn.style.display = '';
+                    if (expBtn) expBtn.style.display = 'none';
+                }
+            });
+        }
     },
 
     delete : function(id){
@@ -63,14 +91,32 @@ admin.tree = {
     },
 
     collapse : function(){
-        document.querySelectorAll("#"+this.elm+" > ol ol").forEach(ol =>{
-            hide(ol);
-        })
+        let container = document.getElementById(this.elm);
+        if (!container) return;
+        container.querySelectorAll('li.dd-item').forEach(li => {
+            let ol = li.querySelector(':scope > ol.dd-list');
+            if (!ol) return;
+            li.classList.add('dd-collapsed');
+            ol.style.display = 'none';
+            let colBtn = li.querySelector(':scope > button[data-action="collapse"]');
+            let expBtn = li.querySelector(':scope > button[data-action="expand"]');
+            if (colBtn) colBtn.style.display = 'none';
+            if (expBtn) expBtn.style.display = '';
+        });
     },
 
     expand : function(){
-        document.querySelectorAll("#"+this.elm+" > ol ol").forEach(ol =>{
-            show(ol);
-        })
+        let container = document.getElementById(this.elm);
+        if (!container) return;
+        container.querySelectorAll('li.dd-item').forEach(li => {
+            let ol = li.querySelector(':scope > ol.dd-list');
+            if (!ol) return;
+            li.classList.remove('dd-collapsed');
+            ol.style.display = '';
+            let colBtn = li.querySelector(':scope > button[data-action="collapse"]');
+            let expBtn = li.querySelector(':scope > button[data-action="expand"]');
+            if (colBtn) colBtn.style.display = '';
+            if (expBtn) expBtn.style.display = 'none';
+        });
     }
 }

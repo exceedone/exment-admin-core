@@ -237,8 +237,8 @@ a.editable-click.editable-disabled:hover {
 
 .form-group {
   position: relative;
+  margin-bottom: 15px;
 }
-
 
 .input-append.date .add-on i,
 .input-prepend.date .add-on i {
