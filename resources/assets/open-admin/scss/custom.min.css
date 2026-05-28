@@ -341,6 +341,10 @@ a#menu-toggle {
     }
 }
 
+.form-group-vertical .col-form-label {
+  text-align: left;
+}
+
 .btn-default {
     background-color: #f4f4f4 !important;
     color: #444 !important;
