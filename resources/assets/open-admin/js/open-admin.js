@@ -360,7 +360,14 @@ admin.ajax = {
                 script = document.createElement('script');
                 script.type = 'text/javascript';
                 script.src = src;
-                document.getElementById('app').appendChild(script);
+                // Append to the main PJAX container if present, otherwise to body.
+                // Avoid referencing a missing '#app' element which throws in some setups.
+                try {
+                    var _target = main || document.getElementById('app') || document.body;
+                    _target.appendChild(script);
+                } catch (e) {
+                    document.body.appendChild(script);
+                }
             } else {
                 eval(script.innerText);
             }
