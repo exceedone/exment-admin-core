@@ -1,6 +1,6 @@
 <div class=" box">
     @if(isset($title))
-        <div class="container-fluid card-header no-border col d-flex justify-content-start">
+        <div class="box-header with-border">
             <h3 class="box-title"> {{ $title }}</h3>
         </div>
     @endif
