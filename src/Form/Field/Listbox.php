@@ -97,11 +97,14 @@ EOT;
         $this->style('width', '100%');
 
         $settings = array_merge([
-            'availableTitle' => trans('admin.listbox.title_available'),
-            'selectedTitle'  => trans('admin.listbox.title_selected'),
-            'infoText'       => trans('admin.listbox.text_total'),
-            'infoTextEmpty'  => trans('admin.listbox.text_empty'),
-            'minHeight' => 200,
+            'availableTitle'    => trans('admin.listbox.title_available'),
+            'selectedTitle'     => trans('admin.listbox.title_selected'),
+            'infoText'          => trans('admin.listbox.text_total'),
+            'infoTextEmpty'     => trans('admin.listbox.text_empty'),
+            'infoTextFiltered'  => trans('admin.listbox.filtered'),
+            'filterPlaceHolder' => trans('admin.listbox.filter_placeholder'),
+            'filterTextClear'   => trans('admin.listbox.filter_clear'),
+            'minHeight'         => 200,
             // Sometimes, click not working, so double click is false
             'moveOnDoubleClick' => false,
         ], $this->settings);

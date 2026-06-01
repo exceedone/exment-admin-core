@@ -1,5 +1,5 @@
-{{-- <div {!! $attributes !!}> --}}
-    <div class="box box-info">
+<div {!! $attributes !!}>
+    <div class="card p-1">
         @if($title || $tools)
             <div class="box-header with-border">
                 <h3 class="box-title">{{ $title }}</h3>
@@ -20,7 +20,7 @@
         @endif
     </div>
 
-{{-- </div> --}}
+</div>
 {{-- 由于widget box 有可能会用于expand，加载完页面后还没有对应的html，导致script失败，故只能和html写在一起。 --}}
 <script>
     {!! $script !!}

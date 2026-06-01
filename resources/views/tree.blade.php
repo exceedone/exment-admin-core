@@ -1,4 +1,4 @@
-<div class="box card">
+<div class="box">
 
     <div class="box-header px-3 pt-3">
         @if($title)
@@ -55,36 +55,37 @@
 
 
 <script>
+(function() {
     const message = @json(__('admin.refresh_succeeded'));
 
-// Đảm bảo toastr được load và sẵn sàng
-function showToastrSuccess() {
-    toastr.success(message, '', {
-        closeButton: true,
-        progressBar: true,
-        timeOut: 4000,
-        showMethod: 'slideDown'
-    });
-}
-
-if (typeof admin !== 'undefined' && admin.pages) {
-    if (typeof admin.pages._originalInit === 'undefined') {
-        admin.pages._originalInit = admin.pages.init;
-
-        admin.pages.init = function () {
-            admin.pages._originalInit.call(this);
-            if (window._showToastrOnPjax) {
-                showToastrSuccess();
-                window._showToastrOnPjax = false;
-            }
-        };
+    // Đảm bảo toastr được load và sẵn sàng
+    function showToastrSuccess() {
+        toastr.success(message, '', {
+            closeButton: true,
+            progressBar: true,
+            timeOut: 4000,
+            showMethod: 'slideDown'
+        });
     }
-} 
 
-// Nếu window._showToastrOnPjax đang true khi load script
-if (window._showToastrOnPjax) {
-    showToastrSuccess();
-    window._showToastrOnPjax = false;
-}
+    if (typeof admin !== 'undefined' && admin.pages) {
+        if (typeof admin.pages._originalInit === 'undefined') {
+            admin.pages._originalInit = admin.pages.init;
 
+            admin.pages.init = function () {
+                admin.pages._originalInit.call(this);
+                if (window._showToastrOnPjax) {
+                    showToastrSuccess();
+                    window._showToastrOnPjax = false;
+                }
+            };
+        }
+    } 
+
+    // Nếu window._showToastrOnPjax đang true khi load script
+    if (window._showToastrOnPjax) {
+        showToastrSuccess();
+        window._showToastrOnPjax = false;
+    }
+})();
 </script>

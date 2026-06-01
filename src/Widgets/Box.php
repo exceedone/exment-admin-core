@@ -66,7 +66,7 @@ class Box extends Widget implements Renderable
         }
 
         $this->id = uniqid('box-');
-        $this->class('card');
+        $this->class('box');
     }
 
     /**

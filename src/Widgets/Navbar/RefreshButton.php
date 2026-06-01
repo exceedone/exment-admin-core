@@ -11,6 +11,7 @@ class RefreshButton implements Renderable
 {
     $message = json_encode(__('admin.refresh_succeeded'));
     $script = <<<SCRIPT
+(function() {
     const message = {$message};
     /**
      * Show a success message using Toastr.
@@ -31,6 +32,7 @@ class RefreshButton implements Renderable
             showToastrSuccess();
         });
     });
+})();
 SCRIPT;
 
     Admin::script($script);
