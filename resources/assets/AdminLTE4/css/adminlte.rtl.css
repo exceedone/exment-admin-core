@@ -15257,7 +15257,7 @@ html.maximized-card {
 .login-logo,
 .register-logo {
   margin-bottom: 0.9rem;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   font-weight: 300;
   text-align: center;
 }
@@ -15269,7 +15269,7 @@ html.maximized-card {
 
 .login-page,
 .register-page {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -15279,6 +15279,7 @@ html.maximized-card {
 .login-box,
 .register-box {
   width: 360px;
+  margin: 7% auto
 }
 @media (max-width: 576px) {
   .login-box,
