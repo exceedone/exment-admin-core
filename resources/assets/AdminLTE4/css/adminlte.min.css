@@ -2169,7 +2169,7 @@ progress {
     --bs-table-hover-color: var(--bs-emphasis-color);
     --bs-table-hover-bg: rgba(var(--bs-emphasis-color-rgb), 0.075);
     width: 100%;
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
     vertical-align: top;
     border-color: var(--bs-table-border-color)
 }
@@ -17761,7 +17761,7 @@ html.maximized-card {
 .login-logo,
 .register-logo {
     margin-bottom: .9rem;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-weight: 300;
     text-align: center
 }
@@ -17774,7 +17774,7 @@ html.maximized-card {
 
 .login-page,
 .register-page {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -17783,7 +17783,8 @@ html.maximized-card {
 
 .login-box,
 .register-box {
-    width: 360px
+  width: 360px;
+  margin: 7% auto
 }
 
 @media (max-width:576px) {
