@@ -878,10 +878,10 @@ hr {
   border-top: 3px solid #00c0ef !important;
 }
 
-.modal-lg,
+/* .modal-lg,
 .modal-xl {
   --bs-modal-width: 900px;
-}
+} */
 
 .field-header {
   margin-left: 70px;

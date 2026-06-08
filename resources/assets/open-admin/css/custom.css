@@ -912,10 +912,10 @@ hr {
   border-top: 3px solid #00c0ef !important;
 }
 
-.modal-lg,
+/* .modal-lg,
 .modal-xl {
   --bs-modal-width: 900px;
-}
+} */
 
 .field-header {
   margin-left: 70px;
@@ -994,6 +994,14 @@ hr {
 
 .card.box-info {
   border-top: 3px solid #00c0ef !important;
+}
+
+/* Thicker chevron icons in datetimepicker */
+.bootstrap-datetimepicker-widget .fa-chevron-up,
+.bootstrap-datetimepicker-widget .fa-chevron-down,
+.bootstrap-datetimepicker-widget .fa-chevron-left,
+.bootstrap-datetimepicker-widget .fa-chevron-right {
+  -webkit-text-stroke: 0.9px currentColor;
 }
 
 /*# sourceMappingURL=custom.css.map */
