@@ -96,7 +96,7 @@ trait UploadField
      * @var array<string, string>
      */
     protected $fileTypes = [
-        'image'  => '/^(gif|png|jpe?g|svg)$/i',
+        'image'  => '/^(gif|png|jpe?g)$/i',
         'html'   => '/^(htm|html)$/i',
         'office' => '/^(docx?|xlsx?|pptx?|pps|potx?)$/i',
         'gdocs'  => '/^(docx?|xlsx?|pptx?|pps|potx?|rtf|ods|odt|pages|ai|dxf|ttf|tiff?|wmf|e?ps)$/i',
@@ -162,7 +162,7 @@ trait UploadField
             'showCancel'           => false,
             'dropZoneEnabled'      => false,
             'preferIconicPreview'  => true,
-            'alwaysPreviewFileExtensions' => ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp', 'svg'],
+            'alwaysPreviewFileExtensions' => ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'],
             'allowedPreviewTypes'  => ['image'],
             'previewFileIcon' => '<i class="fa fa-file"></i>',
             'previewFileIconSettings' => array(
