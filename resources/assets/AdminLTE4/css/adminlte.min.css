@@ -390,6 +390,15 @@ a:hover {
     --bs-link-color-rgb: var(--bs-link-hover-color-rgb)
 }
 
+a {
+    color: #3c8dbc;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
     color: inherit;
@@ -1505,6 +1514,9 @@ progress {
     .g-md-5,
     .gy-md-5 {
         --bs-gutter-y: 3rem
+    }
+    .col-sm-offset-2 {
+        margin-left: 16.66666667%
     }
 }
 
@@ -2875,6 +2887,11 @@ textarea.form-control-lg {
     pointer-events: none;
     filter: none;
     opacity: .65
+}
+
+.btn-block {
+    display: block;
+    width: 100%
 }
 
 [data-bs-theme=dark] .form-switch .form-check-input:not(:checked):not(:focus) {
@@ -17759,6 +17776,14 @@ html.maximized-card {
 
 [data-bs-theme=dark] .toast-light .btn-close {
     --bs-btn-close-white-filter: none
+}
+
+.login-box-body,
+.register-box-body {
+    background: #fff;
+    padding: 20px;
+    border-top: 0;
+    color: #666
 }
 
 .login-logo,
