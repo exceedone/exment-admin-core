@@ -1347,6 +1347,9 @@ progress {
   .gy-md-5 {
     --bs-gutter-y: 3rem;
   }
+  .col-sm-offset-2 {
+    margin-left: 16.66666667%
+  }
 }
 @media (min-width: 992px) {
   .col-lg {
