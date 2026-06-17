@@ -1004,4 +1004,35 @@ hr {
   -webkit-text-stroke: 0.9px currentColor;
 }
 
+/* "Select Time" toggle (clock) icon color in datetimepicker */
+.bootstrap-datetimepicker-widget a[data-action="togglePicker"] {
+  color: #3c8dbc;
+}
+
+.bootstrap-datetimepicker-widget a[data-action="togglePicker"]:hover {
+  outline: none;
+  text-decoration: none;
+  color: #72afd2;
+}
+
+/* Slide + fade animation when toggling date <-> time panels in datetimepicker.
+   Uses grid-template-rows 0fr -> 1fr so it animates to the real content height
+   (like Bootstrap's .collapsing), without needing a fixed max-height. */
+.bootstrap-datetimepicker-widget ul > li.collapse {
+  display: grid !important;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.35s ease;
+}
+
+.bootstrap-datetimepicker-widget ul > li.collapse > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.bootstrap-datetimepicker-widget ul > li.collapse.in {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
 /*# sourceMappingURL=custom.css.map */
