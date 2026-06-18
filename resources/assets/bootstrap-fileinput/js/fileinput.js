@@ -6173,6 +6173,7 @@
         if (!isAjaxUpload) {
           self.clear();
         }
+        self._toggleLoading("hide");
         self._raise("fileselectnone");
         return;
       }
@@ -6378,6 +6379,14 @@
         $el = self.$element,
         $body = $(document.body),
         ev = "focusin.fileinput focusout.fileinput";
+      // Cancel any pending hide-loading timer from a previous browse interaction.
+      // Without this, a stale timer can fire and run $body.off(ev), tearing down the
+      // focus handlers registered for the current browse - which leaves the
+      // "Processing ..." indicator stuck if the dialog is then cancelled.
+      if (self._fileSelectTimeout) {
+        clearTimeout(self._fileSelectTimeout);
+        self._fileSelectTimeout = null;
+      }
       if ($body.length) {
         $body
           .off(ev)
@@ -6385,12 +6394,13 @@
             self._toggleLoading("show");
           })
           .on("focusin.fileinput", function () {
-            setTimeout(function () {
+            self._fileSelectTimeout = setTimeout(function () {
               if (!$el.val()) {
                 self._setFileDropZoneTitle();
               }
               $body.off(ev);
               self._toggleLoading("hide");
+              self._fileSelectTimeout = null;
             }, 2500);
           });
       } else {
