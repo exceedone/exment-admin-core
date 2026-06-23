@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Displayers;
+namespace ExmentAdminCore\Admin\Grid\Displayers;
 
-use OpenAdminCore\Admin\Widgets\Carousel as CarouselWidget;
+use ExmentAdminCore\Admin\Widgets\Carousel as CarouselWidget;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Facades\Storage;
 

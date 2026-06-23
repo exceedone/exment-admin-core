@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field\Traits;
+namespace ExmentAdminCore\Admin\Form\Field\Traits;
 
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Form\Field;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Form\Field;
 
 /**
  * @mixin Field
@@ -55,7 +55,7 @@ trait HasMediaPicker
      */
     protected function renderMediaPicker()
     {
-        if (!class_exists("OpenAdminCore\Admin\Media\MediaManager")) {
+        if (!class_exists("ExmentAdminCore\Admin\Media\MediaManager")) {
             throw new \Exception(
                 '[Media Manager extention not installed yet.<br> Install using: <b>composer require open-admin-ext/media-manager</b><br><br>'
             );

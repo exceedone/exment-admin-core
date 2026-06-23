@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Tools;
+namespace ExmentAdminCore\Admin\Grid\Tools;
 
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid;
 use Illuminate\Contracts\Support\Renderable;
 
 abstract class BatchAction implements Renderable

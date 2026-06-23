@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Controllers;
+namespace ExmentAdminCore\Admin\Controllers;
 
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Show;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Show;
 
 class RoleController extends AdminController
 {

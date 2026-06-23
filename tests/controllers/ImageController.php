@@ -3,11 +3,11 @@
 namespace Tests\Controllers;
 
 use App\Http\Controllers\Controller;
-use OpenAdminCore\Admin\Controllers\ModelForm;
-use OpenAdminCore\Admin\Facades\Admin;
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Controllers\ModelForm;
+use ExmentAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Layout\Content;
 use Tests\Models\Image;
 
 class ImageController extends Controller

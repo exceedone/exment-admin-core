@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets\Grid\Displayers;
+namespace ExmentAdminCore\Admin\Widgets\Grid\Displayers;
 
 use Illuminate\Support\Arr;
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Grid\Linker;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Grid\Linker;
 
 class Actions extends AbstractDisplayer
 {

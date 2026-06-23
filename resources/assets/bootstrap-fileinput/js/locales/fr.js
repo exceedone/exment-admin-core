@@ -108,7 +108,7 @@
             rotateTitle: 'Rotate 90 deg. clockwise',
             zoomTitle: 'Voir les détails',
             dragTitle: 'Déplacer / Réarranger',
-            indicatorNewTitle: 'Pas OpenAdminCore transféré',
+            indicatorNewTitle: 'Pas ExmentAdminCore transféré',
             indicatorSuccessTitle: 'Posté',
             indicatorErrorTitle: 'Ajouter erreur',
             indicatorPausedTitle: 'Transfert suspendu',

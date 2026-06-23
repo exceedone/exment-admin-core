@@ -4,8 +4,8 @@ laravel-admin
 [![Build Status](https://travis-ci.org/z-song/laravel-admin.svg?branch=master)](https://travis-ci.org/z-song/laravel-admin)
 [![StyleCI](https://styleci.io/repos/48796179/shield)](https://styleci.io/repos/48796179)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/z-song/laravel-admin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/z-song/laravel-admin/?branch=master)
-[![Packagist](https://img.shields.io/packagist/l/OpenAdminCore/laravel-admin.svg?maxAge=2592000)](https://packagist.org/packages/OpenAdminCore/laravel-admin)
-[![Total Downloads](https://img.shields.io/packagist/dt/OpenAdminCore/laravel-admin.svg?style=flat-square)](https://packagist.org/packages/OpenAdminCore/laravel-admin)
+[![Packagist](https://img.shields.io/packagist/l/ExmentAdminCore/laravel-admin.svg?maxAge=2592000)](https://packagist.org/packages/ExmentAdminCore/laravel-admin)
+[![Total Downloads](https://img.shields.io/packagist/dt/ExmentAdminCore/laravel-admin.svg?style=flat-square)](https://packagist.org/packages/ExmentAdminCore/laravel-admin)
 [![Awesome Laravel](https://img.shields.io/badge/Awesome-Laravel-brightgreen.svg)](https://github.com/z-song/laravel-admin)
 
 `laravel-admin` is administrative interface builder for laravel which can help you build CRUD backends just with few lines of code.
@@ -29,13 +29,13 @@ Installation
 First, install laravel 5.5, and make sure that the database connection settings are correct.
 
 ```
-composer require OpenAdminCore/laravel-admin 1.5.*
+composer require ExmentAdminCore/laravel-admin 1.5.*
 ```
 
 Then run these commands to publish assets and config：
 
 ```
-php artisan vendor:publish --provider="OpenAdminCore\Admin\AdminServiceProvider"
+php artisan vendor:publish --provider="ExmentAdminCore\Admin\AdminServiceProvider"
 ```
 After run command you can find config file in `config/admin.php`, in this file you can change the install directory,db connection or table names.
 

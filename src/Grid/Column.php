@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid;
+namespace ExmentAdminCore\Admin\Grid;
 
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model as BaseModel;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use OpenAdminCore\Admin\Actions\RowAction;
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
+use ExmentAdminCore\Admin\Actions\RowAction;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
 
 class Column
 {
@@ -868,7 +868,7 @@ class Column
     public function action($action)
     {
         if (!is_subclass_of($action, RowAction::class)) {
-            throw new \InvalidArgumentException("Action class [$action] must be sub-class of [OpenAdminCore\Admin\Actions\GridAction]");
+            throw new \InvalidArgumentException("Action class [$action] must be sub-class of [ExmentAdminCore\Admin\Actions\GridAction]");
         }
 
         $grid = $this->grid;

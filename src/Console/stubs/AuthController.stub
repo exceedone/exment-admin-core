@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use OpenAdminCore\Admin\Controllers\AuthController as BaseAuthController;
+use ExmentAdminCore\Admin\Controllers\AuthController as BaseAuthController;
 
 class AuthController extends BaseAuthController
 {

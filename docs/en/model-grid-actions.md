@@ -41,7 +41,7 @@ First define the action class:
 
 namespace App\Admin\Extensions;
 
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 
 class CheckRow
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Displayers;
+namespace ExmentAdminCore\Admin\Grid\Displayers;
 
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 
 class Expand extends AbstractDisplayer
 {

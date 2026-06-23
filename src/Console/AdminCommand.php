@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Str;

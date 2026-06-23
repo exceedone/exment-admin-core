@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/z-song/laravel-admin.svg?branch=master)](https://travis-ci.org/z-song/laravel-admin)
 [![StyleCI](https://styleci.io/repos/48796179/shield)](https://styleci.io/repos/48796179)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/z-song/laravel-admin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/z-song/laravel-admin/?branch=master)
-[![Packagist](https://img.shields.io/packagist/l/OpenAdminCore/laravel-admin.svg?maxAge=2592000)](https://packagist.org/packages/OpenAdminCore/laravel-admin)
-[![Total Downloads](https://img.shields.io/packagist/dt/OpenAdminCore/laravel-admin.svg?style=flat-square)](https://packagist.org/packages/OpenAdminCore/laravel-admin)
+[![Packagist](https://img.shields.io/packagist/l/ExmentAdminCore/laravel-admin.svg?maxAge=2592000)](https://packagist.org/packages/ExmentAdminCore/laravel-admin)
+[![Total Downloads](https://img.shields.io/packagist/dt/ExmentAdminCore/laravel-admin.svg?style=flat-square)](https://packagist.org/packages/ExmentAdminCore/laravel-admin)
 
 `laravel-admin` 是一个可以快速帮你构建后台管理的工具，它提供的页面组件和表单元素等功能，能帮助你使用很少的代码就实现功能完善的后台管理功能。
 

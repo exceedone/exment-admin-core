@@ -2,10 +2,10 @@
 
 ## Box
 
-`OpenAdminCore\Admin\Widgets\Box` used to generate box components:
+`ExmentAdminCore\Admin\Widgets\Box` used to generate box components:
 
 ```php
-use OpenAdminCore\Admin\Widgets\Box;
+use ExmentAdminCore\Admin\Widgets\Box;
 
 $box = new Box('Box Title', 'Box content');
 
@@ -37,9 +37,9 @@ The `$content` parameter is the content element of the Box, which can be either 
 
 ## Collapse
 
-`OpenAdminCore\Admin\Widgets\Collapse` class used to generate folding components:
+`ExmentAdminCore\Admin\Widgets\Collapse` class used to generate folding components:
 ```php
-use OpenAdminCore\Admin\Widgets\Collapse;
+use ExmentAdminCore\Admin\Widgets\Collapse;
 
 $collapse = new Collapse();
 
@@ -55,7 +55,7 @@ echo $collapse->render();
 
 ## Form
 
-`OpenAdminCore\Admin\Widgets\Form` class is used to quickly build a form:
+`ExmentAdminCore\Admin\Widgets\Form` class is used to quickly build a form:
 
 ```php
 
@@ -86,10 +86,10 @@ echo $form->render();
 
 ## Infobox
 
-`OpenAdminCore\Admin\Widgets\InfoBox` class is used to generate the information presentation block:
+`ExmentAdminCore\Admin\Widgets\InfoBox` class is used to generate the information presentation block:
 
 ```php
-use OpenAdminCore\Admin\Widgets\InfoBox;
+use ExmentAdminCore\Admin\Widgets\InfoBox;
 
 $infoBox = new InfoBox('New Users', 'users', 'aqua', '/admin/users', '1024');
 
@@ -101,10 +101,10 @@ Refer to the section on the `InfoBox` in the `index()` method of the home page l
 
 ## Tab component
 
-`OpenAdminCore\Admin\Widgets\Tab` class is used to generate the tab components:
+`ExmentAdminCore\Admin\Widgets\Tab` class is used to generate the tab components:
 
 ```php
-use OpenAdminCore\Admin\Widgets\Tab;
+use ExmentAdminCore\Admin\Widgets\Tab;
 
 $tab = new Tab();
 
@@ -120,10 +120,10 @@ echo $tab->render();
 
 ## Table
 
-`OpenAdminCore\Admin\Widgets\Table` class is used to generate tables:
+`ExmentAdminCore\Admin\Widgets\Table` class is used to generate tables:
 
 ```php
-use OpenAdminCore\Admin\Widgets\Table;
+use ExmentAdminCore\Admin\Widgets\Table;
 
 // table 1
 $headers = ['Id', 'Email', 'Name', 'Company'];

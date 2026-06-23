@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Actions;
+namespace ExmentAdminCore\Admin\Actions;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use OpenAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Facades\Admin;
 
 /**
  * @mixin Action

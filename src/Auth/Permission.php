@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Auth;
+namespace ExmentAdminCore\Admin\Auth;
 
-use OpenAdminCore\Admin\Facades\Admin;
-use OpenAdminCore\Admin\Middleware\Pjax;
+use ExmentAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Middleware\Pjax;
 
 class Permission
 {
@@ -95,7 +95,7 @@ class Permission
             abort(403, $message);
         }
 
-        /** @phpstan-ignore-next-line Parameter #1 $content of function response expects array|Illuminate\Contracts\View\View|string|null, OpenAdminCore\Admin\Layout\Content given. */
+        /** @phpstan-ignore-next-line Parameter #1 $content of function response expects array|Illuminate\Contracts\View\View|string|null, ExmentAdminCore\Admin\Layout\Content given. */
         $response = response(Admin::content()->withError($message));
 
         Pjax::respond($response);

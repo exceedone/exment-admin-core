@@ -1,5 +1,5 @@
 <?php
-namespace OpenAdminCore\Admin\Validator;
+namespace ExmentAdminCore\Admin\Validator;
 
 use Illuminate\Contracts\Validation\Rule;
 

@@ -22,7 +22,7 @@ At first open `http://localhost/admi/auth/permissions`, fill up slug field with 
 
 In your controller action: 
 ```php
-use OpenAdminCore\Admin\Auth\Permission;
+use ExmentAdminCore\Admin\Auth\Permission;
 
 class PostController extends Controller
 {

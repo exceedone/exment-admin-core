@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Controllers;
+namespace ExmentAdminCore\Admin\Controllers;
 
-use OpenAdminCore\Admin\Auth\Database\OperationLog;
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Auth\Database\OperationLog;
+use ExmentAdminCore\Admin\Grid;
 use Illuminate\Support\Arr;
 
 class LogController extends AdminController

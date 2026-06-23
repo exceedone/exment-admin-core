@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
-use OpenAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Facades\Admin;
 use Illuminate\Console\Command;
 
 class MenuCommand extends Command

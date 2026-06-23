@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use OpenAdminCore\Admin\Auth\Database\Permission;
+use ExmentAdminCore\Admin\Auth\Database\Permission;
 
 class PermissionCommand extends Command
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Column;
+namespace ExmentAdminCore\Admin\Grid\Column;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
-use OpenAdminCore\Admin\Grid\Column;
-use OpenAdminCore\Admin\Grid\Model;
+use ExmentAdminCore\Admin\Grid\Column;
+use ExmentAdminCore\Admin\Grid\Model;
 
 trait HasHeader
 {

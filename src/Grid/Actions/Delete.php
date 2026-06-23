@@ -1,11 +1,11 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Actions;
+namespace ExmentAdminCore\Admin\Grid\Actions;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use OpenAdminCore\Admin\Actions\Response;
-use OpenAdminCore\Admin\Actions\RowAction;
+use ExmentAdminCore\Admin\Actions\Response;
+use ExmentAdminCore\Admin\Actions\RowAction;
 
 class Delete extends RowAction
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field;
+namespace ExmentAdminCore\Admin\Form\Field;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 

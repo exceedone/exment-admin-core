@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Displayers;
+namespace ExmentAdminCore\Admin\Grid\Displayers;
 
 use Illuminate\Database\Eloquent\Model;
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Grid\Column;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid\Column;
 
 abstract class AbstractDisplayer
 {

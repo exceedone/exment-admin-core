@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Show;
+namespace ExmentAdminCore\Admin\Show;
 
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Collection;

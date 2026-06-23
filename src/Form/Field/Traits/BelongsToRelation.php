@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field\Traits;
+namespace ExmentAdminCore\Admin\Form\Field\Traits;
 
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Grid\Selectable;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Grid\Selectable;
 
 trait BelongsToRelation
 {
@@ -37,7 +37,7 @@ trait BelongsToRelation
     {
         if (!class_exists($selectable) || !is_subclass_of($selectable, Selectable::class)) {
             throw new \InvalidArgumentException(
-                "[Class [{$selectable}] must be a sub class of OpenAdminCore\Admin\Grid\Selectable"
+                "[Class [{$selectable}] must be a sub class of ExmentAdminCore\Admin\Grid\Selectable"
             );
         }
 
@@ -264,7 +264,7 @@ JS;
     }
 
     /**
-     * @return \OpenAdminCore\Admin\Grid
+     * @return \ExmentAdminCore\Admin\Grid
      */
     protected function makeGrid()
     {

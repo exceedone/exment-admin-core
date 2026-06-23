@@ -26,7 +26,7 @@
     },
     "autoload": {
       "psr-4": {
-        "OpenAdminCore\\Admin\\": "src/"
+        "ExmentAdminCore\\Admin\\": "src/"
       },
       "files": [
         "src/helpers.php"
@@ -52,10 +52,10 @@
     "extra": {
       "laravel": {
         "providers": [
-          "OpenAdminCore\\Admin\\AdminServiceProvider"
+          "ExmentAdminCore\\Admin\\AdminServiceProvider"
         ],
         "aliases": {
-          "Admin": "OpenAdminCore\\Admin\\Facades\\Admin"
+          "Admin": "ExmentAdminCore\\Admin\\Facades\\Admin"
         }
       }
     },

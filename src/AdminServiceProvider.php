@@ -1,12 +1,12 @@
 <?php
 
-namespace OpenAdminCore\Admin;
+namespace ExmentAdminCore\Admin;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
-use OpenAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Layout\Content;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -211,7 +211,7 @@ class AdminServiceProvider extends ServiceProvider
     public function bladeDirectives()
     {
         Blade::directive('box', function ($title) {
-            return "<?php \$box = new \OpenAdminCore\Admin\Widgets\Box({$title}, '";
+            return "<?php \$box = new \ExmentAdminCore\Admin\Widgets\Box({$title}, '";
         });
 
         Blade::directive('endbox', function ($expression) {

@@ -1,14 +1,14 @@
 <?php
 
-namespace OpenAdminCore\Admin\Controllers;
+namespace ExmentAdminCore\Admin\Controllers;
 
-use OpenAdminCore\Admin\Auth\Database\Menu;
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Layout\Column;
-use OpenAdminCore\Admin\Layout\Content;
-use OpenAdminCore\Admin\Layout\Row;
-use OpenAdminCore\Admin\Tree;
-use OpenAdminCore\Admin\Widgets\Box;
+use ExmentAdminCore\Admin\Auth\Database\Menu;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Layout\Column;
+use ExmentAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Layout\Row;
+use ExmentAdminCore\Admin\Tree;
+use ExmentAdminCore\Admin\Widgets\Box;
 use Illuminate\Routing\Controller;
 
 class MenuController extends Controller
@@ -31,7 +31,7 @@ class MenuController extends Controller
                 $row->column(6, $this->treeView()->render());
 
                 $row->column(6, function (Column $column) {
-                    $form = new \OpenAdminCore\Admin\Widgets\Form();
+                    $form = new \ExmentAdminCore\Admin\Widgets\Form();
                     $form->action(admin_url('auth/menu'));
 
                     $menuModel = config('admin.database.menu_model');
@@ -66,7 +66,7 @@ class MenuController extends Controller
     }
 
     /**
-     * @return \OpenAdminCore\Admin\Tree
+     * @return \ExmentAdminCore\Admin\Tree
      */
     protected function treeView()
     {

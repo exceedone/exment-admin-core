@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Database\Eloquent\Model;
@@ -56,7 +56,7 @@ class MakeCommand extends GeneratorCommand
         $this->generator = new ResourceGenerator($modelName);
 
         if ($this->option('output')) {
-            /** @phpstan-ignore-next-line Result of method OpenAdminCore\Admin\Console\MakeCommand::output() (void) is used. */
+            /** @phpstan-ignore-next-line Result of method ExmentAdminCore\Admin\Console\MakeCommand::output() (void) is used. */
             return $this->output($modelName);
         }
 

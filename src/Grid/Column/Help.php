@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Column;
+namespace ExmentAdminCore\Admin\Grid\Column;
 
 use Illuminate\Contracts\Support\Renderable;
 

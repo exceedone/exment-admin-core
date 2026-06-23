@@ -2,7 +2,7 @@
 
 namespace :namespace;
 
-use OpenAdminCore\Admin\Extension;
+use ExmentAdminCore\Admin\Extension;
 
 class :class_name extends Extension
 {

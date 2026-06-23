@@ -1,19 +1,19 @@
 <?php
 
-namespace OpenAdminCore\Admin\Facades;
+namespace ExmentAdminCore\Admin\Facades;
 
-use OpenAdminCore\Admin\Auth\Database\Administrator;
-use OpenAdminCore\Admin\Auth\Database\HasPermissions;
+use ExmentAdminCore\Admin\Auth\Database\Administrator;
+use ExmentAdminCore\Admin\Auth\Database\HasPermissions;
 use Illuminate\Support\Facades\Facade;
 
 /**
  * Class Admin.
  *
- * @method static \OpenAdminCore\Admin\Grid                                                     grid($model, \Closure $callable)
- * @method static \OpenAdminCore\Admin\Form                                                     form($model, \Closure $callable)
- * @method static \OpenAdminCore\Admin\Show                                                     show($model, $callable = null)
- * @method static \OpenAdminCore\Admin\Tree                                                     tree($model, \Closure $callable = null)
- * @method static \OpenAdminCore\Admin\Layout\Content                                           content(\Closure $callable = null)
+ * @method static \ExmentAdminCore\Admin\Grid                                                     grid($model, \Closure $callable)
+ * @method static \ExmentAdminCore\Admin\Form                                                     form($model, \Closure $callable)
+ * @method static \ExmentAdminCore\Admin\Show                                                     show($model, $callable = null)
+ * @method static \ExmentAdminCore\Admin\Tree                                                     tree($model, \Closure $callable = null)
+ * @method static \ExmentAdminCore\Admin\Layout\Content                                           content(\Closure $callable = null)
  * @method static \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void             css($css = null)
  * @method static \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void             js($js = null)
  * @method static \Illuminate\Contracts\View\Factory|\Illuminate\View\View|void             headerJs($js = null)
@@ -31,12 +31,12 @@ use Illuminate\Support\Facades\Facade;
  * @method static void                                                                      bootstrap()
  * @method static void  
  *
- * @see \OpenAdminCore\Admin\Admin
+ * @see \ExmentAdminCore\Admin\Admin
  */
 class Admin extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \OpenAdminCore\Admin\Admin::class;
+        return \ExmentAdminCore\Admin\Admin::class;
     }
 }

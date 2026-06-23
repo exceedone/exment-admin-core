@@ -1,6 +1,6 @@
 <?php
 
-use OpenAdminCore\Admin\Auth\Database\Administrator;
+use ExmentAdminCore\Admin\Auth\Database\Administrator;
 use Illuminate\Support\Facades\File;
 use Tests\Models\Image;
 use Tests\Models\MultipleImage;

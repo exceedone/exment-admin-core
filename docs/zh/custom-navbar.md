@@ -2,9 +2,9 @@
 
 从版本`1.5.6`开始，可以在顶部导航条上添加html元素了,  打开`app/Admin/bootstrap.php`：
 ```php
-use OpenAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Facades\Admin;
 
-Admin::navbar(function (\OpenAdminCore\Admin\Widgets\Navbar $navbar) {
+Admin::navbar(function (\ExmentAdminCore\Admin\Widgets\Navbar $navbar) {
 
     $navbar->left('html...');
 

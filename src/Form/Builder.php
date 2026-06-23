@@ -1,14 +1,14 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form;
+namespace ExmentAdminCore\Admin\Form;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Form\Field\Hidden;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Form\Field\Hidden;
 
 /**
  * Class Builder.
@@ -18,7 +18,7 @@ class Builder
     /**
      * @var string
      */
-    public static $footerClassName = \OpenAdminCore\Admin\Form\Footer::class;
+    public static $footerClassName = \ExmentAdminCore\Admin\Form\Footer::class;
 
     /**
      *  Previous url key.

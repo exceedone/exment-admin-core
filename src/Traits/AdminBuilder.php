@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Traits;
+namespace ExmentAdminCore\Admin\Traits;
 
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Tree;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Tree;
 
 trait AdminBuilder
 {

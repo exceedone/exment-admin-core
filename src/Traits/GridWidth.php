@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Traits;
+namespace ExmentAdminCore\Admin\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;

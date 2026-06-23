@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets\Grid\Tools;
+namespace ExmentAdminCore\Admin\Widgets\Grid\Tools;
 
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 use Illuminate\Support\Collection;
 
 class BatchActions extends AbstractTool
@@ -12,7 +12,7 @@ class BatchActions extends AbstractTool
      *
      * @var string
      */
-    public static $deleteBatchClassName = \OpenAdminCore\Admin\Widgets\Grid\Tools\BatchDelete::class;
+    public static $deleteBatchClassName = \ExmentAdminCore\Admin\Widgets\Grid\Tools\BatchDelete::class;
 
 
     /**

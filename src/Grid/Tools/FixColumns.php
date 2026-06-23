@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Tools;
+namespace ExmentAdminCore\Admin\Grid\Tools;
 
 use Illuminate\Support\Collection;
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid;
 
 class FixColumns
 {

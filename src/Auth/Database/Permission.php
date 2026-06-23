@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Auth\Database;
+namespace ExmentAdminCore\Admin\Auth\Database;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;

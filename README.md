@@ -115,7 +115,7 @@ composer require dedermus/open-admin-core
 Затем запустите эти команды для публикации ресурсов и конфигурации:
 
 ```
-php artisan vendor:publish --provider="OpenAdminCore\Admin\AdminServiceProvider"
+php artisan vendor:publish --provider="ExmentAdminCore\Admin\AdminServiceProvider"
 ```
 После запуска команды вы можете найти файл конфигурации в `config/admin.php`, в этом файле вы можете изменить каталог установки, соединение с базой данных или имена таблиц.
 Так же в файле `config/filesystems.php` добавляем разрешения в раздел disks:

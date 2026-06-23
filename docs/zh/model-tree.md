@@ -23,8 +23,8 @@ CREATE TABLE `demo_categories` (
 
 namespace App\Models\Demo;
 
-use OpenAdminCore\Admin\Traits\AdminBuilder;
-use OpenAdminCore\Admin\Traits\ModelTree;
+use ExmentAdminCore\Admin\Traits\AdminBuilder;
+use ExmentAdminCore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
@@ -40,8 +40,8 @@ class Category extends Model
 
 namespace App\Models\Demo;
 
-use OpenAdminCore\Admin\Traits\AdminBuilder;
-use OpenAdminCore\Admin\Traits\ModelTree;
+use ExmentAdminCore\Admin\Traits\AdminBuilder;
+use ExmentAdminCore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
@@ -69,11 +69,11 @@ namespace App\Admin\Controllers\Demo;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Facades\Admin;
-use OpenAdminCore\Admin\Layout\Content;
-use OpenAdminCore\Admin\Controllers\ModelForm;
-use OpenAdminCore\Admin\Tree;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Controllers\ModelForm;
+use ExmentAdminCore\Admin\Tree;
 
 class CategoryController extends Controller
 {

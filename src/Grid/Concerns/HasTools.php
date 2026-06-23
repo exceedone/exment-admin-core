@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Concerns;
+namespace ExmentAdminCore\Admin\Grid\Concerns;
 
 use Closure;
-use OpenAdminCore\Admin\Grid\Tools;
+use ExmentAdminCore\Admin\Grid\Tools;
 
 trait HasTools
 {

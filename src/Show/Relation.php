@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Show;
+namespace ExmentAdminCore\Admin\Show;
 
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Show;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Show;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;

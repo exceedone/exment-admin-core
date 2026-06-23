@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets\Grid\Displayers;
+namespace ExmentAdminCore\Admin\Widgets\Grid\Displayers;
 
-use OpenAdminCore\Admin\Widgets\Grid\Grid;
-use OpenAdminCore\Admin\Widgets\Grid\Column;
+use ExmentAdminCore\Admin\Widgets\Grid\Grid;
+use ExmentAdminCore\Admin\Widgets\Grid\Column;
 
 abstract class AbstractDisplayer
 {

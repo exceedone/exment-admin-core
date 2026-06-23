@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets\Navbar;
+namespace ExmentAdminCore\Admin\Widgets\Navbar;
 
 use Illuminate\Contracts\Support\Renderable;
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 
 /**
  * Class FullScreen.

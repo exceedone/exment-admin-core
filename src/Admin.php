@@ -1,17 +1,17 @@
 <?php
 
-namespace OpenAdminCore\Admin;
+namespace ExmentAdminCore\Admin;
 
 use Closure;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use InvalidArgumentException;
-use OpenAdminCore\Admin\Auth\Database\Menu;
-use OpenAdminCore\Admin\Controllers\AuthController;
-use OpenAdminCore\Admin\Layout\Content;
-use OpenAdminCore\Admin\Traits\HasAssets;
-use OpenAdminCore\Admin\Widgets\Navbar;
+use ExmentAdminCore\Admin\Auth\Database\Menu;
+use ExmentAdminCore\Admin\Controllers\AuthController;
+use ExmentAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Traits\HasAssets;
+use ExmentAdminCore\Admin\Widgets\Navbar;
 
 /**
  * Class Admin.
@@ -81,7 +81,7 @@ class Admin
      * @param mixed $model
      * @param Closure $callable
      *
-     * @return \OpenAdminCore\Admin\Grid
+     * @return \ExmentAdminCore\Admin\Grid
      *
      * @deprecated since v1.6.1
      */
@@ -94,7 +94,7 @@ class Admin
      * @param mixed $model
      * @param Closure $callable
      *
-     * @return \OpenAdminCore\Admin\Form
+     * @return \ExmentAdminCore\Admin\Form
      *
      *  @deprecated since v1.6.1
      */
@@ -109,7 +109,7 @@ class Admin
      * @param mixed $model
      * @param Closure|null $callable
      *
-     * @return \OpenAdminCore\Admin\Tree
+     * @return \ExmentAdminCore\Admin\Tree
      */
     public function tree($model, Closure $callable = null)
     {
@@ -134,7 +134,7 @@ class Admin
     /**
      * @param Closure $callable
      *
-     * @return \OpenAdminCore\Admin\Layout\Content
+     * @return \ExmentAdminCore\Admin\Layout\Content
      */
     public function content(Closure $callable = null)
     {
@@ -298,7 +298,7 @@ class Admin
     /**
      * Get navbar object.
      *
-     * @return \OpenAdminCore\Admin\Widgets\Navbar
+     * @return \ExmentAdminCore\Admin\Widgets\Navbar
      */
     public function getNavbar()
     {
@@ -335,7 +335,7 @@ class Admin
 
         app('router')->group($attributes, function ($router) {
             /* @var \Illuminate\Support\Facades\Route $router */
-            $router->namespace('\OpenAdminCore\Admin\Controllers')->group(function ($router) {
+            $router->namespace('\ExmentAdminCore\Admin\Controllers')->group(function ($router) {
                 /* @var \Illuminate\Routing\Router $router */
                 $router->resource('auth/users', 'UserController')->names('admin.auth.users');
                 $router->resource('auth/roles', 'RoleController')->names('admin.auth.roles');

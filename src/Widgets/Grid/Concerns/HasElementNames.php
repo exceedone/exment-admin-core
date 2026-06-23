@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets\Grid\Concerns;
+namespace ExmentAdminCore\Admin\Widgets\Grid\Concerns;
 
-use OpenAdminCore\Admin\Grid\Concerns\HasFilter;
+use ExmentAdminCore\Admin\Grid\Concerns\HasFilter;
 
 trait HasElementNames
 {

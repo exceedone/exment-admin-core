@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Controllers;
+namespace ExmentAdminCore\Admin\Controllers;
 
-use OpenAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Layout\Content;
 use Illuminate\Routing\Controller;
 
 /**

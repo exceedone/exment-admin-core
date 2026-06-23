@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Auth\Database;
+namespace ExmentAdminCore\Admin\Auth\Database;
 
-use OpenAdminCore\Admin\Traits\AdminBuilder;
-use OpenAdminCore\Admin\Traits\ModelTree;
+use ExmentAdminCore\Admin\Traits\AdminBuilder;
+use ExmentAdminCore\Admin\Traits\ModelTree;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\DB;

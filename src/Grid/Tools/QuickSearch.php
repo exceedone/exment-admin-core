@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Tools;
+namespace ExmentAdminCore\Admin\Grid\Tools;
 
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid;
 use Illuminate\Support\Arr;
 
 class QuickSearch extends AbstractTool

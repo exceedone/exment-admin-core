@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Tree;
+namespace ExmentAdminCore\Admin\Tree;
 
-use OpenAdminCore\Admin\Tree;
+use ExmentAdminCore\Admin\Tree;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Collection;

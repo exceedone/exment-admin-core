@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Concerns;
+namespace ExmentAdminCore\Admin\Grid\Concerns;
 
-use OpenAdminCore\Admin\Grid\Tools\QuickCreate;
+use ExmentAdminCore\Admin\Grid\Tools\QuickCreate;
 
 trait HasQuickCreate
 {

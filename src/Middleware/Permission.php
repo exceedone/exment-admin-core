@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Middleware;
+namespace ExmentAdminCore\Admin\Middleware;
 
-use OpenAdminCore\Admin\Auth\Permission as Checker;
-use OpenAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Auth\Permission as Checker;
+use ExmentAdminCore\Admin\Facades\Admin;
 use Illuminate\Config\Repository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;

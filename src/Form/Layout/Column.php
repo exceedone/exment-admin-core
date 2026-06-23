@@ -3,10 +3,10 @@
  * Copyright (c) 2019. Mallto.Co.Ltd.<mall-to.com> All rights reserved.
  */
 
-namespace OpenAdminCore\Admin\Form\Layout;
+namespace ExmentAdminCore\Admin\Form\Layout;
 
 use Illuminate\Support\Collection;
-use OpenAdminCore\Admin\Form\Field;
+use ExmentAdminCore\Admin\Form\Field;
 
 class Column
 {

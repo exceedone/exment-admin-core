@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Layout;
+namespace ExmentAdminCore\Admin\Layout;
 
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid;
 use Illuminate\Contracts\Support\Renderable;
-use OpenAdminCore\Admin\Traits\GridWidth;
+use ExmentAdminCore\Admin\Traits\GridWidth;
 
 class Column implements Buildable
 {

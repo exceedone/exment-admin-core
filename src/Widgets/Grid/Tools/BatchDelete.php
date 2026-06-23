@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets\Grid\Tools;
+namespace ExmentAdminCore\Admin\Widgets\Grid\Tools;
 
 class BatchDelete extends BatchAction
 {

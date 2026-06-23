@@ -12,8 +12,8 @@ use Exceedone\Exment\Validator\ImageRule;
  *  - ReflectionClass to read protected properties/methods without instantiation
  *
  * Covers:
- *  A) OpenAdminCore\Admin\Form\Field\UploadField::$fileTypes['image'] regex
- *  B) OpenAdminCore\Admin\Form\Field\Traits\UploadField::$fileTypes['image'] regex
+ *  A) ExmentAdminCore\Admin\Form\Field\UploadField::$fileTypes['image'] regex
+ *  B) ExmentAdminCore\Admin\Form\Field\Traits\UploadField::$fileTypes['image'] regex
  *     (the version used by File / MultipleFile via `use UploadField`)
  *  C) alwaysPreviewFileExtensions list
  *  D) Exceedone\Exment\Model\Define::IMAGE_RULE_EXTENSIONS constant
@@ -28,7 +28,7 @@ class SvgRemovalTest extends BaseTestCase
 
     private function getUploadFieldImagePattern(): string
     {
-        $ref = new ReflectionClass(OpenAdminCore\Admin\Form\Field\UploadField::class);
+        $ref = new ReflectionClass(ExmentAdminCore\Admin\Form\Field\UploadField::class);
         return $ref->getDefaultProperties()['fileTypes']['image'];
     }
 
@@ -65,12 +65,12 @@ class SvgRemovalTest extends BaseTestCase
     // -----------------------------------------------------------------------
     // B. Traits\UploadField — Field/Traits/UploadField.php
     //    Used by File and MultipleFile via `use UploadField` (resolved from
-    //    OpenAdminCore\Admin\Form\Field\UploadField which is the trait file).
+    //    ExmentAdminCore\Admin\Form\Field\UploadField which is the trait file).
     // -----------------------------------------------------------------------
 
     private function getTraitsUploadFieldImagePattern(): string
     {
-        $ref = new ReflectionClass(OpenAdminCore\Admin\Form\Field\Traits\UploadField::class);
+        $ref = new ReflectionClass(ExmentAdminCore\Admin\Form\Field\Traits\UploadField::class);
         return $ref->getDefaultProperties()['fileTypes']['image'];
     }
 

@@ -2,7 +2,7 @@
 
 `model-grid`内置了很多对于列的操作方法，可以通过这些方法很灵活的操作列数据。
 
-`OpenAdminCore\Admin\Grid\Column`对象内置了`display()`方法来通过传入的回调函数来处理当前列的值，
+`ExmentAdminCore\Admin\Grid\Column`对象内置了`display()`方法来通过传入的回调函数来处理当前列的值，
 ```php
 $grid->column('title')->display(function ($title) {
 
@@ -178,7 +178,7 @@ $grid->keywords()->badge();
 
 在`app/Admin/bootstrap.php`加入以下代码:
 ```php
-use OpenAdminCore\Admin\Grid\Column;
+use ExmentAdminCore\Admin\Grid\Column;
 
 Column::extend('color', function ($value, $color) {
     return "<span style='color: $color'>$value</span>"
@@ -199,8 +199,8 @@ $grid->title()->color('#ccc');
 
 namespace App\Admin\Extensions;
 
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
 
 class Popover extends AbstractDisplayer
 {
@@ -227,7 +227,7 @@ EOT;
 ```
 然后在`app/Admin/bootstrap.php`注册扩展类：
 ```php
-use OpenAdminCore\Admin\Grid\Column;
+use ExmentAdminCore\Admin\Grid\Column;
 use App\Admin\Extensions\Popover;
 
 Column::extend('popover', Popover::class);

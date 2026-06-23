@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Actions;
+namespace ExmentAdminCore\Admin\Actions;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid;
 
 /**
  * Class GridAction.

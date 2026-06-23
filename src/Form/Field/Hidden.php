@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field;
+namespace ExmentAdminCore\Admin\Form\Field;
 
-use OpenAdminCore\Admin\Form\Field;
+use ExmentAdminCore\Admin\Form\Field;
 
 class Hidden extends Field
 {

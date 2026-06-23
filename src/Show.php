@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin;
+namespace ExmentAdminCore\Admin;
 
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;
@@ -15,12 +15,12 @@ use Illuminate\Database\Eloquent\Relations\Relation as EloquentRelation;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use OpenAdminCore\Admin\Show\Divider;
-use OpenAdminCore\Admin\Show\Field;
-use OpenAdminCore\Admin\Show\Panel;
-use OpenAdminCore\Admin\Show\Relation;
-use OpenAdminCore\Admin\Traits\Resource;
-use OpenAdminCore\Admin\Traits\ShouldSnakeAttributes;
+use ExmentAdminCore\Admin\Show\Divider;
+use ExmentAdminCore\Admin\Show\Field;
+use ExmentAdminCore\Admin\Show\Panel;
+use ExmentAdminCore\Admin\Show\Relation;
+use ExmentAdminCore\Admin\Traits\Resource;
+use ExmentAdminCore\Admin\Traits\ShouldSnakeAttributes;
 
 class Show implements Renderable
 {

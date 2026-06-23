@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Tools;
+namespace ExmentAdminCore\Admin\Grid\Tools;
 
-use OpenAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Admin;
 
 class FilterButton extends AbstractTool
 {
@@ -17,7 +17,7 @@ class FilterButton extends AbstractTool
     protected $btnClassName;
 
     /**
-     * @return \OpenAdminCore\Admin\Grid\Filter
+     * @return \ExmentAdminCore\Admin\Grid\Filter
      */
     protected function filter()
     {

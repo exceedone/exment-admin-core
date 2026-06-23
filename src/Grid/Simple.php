@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid;
+namespace ExmentAdminCore\Admin\Grid;
 
 use Illuminate\Contracts\Support\Renderable;
-use OpenAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Grid;
 
 /**
  * @mixin Grid

@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Controllers;
+namespace ExmentAdminCore\Admin\Controllers;
 
-use OpenAdminCore\Admin\Widgets\Form;
+use ExmentAdminCore\Admin\Widgets\Form;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;

@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
 use Illuminate\Console\Command;
 use mysql_xdevapi\SqlStatementResult;

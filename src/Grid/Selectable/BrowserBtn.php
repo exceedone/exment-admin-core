@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Selectable;
+namespace ExmentAdminCore\Admin\Grid\Selectable;
 
 use Illuminate\Contracts\Support\Renderable;
 

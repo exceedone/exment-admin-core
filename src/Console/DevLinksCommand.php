@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
 use Illuminate\Console\Command;
 use ReflectionClass;
@@ -60,7 +60,7 @@ class DevLinksCommand extends Command
      */
     protected function links()
     {
-        $reflector = new ReflectionClass("\OpenAdminCore\Admin\Admin");
+        $reflector = new ReflectionClass("\ExmentAdminCore\Admin\Admin");
         $dir = str_replace('src/Admin.php', '', $reflector->getFileName()).'resources/assets/';
 
         return [public_path('vendor/open-admin') => $dir];

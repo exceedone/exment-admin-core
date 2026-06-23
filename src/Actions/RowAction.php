@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Actions;
+namespace ExmentAdminCore\Admin\Actions;
 
 use Illuminate\Http\Request;
-use OpenAdminCore\Admin\Grid\Column;
+use ExmentAdminCore\Admin\Grid\Column;
 
 abstract class RowAction extends GridAction
 {
@@ -134,7 +134,7 @@ abstract class RowAction extends GridAction
      */
     public function render()
     {
-        $linkClass = ($this->parent->getActionClass() != "OpenAdminCore\Admin\Grid\Displayers\Actions\Actions") ? 'dropdown-item' : '';
+        $linkClass = ($this->parent->getActionClass() != "ExmentAdminCore\Admin\Grid\Displayers\Actions\Actions") ? 'dropdown-item' : '';
         $icon = $this->getIcon();
 
         if ($href = $this->href()) {

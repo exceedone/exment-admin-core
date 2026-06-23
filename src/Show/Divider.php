@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Show;
+namespace ExmentAdminCore\Admin\Show;
 
 class Divider extends Field
 {

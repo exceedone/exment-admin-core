@@ -19,7 +19,7 @@ Open `app/Providers/AppServiceProvider.php`, and call the `Config::load()` metho
 
 namespace App\Providers;
 
-use OpenAdminCore\Admin\Config\Config;
+use ExmentAdminCore\Admin\Config\Config;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

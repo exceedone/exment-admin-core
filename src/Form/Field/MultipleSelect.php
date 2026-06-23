@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field;
+namespace ExmentAdminCore\Admin\Form\Field;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Arr;
-use OpenAdminCore\Admin\Validator\CheckboxRequiredRule;
+use ExmentAdminCore\Admin\Validator\CheckboxRequiredRule;
 
 class MultipleSelect extends Select
 {

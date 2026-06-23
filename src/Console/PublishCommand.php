@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
 use Illuminate\Console\Command;
 
@@ -28,7 +28,7 @@ class PublishCommand extends Command
     public function handle()
     {
         $force = $this->option('force');
-        $options = ['--provider' => 'OpenAdminCore\Admin\AdminServiceProvider'];
+        $options = ['--provider' => 'ExmentAdminCore\Admin\AdminServiceProvider'];
         if ($force == true) {
             $options['--force'] = true;
         }

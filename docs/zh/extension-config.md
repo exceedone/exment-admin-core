@@ -19,7 +19,7 @@ $ php artisan migrate
 
 namespace App\Providers;
 
-use OpenAdminCore\Admin\Config\Config;
+use ExmentAdminCore\Admin\Config\Config;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider

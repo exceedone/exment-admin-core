@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets;
+namespace ExmentAdminCore\Admin\Widgets;
 
-use OpenAdminCore\Admin\Widgets\Navbar\RefreshButton;
+use ExmentAdminCore\Admin\Widgets\Navbar\RefreshButton;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Renderable;
 

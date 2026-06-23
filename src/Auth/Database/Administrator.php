@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Auth\Database;
+namespace ExmentAdminCore\Admin\Auth\Database;
 
-use OpenAdminCore\Admin\Traits\AdminBuilder;
+use ExmentAdminCore\Admin\Traits\AdminBuilder;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Database\Eloquent\Collection;

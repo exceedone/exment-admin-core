@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Controllers;
+namespace ExmentAdminCore\Admin\Controllers;
 
-use OpenAdminCore\Admin\Facades\Admin;
-use OpenAdminCore\Admin\Form;
-use OpenAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Form;
+use ExmentAdminCore\Admin\Layout\Content;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;

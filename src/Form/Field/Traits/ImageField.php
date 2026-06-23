@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field\Traits;
+namespace ExmentAdminCore\Admin\Form\Field\Traits;
 
 use Illuminate\Support\Str;
 use Intervention\Image\Constraint;

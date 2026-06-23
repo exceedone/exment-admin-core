@@ -1,10 +1,10 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Displayers;
+namespace ExmentAdminCore\Admin\Grid\Displayers;
 
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Form\Field\Traits\BelongsToRelation;
-use OpenAdminCore\Admin\Grid\Selectable;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Form\Field\Traits\BelongsToRelation;
+use ExmentAdminCore\Admin\Grid\Selectable;
 
 class BelongsTo extends AbstractDisplayer
 {
@@ -52,7 +52,7 @@ class BelongsTo extends AbstractDisplayer
     {
         if (!class_exists($selectable) || !is_subclass_of($selectable, Selectable::class)) {
             throw new \InvalidArgumentException(
-                "[Class [{$selectable}] must be a sub class of OpenAdminCore\Admin\Grid\Selectable"
+                "[Class [{$selectable}] must be a sub class of ExmentAdminCore\Admin\Grid\Selectable"
             );
         }
 

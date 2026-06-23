@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Concerns;
+namespace ExmentAdminCore\Admin\Grid\Concerns;
 
 use Illuminate\Support\Collection;
-use OpenAdminCore\Admin\Grid\Tools\FixColumns;
+use ExmentAdminCore\Admin\Grid\Tools\FixColumns;
 
 trait CanFixColumns
 {

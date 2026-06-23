@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Middleware;
+namespace ExmentAdminCore\Admin\Middleware;
 
 use Illuminate\Http\Request;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets;
+namespace ExmentAdminCore\Admin\Widgets;
 
 trait ContainsForms
 {
@@ -37,7 +37,7 @@ trait ContainsForms
 
         foreach ($forms as $name => $class) {
             if (!is_subclass_of($class, Form::class)) {
-                admin_error("Class [{$class}] must be a sub-class of [OpenAdminCore\Admin\Widgets\Form].");
+                admin_error("Class [{$class}] must be a sub-class of [ExmentAdminCore\Admin\Widgets\Form].");
                 continue;
             }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Displayers\Actions;
+namespace ExmentAdminCore\Admin\Grid\Displayers\Actions;
 
-use OpenAdminCore\Admin\Actions\RowAction;
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Grid\Actions\Delete;
-use OpenAdminCore\Admin\Grid\Actions\Edit;
-use OpenAdminCore\Admin\Grid\Actions\Show;
-use OpenAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
+use ExmentAdminCore\Admin\Actions\RowAction;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Grid\Actions\Delete;
+use ExmentAdminCore\Admin\Grid\Actions\Edit;
+use ExmentAdminCore\Admin\Grid\Actions\Show;
+use ExmentAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
 
 class Actions extends AbstractDisplayer
 {

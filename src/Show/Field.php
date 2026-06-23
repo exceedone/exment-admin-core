@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Show;
+namespace ExmentAdminCore\Admin\Show;
 
-use OpenAdminCore\Admin\Show;
-use OpenAdminCore\Admin\Widgets\Carousel;
+use ExmentAdminCore\Admin\Show;
+use ExmentAdminCore\Admin\Widgets\Carousel;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Database\Eloquent\Model;

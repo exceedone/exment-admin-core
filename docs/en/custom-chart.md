@@ -6,7 +6,7 @@ Use `chartjs` for example, first download [chartjs](http://chartjs.org/), put it
 
 Then import the component in `app/Admin/bootstrap.php`:
 ```php
-use OpenAdminCore\Admin\Facades\Admin;
+use ExmentAdminCore\Admin\Facades\Admin;
 
 Admin::js('/vendor/chartjs/dist/Chart.min.js');
 

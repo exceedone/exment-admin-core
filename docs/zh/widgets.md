@@ -2,10 +2,10 @@
 
 ## Box组件
 
-`OpenAdminCore\Admin\Widgets\Box`用来生成box组件：
+`ExmentAdminCore\Admin\Widgets\Box`用来生成box组件：
 
 ```php
-use OpenAdminCore\Admin\Widgets\Box;
+use ExmentAdminCore\Admin\Widgets\Box;
 
 $box = new Box('Box标题', 'Box内容');
 
@@ -37,9 +37,9 @@ echo $box;
 
 ## Collapse组件
 
-`OpenAdminCore\Admin\Widgets\Collapse`类用来生成折叠插件：
+`ExmentAdminCore\Admin\Widgets\Collapse`类用来生成折叠插件：
 ```php
-use OpenAdminCore\Admin\Widgets\Collapse;
+use ExmentAdminCore\Admin\Widgets\Collapse;
 
 $collapse = new Collapse();
 
@@ -55,7 +55,7 @@ echo $collapse->render();
 
 ## 表单
 
-`OpenAdminCore\Admin\Widgets\Form`类用来快速构建表单：
+`ExmentAdminCore\Admin\Widgets\Form`类用来快速构建表单：
 
 ```php
 
@@ -86,10 +86,10 @@ echo $form->render();
 
 ## Infobox组件
 
-`OpenAdminCore\Admin\Widgets\InfoBox`类用来生成信息展示块：
+`ExmentAdminCore\Admin\Widgets\InfoBox`类用来生成信息展示块：
 
 ```php
-use OpenAdminCore\Admin\Widgets\InfoBox;
+use ExmentAdminCore\Admin\Widgets\InfoBox;
 
 $infoBox = new InfoBox('New Users', 'users', 'aqua', '/admin/users', '1024');
 
@@ -101,10 +101,10 @@ echo $infoBox->render();
 
 ## Tab组件
 
-`OpenAdminCore\Admin\Widgets\Tab`类用来生成选项卡组件：
+`ExmentAdminCore\Admin\Widgets\Tab`类用来生成选项卡组件：
 
 ```php
-use OpenAdminCore\Admin\Widgets\Tab;
+use ExmentAdminCore\Admin\Widgets\Tab;
 
 $tab = new Tab();
 
@@ -120,10 +120,10 @@ echo $tab->render();
 
 ## Table
 
-`OpenAdminCore\Admin\Widgets\Table`类用来生成表格：
+`ExmentAdminCore\Admin\Widgets\Table`类用来生成表格：
 
 ```php
-use OpenAdminCore\Admin\Widgets\Table;
+use ExmentAdminCore\Admin\Widgets\Table;
 
 // table 1
 $headers = ['Id', 'Email', 'Name', 'Company'];

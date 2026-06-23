@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Selectable;
+namespace ExmentAdminCore\Admin\Grid\Selectable;
 
-use OpenAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
+use ExmentAdminCore\Admin\Grid\Displayers\AbstractDisplayer;
 
 class Checkbox extends AbstractDisplayer
 {

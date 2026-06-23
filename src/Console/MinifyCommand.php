@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Console;
+namespace ExmentAdminCore\Admin\Console;
 
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Facades\Admin as AdminFacade;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Facades\Admin as AdminFacade;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use MatthiasMullie\Minify;
@@ -51,7 +51,7 @@ class MinifyCommand extends Command
         }
 
         if ($this->option('clear')) {
-            /** @phpstan-ignore-next-line  Result of method OpenAdminCore\Admin\Console\MinifyCommand::clearMinifiedFiles() (void) is used */
+            /** @phpstan-ignore-next-line  Result of method ExmentAdminCore\Admin\Console\MinifyCommand::clearMinifiedFiles() (void) is used */
             return $this->clearMinifiedFiles();
         }
 

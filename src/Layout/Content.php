@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Layout;
+namespace ExmentAdminCore\Admin\Layout;
 
 use Closure;
 use Illuminate\Contracts\Support\Renderable;

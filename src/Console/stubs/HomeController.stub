@@ -3,11 +3,11 @@
 namespace DummyNamespace;
 
 use App\Http\Controllers\Controller;
-use OpenAdminCore\Admin\Admin;
-use OpenAdminCore\Admin\Controllers\Dashboard;
-use OpenAdminCore\Admin\Layout\Column;
-use OpenAdminCore\Admin\Layout\Content;
-use OpenAdminCore\Admin\Layout\Row;
+use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Controllers\Dashboard;
+use ExmentAdminCore\Admin\Layout\Column;
+use ExmentAdminCore\Admin\Layout\Content;
+use ExmentAdminCore\Admin\Layout\Row;
 
 class HomeController extends Controller
 {

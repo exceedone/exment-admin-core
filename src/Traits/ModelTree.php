@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Traits;
+namespace ExmentAdminCore\Admin\Traits;
 
-use OpenAdminCore\Admin\Auth\Database\Menu;
+use ExmentAdminCore\Admin\Auth\Database\Menu;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;

@@ -1,9 +1,9 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid;
+namespace ExmentAdminCore\Admin\Grid;
 
-use OpenAdminCore\Admin\Grid;
-use OpenAdminCore\Admin\Middleware\Pjax;
+use ExmentAdminCore\Admin\Grid;
+use ExmentAdminCore\Admin\Middleware\Pjax;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;

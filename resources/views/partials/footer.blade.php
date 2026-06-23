@@ -9,7 +9,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
 
         @if(config('admin.show_version'))
-        <strong>Version</strong>&nbsp;&nbsp; {!! \OpenAdminCore\Admin\Admin::VERSION !!}
+        <strong>Version</strong>&nbsp;&nbsp; {!! \ExmentAdminCore\Admin\Admin::VERSION !!}
         @endif
 
     </div>

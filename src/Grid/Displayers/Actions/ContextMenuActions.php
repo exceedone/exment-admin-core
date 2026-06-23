@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Displayers\Actions;
+namespace ExmentAdminCore\Admin\Grid\Displayers\Actions;
 
 class ContextMenuActions extends DropdownActions
 {

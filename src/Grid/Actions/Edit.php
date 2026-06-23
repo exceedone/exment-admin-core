@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Actions;
+namespace ExmentAdminCore\Admin\Grid\Actions;
 
-use OpenAdminCore\Admin\Actions\RowAction;
+use ExmentAdminCore\Admin\Actions\RowAction;
 
 class Edit extends RowAction
 {

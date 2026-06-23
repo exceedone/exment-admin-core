@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Grid\Column;
+namespace ExmentAdminCore\Admin\Grid\Column;
 
-use OpenAdminCore\Admin\Grid\Displayers;
+use ExmentAdminCore\Admin\Grid\Displayers;
 
 trait InlineEditing
 {

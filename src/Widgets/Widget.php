@@ -1,6 +1,6 @@
 <?php
 
-namespace OpenAdminCore\Admin\Widgets;
+namespace ExmentAdminCore\Admin\Widgets;
 
 use Illuminate\Support\Fluent;
 

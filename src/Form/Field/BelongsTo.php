@@ -1,8 +1,8 @@
 <?php
 
-namespace OpenAdminCore\Admin\Form\Field;
+namespace ExmentAdminCore\Admin\Form\Field;
 
-use OpenAdminCore\Admin\Form\Field\Traits\BelongsToRelation;
+use ExmentAdminCore\Admin\Form\Field\Traits\BelongsToRelation;
 
 class BelongsTo extends Select
 {
