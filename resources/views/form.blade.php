@@ -1,4 +1,4 @@
-<div class="box">
+<div class="box custom-border-info">
     <div class="box-header with-border">
         <h3 class="box-title text-nowrap">{{ $form->title() }}</h3>
 
