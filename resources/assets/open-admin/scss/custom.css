@@ -67,7 +67,7 @@
 
 .nav-tabs-custom>.nav-tabs>.nav-item>.nav-link {
   background: transparent;
-  color: #444;
+  /* color: #444; */
   border: 1px solid transparent;
   border-radius: 0;
   margin: 0;
@@ -75,7 +75,7 @@
 }
 
 .nav-tabs-custom>.nav-tabs>.nav-item>.nav-link.active {
-  background-color: #fff;
+  background-color: #d7e6ef;
   color: #555;
   border: 1px solid #ddd;
   border-top: 3px solid #3c8dbc;
@@ -87,7 +87,7 @@
 
 .nav-tabs-custom>.nav-tabs>.nav-item>.nav-link.active:hover,
 .nav-tabs-custom>.nav-tabs>.nav-item>.nav-link.active:focus {
-  background-color: #fff;
+  background-color: #d7e6ef;
   color: #555;
   border: 1px solid #ddd;
   border-top: 3px solid #3c8dbc;
