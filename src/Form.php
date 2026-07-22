@@ -509,6 +509,21 @@ class Form implements Renderable
         return back()->withInput()->withErrors($message);
     }
 
+    /**
+     * Build the response for a failed validation of a request that wants JSON.
+     *
+     * @param MessageBag $message
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    protected function responseJsonValidationError(MessageBag $message)
+    {
+        return response()->json([
+            'message' => $message->first(),
+            'errors'  => $message->getMessages(),
+        ], 422);
+    }
+
 
     /**
      * Get ajax response.
@@ -669,6 +684,10 @@ class Form implements Renderable
         // Handle validation errors.
         if ($validationMessages = $this->validationMessages($data)) {
             if (!$isEditable) {
+                if (\request()->wantsJson()) {
+                    return $this->responseJsonValidationError($validationMessages);
+                }
+
                 return back()->withInput()->withErrors($validationMessages);
             }
 
