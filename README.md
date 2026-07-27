@@ -1,103 +1,60 @@
-<p style="text-align: center">
-  <a href="https://laravel-admin.org/">
-    <img src="https://open-admin.org/gfx/logo.png" alt="open-admin" style="height:200px;background:transparent;">
+<p align="center">
+  <a href="https://github.com/exceedone/exment-admin-core">
+    <img src="https://open-admin.org/gfx/logo.png" alt="exment-admin-core" style="height:200px;background:transparent;">
   </a>
 </p>
 
-<p style="text-align: center">⛵<code>laravel-admin</code> - это конструктор административного интерфейса для laravel, который поможет вам создать CRUD-функции всего с помощью нескольких строк кода.</p>
+<p align="center">⛵ <code>exment-admin-core</code> is an admin interface builder for Laravel that helps you build CRUD screens with just a few lines of code.</p>
 
-<p style="text-align: center">Данный конструктор является форком от проекта <a href="https://github.com/open-admin-org/open-admin" target="_blank">https://github.com/open-admin-org/open-admin</a></p>
+<p align="center">This package is a fork of <a href="https://github.com/open-admin-org/open-admin" target="_blank">open-admin</a> / <a href="https://github.com/dedermus/open-admin-core" target="_blank">open-admin-core</a>, adapted for <a href="https://exment.net" target="_blank">Exment</a>.</p>
 
-
-<p style="text-align: center">
-  <a href="https://laravel-admin.org/docs">Документация</a> |
-  <a href="https://demo.laravel-admin.org">Демо</a> |
-  <a href="https://github.com/z-song/demo.laravel-admin.org">Исходный код демо-версии</a> |
-  <a href="https://github.com/open-admin-org">Расширения</a>
+<p align="center">
+  <a href="docs/en">Documentation (en)</a> |
+  <a href="docs/zh">Documentation (zh)</a> |
+  <a href="CHANGELOG.md">Changelog</a>
 </p>
 
-<p style="text-align: center">
-    <a href="https://packagist.org/packages/dedermus/laravel-admin">
-        <img src="https://img.shields.io/packagist/l/encore/laravel-admin.svg?maxAge=2592000&&style=flat-square" alt="Packagist">
+<p align="center">
+    <a href="LICENSE">
+        <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="License MIT">
     </a>
-    <a href="https://packagist.org/packages/dedermus/laravel-admin">
-        <img src="https://img.shields.io/packagist/dt/encore/laravel-admin.svg?style=flat-square" alt="Total Downloads">
-    </a>
-    <a href="https://gitlab.com/dedermus/laravel-admin.git">
-        <img src="https://img.shields.io/badge/Awesome-Laravel-brightgreen.svg?style=flat-square" alt="Awesome Laravel">
-    </a>
+    <img src="https://img.shields.io/badge/PHP-%5E8.2-777bb4.svg?style=flat-square" alt="PHP ^8.2">
+    <img src="https://img.shields.io/badge/Laravel-12-ff2d20.svg?style=flat-square" alt="Laravel 12">
 </p>
 
-<p style="text-align: center">
-    Вдохновлен проектами <a href="https://github.com/sleeping-owl/admin" target="_blank">SleepingOwlAdmin</a>, <a href="https://github.com/zofe/rapyd-laravel" target="_blank">rapyd-laravel</a> и <a href="https://github.com/z-song/laravel-admin/" target="_blank">laravel-admin</a>.
+<p align="center">
+    Inspired by <a href="https://github.com/sleeping-owl/admin" target="_blank">SleepingOwlAdmin</a>, <a href="https://github.com/zofe/rapyd-laravel" target="_blank">rapyd-laravel</a> and <a href="https://github.com/z-song/laravel-admin/" target="_blank">laravel-admin</a>.
 </p>
 
 
-Требования
+Requirements
 ------------
 - PHP ^8.2
-- Laravel >= ^11.9
-- Fileinfo PHP Extension
+- Laravel ^12.0
+- Fileinfo PHP extension
 
-Установка
+Installation
 ------------
 
-Сначала установите laravel 11 или выше и убедитесь, что настройки подключения к базе данных верны.
+First install Laravel 12 and make sure the database connection settings are correct.
 
-подтягиваем скелет фреймворка
+Create the framework skeleton:
 ```
 composer create-project laravel/laravel example-app
 ```
 
-устанавливаем локаль и другие параметры в config/app.php
+Set the application URL, timezone and locale. In Laravel 12 `config/app.php` reads these from the environment, so edit `.env`:
 ```
-/*
-|--------------------------------------------------------------------------
-| Application URL
-|--------------------------------------------------------------------------
-|
-| This URL is used by the console to properly generate URLs when using
-| the Artisan command line tool. You should set this to the root of
-| your application so that it is used when running Artisan tasks.
-|
-*/
-
-'url' => env('APP_URL', null),
-
-'asset_url' => env('ASSET_URL', null),
-
-/*
-|--------------------------------------------------------------------------
-| Application Timezone
-|--------------------------------------------------------------------------
-|
-| Here you may specify the default timezone for your application, which
-| will be used by the PHP date and date-time functions. We have gone
-| ahead and set this to a sensible default for you out of the box.
-|
-*/
-
-'timezone' => 'Europe/Moscow',
-
-/*
-|--------------------------------------------------------------------------
-| Application Locale Configuration
-|--------------------------------------------------------------------------
-|
-| The application locale determines the default locale that will be used
-| by the translation service provider. You are free to set this value
-| to any of the locales which will be supported by the application.
-|
-*/
-
-'locale' => 'ru',
+APP_URL=http://localhost
+APP_TIMEZONE=UTC
+APP_LOCALE=en
 ```
 ```
 php artisan storage:link
 ```
-создаем БД с именем new (или с дугим на усмотрение разработчика)
+Create a database named `new_base` (or any other name you prefer).
 
-настраваем подключение к БД в .env (примерные настройки для среды разработки)
+Configure the database connection in `.env` (example settings for a development environment):
 ```
 DB_CONNECTION=pgsql
 DB_HOST=127.0.0.1
@@ -106,22 +63,48 @@ DB_DATABASE=new_base
 DB_USERNAME=postgres
 DB_PASSWORD=postgres
 ```
-# Затем устанавливаем админ-панель
+
+### Then install the admin panel
+
+The package is installed from a Git repository (or from a local path during development) — add it to the `repositories` section of your project's `composer.json`:
+
+```json
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/exceedone/exment-admin-core"
+    }
+]
+```
+
+For local development, a path repository pointing at the package directory is more convenient:
+
+```json
+"repositories": [
+    {
+        "type": "path",
+        "url": "exment-admin-core"
+    }
+]
+```
+
+Then:
 
 ```
-composer require dedermus/open-admin-core
+composer require exceedone/exment-admin-core
 ```
 
-Затем запустите эти команды для публикации ресурсов и конфигурации:
+Next, run this command to publish the assets and the configuration:
 
 ```
 php artisan vendor:publish --provider="ExmentAdminCore\Admin\AdminServiceProvider"
 ```
-После запуска команды вы можете найти файл конфигурации в `config/admin.php`, в этом файле вы можете изменить каталог установки, соединение с базой данных или имена таблиц.
-Так же в файле `config/filesystems.php` добавляем разрешения в раздел disks:
+After running it you will find the configuration file at `config/admin.php`, where you can change the install directory, the database connection or the table names.
+
+Also add the required disks to `config/filesystems.php`:
 ```
     'disks' => [
-    
+
         ...
 
         'uploads' => [
@@ -137,10 +120,10 @@ php artisan vendor:publish --provider="ExmentAdminCore\Admin\AdminServiceProvide
             'url' => env('APP_URL').'/uploads',
             'visibility' => 'public',
         ],
-        
+
         ...
 ```
-Включение поддержки HTTPS
+Enabling HTTPS support:
 ```
     /*
     |--------------------------------------------------------------------------
@@ -154,46 +137,50 @@ php artisan vendor:publish --provider="ExmentAdminCore\Admin\AdminServiceProvide
 ```
 
 
-Наконец, выполните следующую команду, чтобы завершить установку.
+Finally, run the following command to complete the installation.
 ```
 php artisan admin:install
 ```
 
-Откройте `http://localhost/admin/` в браузере, используйте имя пользователя `admin` и пароль `admin` для входа.
+Open `http://localhost/admin/` in your browser and log in with the username `admin` and the password `admin`.
 
-Конфигурации
+Configuration
 ------------
-Файл `config/admin.php` содержит массив конфигураций, там вы можете найти конфигурации по умолчанию.
+The file `config/admin.php` contains the configuration array where you can find the default settings.
 
-Обновление
+Updating
 ------------
-Обновление до новой версии open-admin может потребовать обновления ресурсов, которые вы можете опубликовать с помощью:
+Updating to a new version of exment-admin-core may require republishing the assets, which you can do with:
 ```
 php artisan vendor:publish --tag=open-admin-assets --force
 ```
 
-Поддержка справа налево
+RTL (right-to-left) support
 ------------
-пройдись по этому пути `<YOUR_PROJECT_PATH>\vendor\dedermus\open-admin-core\src\Traits\HasAssets.php` и модифицируй `$baseCss` массив для загрузки справа налево (rtl) версии начальной загрузки и CSS-файлов AdminLTE.    
-**bootstrap.min.css** измените его на **bootstrap.rtl.min.css**    
-**AdminLTE.min.css** измените его на **AdminLTE.rtl.min.css**
+Go to `<YOUR_PROJECT_PATH>\vendor\exceedone\exment-admin-core\src\Traits\HasAssets.php` and edit the `$baseCss` array to load the right-to-left (rtl) versions of the Bootstrap and AdminLTE CSS files.    
+Change **bootstrap.min.css** to **bootstrap.rtl.min.css**    
+Change **AdminLTE.min.css** to **AdminLTE.rtl.min.css**
 
-## Расширения от Zong
+## Extensions
 
-| Расширения                                       | Описание                                                                                        | laravel-admin |
+> ⚠️ The extensions listed below are written for `laravel-admin` / `open-admin` and use the old namespaces (`Encore\Admin`, `OpenAdminCore\Admin`). **They do not work with `ExmentAdminCore\Admin` out of the box** — a fork with the namespace replaced is required. The tables are kept as a reference of what is available.
+
+### Extensions by Zong
+
+| Extension                                        | Description                                                                                     | laravel-admin |
 | ------------------------------------------------ |-------------------------------------------------------------------------------------------------|---------------|
-| [helpers](https://github.com/laravel-admin-extensions/helpers)             | Несколько инструментов, которые помогут вам в разработке                                        | ~1.0.2        |
-| [media-manager](https://github.com/laravel-admin-extensions/media-manager) | Предоставляет веб-интерфейс для управления локальными файлами.                                  | ~1.0.2        |
-| [api-tester](https://github.com/laravel-admin-extensions/api-tester) | Помощь вам в тестировании локальных API laravel.                                                | ~1.0.2        |
-| [scheduling](https://github.com/laravel-admin-extensions/scheduling) | Диспетчер задач планирования для laravel-admin                                                  | ~1.5          |
-| [redis-manager](https://github.com/laravel-admin-extensions/redis-manager) | Менеджер Redis для laravel-admin                                                                | ~1.5          |
-| [backup](https://github.com/laravel-admin-extensions/backup) | Интерфейс администратора для управления резервными копиями                                      | ~1.5          |
-| [log-viewer](https://github.com/laravel-admin-extensions/log-viewer) | Просмотрщик лог-журналов для Laravel                                                            | ~1.5          |
-| [config](https://github.com/laravel-admin-extensions/config) | Менеджер конфигурации для laravel-admin                                                             | ~1.5          |
+| [helpers](https://github.com/laravel-admin-extensions/helpers)             | Several tools to help you in development                                                        | ~1.0.2        |
+| [media-manager](https://github.com/laravel-admin-extensions/media-manager) | Provides a web interface to manage local files                                                  | ~1.0.2        |
+| [api-tester](https://github.com/laravel-admin-extensions/api-tester) | Helps you test your local Laravel APIs                                                          | ~1.0.2        |
+| [scheduling](https://github.com/laravel-admin-extensions/scheduling) | Task scheduling manager for laravel-admin                                                       | ~1.5          |
+| [redis-manager](https://github.com/laravel-admin-extensions/redis-manager) | Redis manager for laravel-admin                                                                 | ~1.5          |
+| [backup](https://github.com/laravel-admin-extensions/backup) | An admin interface for managing backups                                                         | ~1.5          |
+| [log-viewer](https://github.com/laravel-admin-extensions/log-viewer) | Log viewer for Laravel                                                                          | ~1.5          |
+| [config](https://github.com/laravel-admin-extensions/config) | Config manager for laravel-admin                                                                | ~1.5          |
 | [reporter](https://github.com/laravel-admin-extensions/reporter) | Provides a developer-friendly web interface to view the exception                               | ~1.5          |
 | [wangEditor](https://github.com/laravel-admin-extensions/wangEditor) | A rich text editor based on [wangeditor](http://www.wangeditor.com/)                            | ~1.6          |
 | [summernote](https://github.com/laravel-admin-extensions/summernote) | A rich text editor based on [summernote](https://summernote.org/)                               | ~1.6          |
-| [china-distpicker](https://github.com/laravel-admin-extensions/china-distpicker) | 一个基于[distpicker](https://github.com/fengyuanchen/distpicker)的中国省市区选择器                           | ~1.6          |
+| [china-distpicker](https://github.com/laravel-admin-extensions/china-distpicker) | A Chinese province/city/district picker based on [distpicker](https://github.com/fengyuanchen/distpicker) | ~1.6          |
 | [simplemde](https://github.com/laravel-admin-extensions/simplemde) | A markdown editor based on [simplemde](https://github.com/sparksuite/simplemde-markdown-editor) | ~1.6          |
 | [phpinfo](https://github.com/laravel-admin-extensions/phpinfo) | Integrate the `phpinfo` page into laravel-admin                                                 | ~1.6          |
 | [php-editor](https://github.com/laravel-admin-extensions/php-editor) <br/> [python-editor](https://github.com/laravel-admin-extensions/python-editor) <br/> [js-editor](https://github.com/laravel-admin-extensions/js-editor)<br/> [css-editor](https://github.com/laravel-admin-extensions/css-editor)<br/> [clike-editor](https://github.com/laravel-admin-extensions/clike-editor)| Several programing language editor extensions based on code-mirror                              | ~1.6          |
@@ -213,7 +200,7 @@ php artisan vendor:publish --tag=open-admin-assets --force
 | [google-authenticator](https://github.com/ylic/laravel-admin-google-authenticator) | Google authenticator                                                                            | ~1.6          |
 
 
-Переработанные расширения от Open-Admin под Bootstrap 5.3
+### Extensions reworked by Open-Admin for Bootstrap 5.3
 
 | Extension                                                        | Description                              | open-admin                              |
 |------------------------------------------------------------------| ---------------------------------------- |---------------------------------------- |
@@ -227,7 +214,7 @@ php artisan vendor:publish --tag=open-admin-assets --force
 | [phpinfo](https://github.com/open-admin-org/phpinfo)             | Show php info in the admin               |~1.0 |
 | [log-viewer](https://github.com/dedermus/log-viewer)             | Log viewer for laravel                   |~1.0.12 |
 | [page-designer](https://github.com/open-admin-org/page-designer) | Page designer to position items freely   |~1.0.18 |
-| [reporter](https://github.com/open-admin-org/reporter)           | rovides a developer-friendly web interface to view the exception    |~1.0.18 |
+| [reporter](https://github.com/open-admin-org/reporter)           | Provides a developer-friendly web interface to view the exception    |~1.0.18 |
 | [redis-manager](https://github.com/open-admin-org/redis-manager) | Redis manager for open-admin             |~1.0.20 |
 
 
@@ -245,28 +232,19 @@ php artisan vendor:publish --tag=open-admin-assets --force
 -->
 
 
-## Авторы
-Этот проект существует благодаря всем людям, которые вносят свой вклад. [[Contribute](CONTRIBUTING.md)].
-<a href="graphs/contributors"><img src="https://opencollective.com/laravel-admin/contributors.svg?width=890&button=false" /></a>
-## Backers
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/laravel-admin#backer)]
-<a href="https://opencollective.com/laravel-admin#backers" target="_blank"><img src="https://opencollective.com/laravel-admin/backers.svg?width=890"></a>
-## Sponsors
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/laravel-admin#sponsor)]
-<a href="https://opencollective.com/laravel-admin/sponsor/0/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/1/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/2/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/3/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/4/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/5/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/6/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/7/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/8/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/laravel-admin/sponsor/9/website" target="_blank"><img src="https://opencollective.com/laravel-admin/sponsor/9/avatar.svg"></a>
+## Credits
+
+This project exists thanks to everyone who contributes. [[Contribute](CONTRIBUTING.md)]
+
+`exment-admin-core` builds on the work of:
+
++ [laravel-admin](https://github.com/z-song/laravel-admin) by z-song
++ [open-admin](https://github.com/open-admin-org/open-admin)
++ [open-admin-core](https://github.com/dedermus/open-admin-core) by dedermus
 
 Other
 ------------
-`laravel-admin` based on following plugins or services:
+`exment-admin-core` is based on the following plugins or services:
 
 + [Laravel](https://laravel.com/)
 + [AdminLTE](https://adminlte.io/)
@@ -284,6 +262,6 @@ Other
 + [fontawesome-iconpicker](https://github.com/itsjavi/fontawesome-iconpicker)
 + [sweetalert2](https://github.com/sweetalert2/sweetalert2)
 
-Лицензия
+License
 ------------
-`laravel-admin` is licensed under [The MIT License (MIT)](LICENSE).
+`exment-admin-core` is licensed under [The MIT License (MIT)](LICENSE).

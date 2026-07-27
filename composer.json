@@ -1,14 +1,19 @@
 {
-    "name": "exceedone/open-admin-core",
-    "description": "open-admin-core. Open-source Laravel Admin panel. No pro or paid package, free & open. Based on laravel-admin, with special thanks to z-song",
+    "name": "exceedone/exment-admin-core",
+    "description": "exment-admin-core. Open-source Laravel Admin panel used by Exment. No pro or paid package, free & open. Based on open-admin-core (dedermus) and laravel-admin, with special thanks to z-song",
     "type": "library",
-    "keywords": ["laravel", "admin", "grid", "form", "open-admin","open","free"],
-    "homepage": "https://github.com/exceedone/open-admin-core.git",
+    "keywords": ["laravel", "admin", "grid", "form", "exment", "open-admin","open","free"],
+    "homepage": "https://github.com/exceedone/exment-admin-core",
     "license": "MIT",
     "authors": [
       {
+        "name": "Exceedone",
+        "role": "Maintainer"
+      },
+      {
         "name": "dedermus",
-        "email": "dedermus@yandex.ru"
+        "email": "dedermus@yandex.ru",
+        "role": "Original author (open-admin-core)"
       }
     ],
     "require": {
@@ -42,7 +47,7 @@
       ]
     },
     "scripts": {
-      "sass": "sass --watch resources/assets/open-admin-core/scss/styles.scss:resources/assets/open-admin-core/css/styles.css resources/assets/open-admin-core/scss/pages:resources/assets/open-admin-core/css/pages --style compressed",
+      "sass": "sass --watch resources/assets/open-admin/scss/styles.scss:resources/assets/open-admin/css/styles.css resources/assets/open-admin/scss/pages:resources/assets/open-admin/css/pages --style compressed",
       "test": "./vendor/bin/phpunit"
     },
     "suggest": {
