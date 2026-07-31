@@ -557,6 +557,7 @@ $(document).on('pjax:end', function () {
         var instance = bootstrap.Tooltip.getInstance(el);
         if (instance) instance.dispose();
     });
+    document.querySelectorAll('body > .select2-container').forEach(el => el.remove());
 });
 
 // On mobile, tapping a tooltip trigger that opens a modal leaves the tooltip visible
@@ -568,6 +569,9 @@ document.addEventListener('show.bs.modal', function () {
     });
 });
 $(document).on('pjax:send', function (xhr) {
+    try {
+        $('select.select2-hidden-accessible').select2('close');
+    } catch (e) {}
     if (xhr.relatedTarget && xhr.relatedTarget.tagName && xhr.relatedTarget.tagName.toLowerCase() === 'form') {
         const $form = $(xhr.relatedTarget);        
         const $submit_btn = $form.find(':submit');

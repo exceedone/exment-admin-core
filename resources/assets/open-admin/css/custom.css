@@ -669,6 +669,13 @@ div#main {
   outline: none;
 }
 
+.select2-selection--multiple .select2-selection__rendered li.select2-search--inline:only-child {
+  width: 100%;
+}
+.select2-selection--multiple .select2-selection__rendered li.select2-search--inline:only-child .select2-search__field {
+  width: 100% !important;
+}
+
 .box-footer.border-top.border-1.border-gray-500 {
   text-align: -webkit-right;
 }
