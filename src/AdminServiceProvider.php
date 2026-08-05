@@ -76,6 +76,12 @@ class AdminServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'admin');
 
+        // Load the package migrations so `migrate` works without publishing them first.
+        // A copy published into database/migrations still takes precedence, because
+        // Migrator::getMigrationFiles() keys files by migration name and the
+        // application path is resolved last.
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         $this->ensureHttps();
 
         if (file_exists($routes = admin_path('routes.php'))) {
