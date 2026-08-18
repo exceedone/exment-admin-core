@@ -240,16 +240,6 @@ return [
         'except' => [
             env('ADMIN_ROUTE_PREFIX', 'admin').'/auth/logs*',
         ],
-
-        /*
-         * Replace input fields that should not be logged
-         */
-        'filter_input' => [
-            'token'             => '*****-filtered-out-*****',
-            'password'          => '*****-filtered-out-*****',
-            'password_remember' => '*****-filtered-out-*****',
-            'password_confirmation' => '*****-filtered-out-*****',
-        ],
     ],
 
     /*
