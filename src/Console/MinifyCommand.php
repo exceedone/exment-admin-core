@@ -110,7 +110,7 @@ class MinifyCommand extends Command
         /** @phpstan-ignore-next-line  Unable to resolve the template type TValue in call to function collect  */
         $css = collect(array_merge(Admin::$css, Admin::baseCss()))
             ->unique()->map(function ($css) {
-                if (url()->isValidUrl($css)) {
+                if (admin_is_valid_url($css)) {
                     $this->assets['css'][] = $css;
 
                     return;
@@ -144,7 +144,7 @@ class MinifyCommand extends Command
         /** @phpstan-ignore-next-line  Unable to resolve the template type TValue in call to function collect  */
         $js = collect(array_merge(Admin::$js, Admin::baseJs()))
             ->unique()->map(function ($js) {
-                if (url()->isValidUrl($js)) {
+                if (admin_is_valid_url($js)) {
                     $this->assets['js'][] = $js;
 
                     return;

@@ -23,7 +23,7 @@ class Download extends AbstractDisplayer
                 return '';
             }
 
-            if (url()->isValidUrl($value)) {
+            if (admin_is_valid_url($value)) {
                 $src = $value;
             } elseif ($server) {
                 $src = rtrim($server, '/').'/'.ltrim($value, '/');

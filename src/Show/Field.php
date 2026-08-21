@@ -251,7 +251,7 @@ class Field implements Renderable
                     return '';
                 }
 
-                if (url()->isValidUrl($path)) {
+                if (admin_is_valid_url($path)) {
                     $src = $path;
                 } elseif ($server) {
                     $src = $server.$path;
@@ -288,7 +288,7 @@ class Field implements Renderable
                     return '';
                 }
 
-                if (url()->isValidUrl($path)) {
+                if (admin_is_valid_url($path)) {
                     $image = $path;
                 } elseif ($server) {
                     $image = $server.$path;
@@ -324,13 +324,17 @@ class Field implements Renderable
         $field = $this;
 
         return $this->unescape()->as(function ($path) use ($server, $download, $field) {
+            if (empty($path)) {
+                return '';
+            }
+
             $name = basename($path);
 
             $field->border = false;
 
             $size = $url = '';
 
-            if (url()->isValidUrl($path)) {
+            if (admin_is_valid_url($path)) {
                 $url = $path;
             } elseif ($server) {
                 $url = $server.$path;

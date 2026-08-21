@@ -20,7 +20,7 @@ class Image extends AbstractDisplayer
         }
 
         return collect((array) $this->value)->filter()->map(function ($path) use ($server, $width, $height) {
-            if (url()->isValidUrl($path) || strpos($path, 'data:image') === 0) {
+            if (admin_is_valid_url($path) || strpos($path, 'data:image') === 0) {
                 $src = $path;
             } elseif ($server) {
                 $src = rtrim($server, '/').'/'.ltrim($path, '/');

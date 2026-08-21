@@ -16,11 +16,37 @@ if (!function_exists('admin_path')) {
     }
 }
 
+if (!function_exists('admin_is_valid_url')) {
+    /**
+     * Null-safe wrapper of UrlGenerator::isValidUrl().
+     *
+     * PHP 8.1+ deprecates passing null to preg_match() (PHP 9 throws TypeError),
+     * so non-string / empty values are rejected before delegating to the framework.
+     * Semantics for strings are unchanged ('//cdn', '#', 'mailto:' stay valid).
+     *
+     * @param mixed $path
+     *
+     * @return bool
+     */
+    function admin_is_valid_url($path): bool
+    {
+        if ($path instanceof \Stringable) {
+            $path = (string) $path;
+        }
+
+        if (!is_string($path) || $path === '') {
+            return false;
+        }
+
+        return \Illuminate\Support\Facades\URL::isValidUrl($path);
+    }
+}
+
 if (!function_exists('admin_url')) {
     /**
      * Get admin url.
      *
-     * @param string $path
+     * @param string|null $path
      * @param mixed  $parameters
      * @param bool   $secure
      *
@@ -28,7 +54,7 @@ if (!function_exists('admin_url')) {
      */
     function admin_url($path = '', $parameters = [], $secure = null)
     {
-        if (\Illuminate\Support\Facades\URL::isValidUrl($path)) {
+        if (admin_is_valid_url($path)) {
             return $path;
         }
         
