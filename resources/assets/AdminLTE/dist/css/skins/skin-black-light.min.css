@@ -79,9 +79,6 @@
 #main-nav-menu > li > a {
     border-left: 1px solid #eee;
 }
-.user-menu{
-    border-left: 1px solid #eee;
-}
 .user-menu > span{
     color: black !important;
 }
