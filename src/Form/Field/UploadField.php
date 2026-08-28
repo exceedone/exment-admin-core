@@ -5,7 +5,6 @@ namespace ExmentAdminCore\Admin\Form\Field;
 use ExmentAdminCore\Admin\Form;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\URL;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 trait UploadField
@@ -506,7 +505,7 @@ trait UploadField
      */
     public function objectUrl($path)
     {
-        if (URL::isValidUrl($path)) {
+        if (admin_is_valid_url($path)) {
             return $path;
         }
 

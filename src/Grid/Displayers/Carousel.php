@@ -27,7 +27,7 @@ class Carousel extends AbstractDisplayer
         }
 
         $images = collect((array) $this->value)->filter()->map(function ($path) use ($server) {
-            if (url()->isValidUrl($path) || strpos($path, 'data:image') === 0) {
+            if (admin_is_valid_url($path) || strpos($path, 'data:image') === 0) {
                 $image = $path;
             } elseif ($server) {
                 $image = rtrim($server, '/').'/'.ltrim($path, '/');
