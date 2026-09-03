@@ -104,6 +104,17 @@
     transition: margin-left 0.1s ease
 }
 
+body > .wrapper:has(> aside.main-sidebar) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+body > .wrapper:has(> aside.main-sidebar) > #main.content-wrapper {
+    flex-grow: 1;
+    min-height: 0 !important
+}
+
 .fixed-bottom {
     margin-left: var(--sidebar-width)
 }
