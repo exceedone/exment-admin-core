@@ -94,7 +94,7 @@ class Pjax
     {
         $input = $response->getContent();
 
-        $title = $this->makeFromBetween($input, '<title>', '</title>');
+        $title = $this->makeFromBetween($input, '<title>', '</title>', true);
         $title = !empty($title) ? '<title>' . $title . '</title>' : '';
 
         $content = $this->makeFromBetween($input, '<!--start-pjax-container-->', '<!--end-pjax-container-->');
@@ -138,17 +138,26 @@ class Pjax
     }
 
     /**
-     * Prepare an HTML title tag.
+     * Take the text between two markers.
+     *
+     * $firstOnly stops at the first closing marker instead of the last one.
+     * The container markers want the last one, because the body they wrap may
+     * legitimately repeat the opening marker; the title wants the first.
      *
      * @param string $input
+     * @param string $start
+     * @param string $end
+     * @param bool   $firstOnly
      *
      * @return string
      */
-    protected function makeFromBetween($input, $start, $end)
+    protected function makeFromBetween($input, $start, $end, $firstOnly = false)
     {
         $str = '';
         if (Str::contains($input, $start)) {
-            $str = Str::between($input, $start, $end);
+            $str = $firstOnly
+                ? Str::betweenFirst($input, $start, $end)
+                : Str::between($input, $start, $end);
         }
 
         return $str;
