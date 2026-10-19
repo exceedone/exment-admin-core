@@ -25,7 +25,7 @@ class Pjax
     {
         $response = $next($request);
 
-        if (!$request->pjax() || $response->isRedirection() || Admin::guard()->guest()) {
+        if (!$request->pjax() || $request->wantsJson() || $response->isRedirection() || Admin::guard()->guest()) {
             return $response;
         }
 

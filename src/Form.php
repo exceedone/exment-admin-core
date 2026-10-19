@@ -494,10 +494,17 @@ class Form implements Renderable
     /**
      * @param MessageBag $message
      *
-     * @return $this|\Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
     protected function responseValidationError(MessageBag $message)
     {
+        if (\request()->wantsJson()) {
+            return response()->json([
+                'message' => $message->first(),
+                'errors'  => $message->getMessages(),
+            ], 422);
+        }
+
         if (\request()->ajax() && !\request()->pjax()) {
             return response()->json([
                 'status'     => false,
@@ -669,7 +676,7 @@ class Form implements Renderable
         // Handle validation errors.
         if ($validationMessages = $this->validationMessages($data)) {
             if (!$isEditable) {
-                return back()->withInput()->withErrors($validationMessages);
+                return $this->responseValidationError($validationMessages);
             }
 
             return response()->json(['errors' => Arr::dot($validationMessages->getMessages())], 422);
