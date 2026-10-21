@@ -8,7 +8,7 @@
                     <thead>
                         <tr>
                             @foreach($grid->visibleColumns() as $column)
-                            <th {!! $column->formatHtmlAttributes() !!}>{{$column->getLabel()}}{!! $column->renderHeader() !!}</th>
+                            <th {!! $column->formatHtmlAttributes() !!}>{{$column->getLabel()}}{!! $column->sorter() !!}{!! $column->renderHeader() !!}</th>
                             @endforeach
                         </tr>
                     </thead>
@@ -37,7 +37,7 @@
                     <thead>
                     <tr>
                         @foreach($grid->leftVisibleColumns() as $column)
-                            <th {!! $column->formatHtmlAttributes() !!}>{{$column->getLabel()}}{!! $column->renderHeader() !!}</th>
+                            <th {!! $column->formatHtmlAttributes() !!}>{{$column->getLabel()}}{!! $column->sorter() !!}{!! $column->renderHeader() !!}</th>
                         @endforeach
                     </tr>
                     </thead>
@@ -69,7 +69,7 @@
                     <thead>
                     <tr>
                         @foreach($grid->rightVisibleColumns() as $column)
-                            <th {!! $column->formatHtmlAttributes() !!}>{{$column->getLabel()}}{!! $column->renderHeader() !!}</th>
+                            <th {!! $column->formatHtmlAttributes() !!}>{{$column->getLabel()}}{!! $column->sorter() !!}{!! $column->renderHeader() !!}</th>
                         @endforeach
                     </tr>
                     </thead>

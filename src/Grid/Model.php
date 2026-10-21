@@ -644,8 +644,8 @@ class Model
         else {
             $this->resetOrderBy();
 
-            // Change type -1 to desc, 1 to asc.
-            $type = ($this->sort['type'] ?? 1) == -1 ? 'desc' : 'asc';
+            // Change type -1 to desc, 1 to asc (also accepts the asc/desc spelling).
+            $type = static::normalizeSortDirection($this->sort['type'] ?? 1);
     
             // get column. if contains "cast", set set column as cast
             if ($column && !is_null($cast = $column->getCast())) {
@@ -664,6 +664,32 @@ class Model
                 'arguments' => $arguments,
             ]);
         }
+    }
+
+    /**
+     * Normalize a sort type into an SQL sort direction.
+     *
+     * The grid header sends the sort type as `1` (asc) / `-1` (desc), but
+     * bookmarked urls, plugins and Grid\Column\Sorter may spell it `asc` /
+     * `desc` instead. Both dialects have to resolve to the same direction,
+     * otherwise a non-numeric type silently falls back to `asc` and sorting
+     * descending becomes impossible.
+     *
+     * @param mixed $type
+     *
+     * @return string `asc` or `desc`
+     */
+    public static function normalizeSortDirection($type)
+    {
+        if (is_string($type)) {
+            $direction = strtolower(trim($type));
+
+            if ($direction === 'asc' || $direction === 'desc') {
+                return $direction;
+            }
+        }
+
+        return (int) $type === -1 ? 'desc' : 'asc';
     }
 
     /**
@@ -712,8 +738,8 @@ class Model
 
             $this->resetOrderBy();
 
-            // Change type -1 to desc, 1 to asc.
-            $type = ($this->sort['type'] ?? 1) == -1 ? 'desc' : 'asc';
+            // Change type -1 to desc, 1 to asc (also accepts the asc/desc spelling).
+            $type = static::normalizeSortDirection($this->sort['type'] ?? 1);
     
             $this->queries->push([
                 'method'    => 'orderBy',
@@ -736,8 +762,8 @@ class Model
         if($column && !is_null($func = $column->getSortCallback())){
             $this->resetOrderBy();   
 
-            // Change type -1 to desc, 1 to asc.
-            $type = ($this->sort['type'] ?? 1) == -1 ? 'desc' : 'asc';
+            // Change type -1 to desc, 1 to asc (also accepts the asc/desc spelling).
+            $type = static::normalizeSortDirection($this->sort['type'] ?? 1);
     
             // call callback sorting.
             $this->queries->push([
