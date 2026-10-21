@@ -205,7 +205,8 @@ class Tools implements Renderable
     protected function renderList()
     {
         $text = trans('admin.list');
-        $url = url($this->getListPath(true));
+        // Escape: the path can carry a crafted record id from the URL.
+        $url = e(url($this->getListPath(true)));
 
         return <<<EOT
 <div class="btn-group pull-right" style="margin-right: 5px">
@@ -222,7 +223,8 @@ EOT;
     protected function renderView()
     {
         $view = trans('admin.view');
-        $url = url($this->getViewPath());
+        // Escape: the path can carry a crafted record id from the URL.
+        $url = e(url($this->getViewPath()));
 
         return <<<HTML
 <div class="btn-group pull-right" style="margin-right: 5px">
@@ -240,8 +242,9 @@ HTML;
      */
     protected function renderDelete()
     {
-        $url = url($this->getDeletePath());
-        $listUrl = url($this->getListPath(true));
+        // Escape: the path can carry a crafted record id from the URL.
+        $url = e(url($this->getDeletePath()));
+        $listUrl = e(url($this->getListPath(true)));
         $trans = [
             'delete_confirm' => trans('admin.delete_confirm'),
             'confirm'        => trans('admin.confirm'),
