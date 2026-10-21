@@ -44,14 +44,13 @@ trait HasHeader
      * @param string $cast
      *
      * @return Column|string
+     *
+     * @deprecated Use `sortable()`. Every grid view renders `sorter()`, so
+     *             adding a Sorter header on top of it duplicates the link.
      */
     protected function addSorter($cast = null)
     {
-        $sortName = $this->grid->model()->getSortName();
-
-        $sorter = new Sorter($sortName, $this->getName(), $cast);
-
-        return $this->addHeader($sorter);
+        return $this->sortable($cast);
     }
 
     /**

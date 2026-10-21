@@ -3,6 +3,8 @@
 namespace ExmentAdminCore\Admin\Grid\Column;
 
 use Illuminate\Contracts\Support\Renderable;
+use ExmentAdminCore\Admin\Grid\Column;
+use ExmentAdminCore\Admin\Grid\Model;
 
 class Sorter implements Renderable
 {
@@ -31,17 +33,26 @@ class Sorter implements Renderable
     protected $columnName;
 
     /**
+     * Column this sorter belongs to, when known.
+     *
+     * @var Column|null
+     */
+    protected $column;
+
+    /**
      * Sorter constructor.
      *
-     * @param string $sortName
-     * @param string $columnName
-     * @param string $cast
+     * @param string      $sortName
+     * @param string      $columnName
+     * @param string|null $cast
+     * @param Column|null $column
      */
-    public function __construct($sortName, $columnName, $cast)
+    public function __construct($sortName, $columnName, $cast = null, ?Column $column = null)
     {
         $this->sortName = $sortName;
         $this->columnName = $columnName;
         $this->cast = $cast;
+        $this->column = $column;
     }
 
     /**
@@ -65,16 +76,22 @@ class Sorter implements Renderable
      */
     public function render()
     {
-        $icon = 'icon-sort';
-        $type = 'desc';
-
-        if ($this->isSorted()) {
-            $type = $this->sort['type'] == 'desc' ? 'asc' : 'desc';
-            $icon_type = $this->sort['type'] == 'desc' ? 'down' : 'up';
-            $icon .= "-amount-{$icon_type}";
+        // Column::sorter() is the single implementation of the sort url contract
+        // that Grid\Model reads back, so defer to it whenever the column is known.
+        if ($this->column) {
+            return $this->column->sorter();
         }
 
-        // set sort value
+        $icon = 'icon-sort';
+        $type = -1;
+
+        if ($this->isSorted()) {
+            $current = Model::normalizeSortDirection($this->sort['type'] ?? null);
+            $type = $current === 'asc' ? -1 : 1;
+            $icon .= $current === 'asc' ? '-amount-up' : '-amount-down';
+        }
+
+        // set sort value. Grid\Model expects the numeric 1/-1 form.
         $sort = ['column' => $this->columnName, 'type' => $type];
 
         if ($this->cast) {
@@ -86,6 +103,6 @@ class Sorter implements Renderable
 
         $url = url()->current().'?'.http_build_query($query);
 
-        return "<a class=\"icon-fw $icon\" href=\"$url\"></a>";
+        return "<a class=\"icon-fw " . e($icon) . "\" href=\"" . e($url) . "\"></a>";
     }
 }
