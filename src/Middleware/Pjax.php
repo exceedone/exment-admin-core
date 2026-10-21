@@ -97,9 +97,9 @@ class Pjax
         $title = $this->makeFromBetween($input, '<title>', '</title>', true);
         $title = !empty($title) ? '<title>' . $title . '</title>' : '';
 
+        // The marked-out content is the raw HTML of the page, already UTF-8, so it is sent as is.
+        // Decoding its numeric entities here would turn escaped user input such as "&#60;" into real tags.
         $content = $this->makeFromBetween($input, '<!--start-pjax-container-->', '<!--end-pjax-container-->');
-        $content = $this->decodeUtf8HtmlEntities($content);
-
 
         if (empty($content)) {
             // try dom-crwawler
@@ -183,7 +183,10 @@ class Pjax
     }
 
     /**
-     * Decode utf-8 characters to html entities.
+     * Turn the numeric entities DomCrawler writes for non-ASCII text back into UTF-8 characters.
+     *
+     * ASCII entities (code point < 128) are kept: "&#60;" may be escaped user input,
+     * and decoding it, for example inside a <script> block, would create real markup.
      *
      * @param string $html
      *
@@ -191,8 +194,14 @@ class Pjax
      */
     protected function decodeUtf8HtmlEntities($html)
     {
-        return preg_replace_callback('/(&#[0-9]+;)/', function ($html) {
-            return mb_convert_encoding($html[1], 'UTF-8', 'HTML-ENTITIES');
+        return preg_replace_callback('/&#([0-9]+);/', function ($match) {
+            $codePoint = (int) $match[1];
+            // Keep ASCII, UTF-16 surrogates and values past the last Unicode code point as they are.
+            if ($codePoint < 128 || ($codePoint >= 0xD800 && $codePoint <= 0xDFFF) || $codePoint > 0x10FFFF) {
+                return $match[0];
+            }
+
+            return mb_chr($codePoint, 'UTF-8');
         }, $html);
     }
 
