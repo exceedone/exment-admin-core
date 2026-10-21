@@ -131,6 +131,7 @@ class MultipleFile extends Field
      * Sort files.
      *
      * @param string $order
+     * @param array<mixed>|false $updated_files false: sort the original files
      *
      * @return array<mixed>
      */
@@ -198,7 +199,7 @@ class MultipleFile extends Field
         }
 
         if (is_string($files) && request()->has(static::FILE_SORT_FLAG)) {
-            return $this->sortFiles($files);
+            return $this->sortFiles($files, false);
         }
 
         if (is_string($files)) {
