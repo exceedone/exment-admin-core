@@ -250,7 +250,12 @@ trait HasAssets
         if (!is_null($js)) {
             return static::$baseJs = $js;
         }
-        array_push(static::$baseJs,         'vendor/open-admin/flatpickr/l10n/' . config('app.locale') . '.js'); //4.6.13 version
+        // the date picker's texts in the app's language (flatpickr 4.6.13): flatpickr has no
+        // file for its built-in English, and a locale without one would load a 404 on every page
+        $l10n = 'vendor/open-admin/flatpickr/l10n/' . config('app.locale') . '.js';
+        if (is_file(public_path($l10n))) {
+            array_push(static::$baseJs, $l10n);
+        }
         // array_push(static::$baseJs, 'vendor/exment/js/customscript.js');
         return static::$baseJs;
     }
