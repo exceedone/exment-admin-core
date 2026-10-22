@@ -944,6 +944,8 @@ class Form implements Renderable
     {
         $data = $this->handleEditable($data);
 
+        $data = $this->handleFileSort($data);
+
         if ($this->handleOrderable($id, $data)) {
             return response([
                 'status'  => true,
@@ -970,6 +972,38 @@ class Form implements Renderable
             Arr::forget($input, ['pk', 'value', 'name']);
             Arr::set($input, $name, $value);
         }
+
+        return $input;
+    }
+
+    /**
+     * Handle the new order of the files of a multiple file field (as laravel-admin / v6).
+     *
+     * The upload widget posts the order in _file_sort_[column]; it becomes the value of the
+     * column, which MultipleFile::prepare() then sorts the saved files with.
+     *
+     * @param array<mixed> $input
+     *
+     * @return array<mixed>
+     */
+    protected function handleFileSort(array $input = [])
+    {
+        if (!array_key_exists(Form\Field::FILE_SORT_FLAG, $input) || !is_array($input[Form\Field::FILE_SORT_FLAG])) {
+            return $input;
+        }
+
+        $sorts = array_filter($input[Form\Field::FILE_SORT_FLAG], function ($order) {
+            return is_string($order) && $order !== '';
+        });
+        if (empty($sorts)) {
+            return $input;
+        }
+
+        foreach ($sorts as $column => $order) {
+            Arr::set($input, $column, $order);
+        }
+
+        request()->replace($input);
 
         return $input;
     }

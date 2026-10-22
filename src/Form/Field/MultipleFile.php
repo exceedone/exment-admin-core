@@ -137,23 +137,37 @@ class MultipleFile extends Field
      */
     protected function sortFiles($order, $updated_files)
     {
-        $order = explode(',', trim($order, ','));
-        if ($updated_files === false) {
-            $updated_files = $this->original();
+        $files = $updated_files === false ? $this->original() : $updated_files;
+        $files = array_values(is_array($files) ? $files : (is_null($files) || $files === '' ? [] : [$files]));
+
+        // the widget posts the preview keys (initialFileIndex(): the index by default, like v6);
+        // the file paths and the plain indexes (v6) are accepted as well
+        $positions = [];
+        foreach ($files as $index => $file) {
+            $positions[(string) $this->initialFileIndex($index, $file)] = $index;
+        }
+        foreach ($files as $index => $file) {
+            if (is_string($file) && !array_key_exists($file, $positions)) {
+                $positions[$file] = $index;
+            }
+        }
+        foreach (array_keys($files) as $index) {
+            if (!array_key_exists((string) $index, $positions)) {
+                $positions[(string) $index] = $index;
+            }
         }
 
-        usort($updated_files, function ($a, $b) use ($order) {
-            $pos_a = array_search($a, $order);
-            $pos_b = array_search($b, $order);
-
-            if ($pos_a === false || $pos_b === false) {
-                return 0;
+        $sorted = [];
+        foreach (explode(',', trim((string) $order, ',')) as $item) {
+            // an order naming a file the field does not have keeps the saved files as they are
+            if (!array_key_exists($item, $positions)) {
+                return $files;
             }
+            $sorted[$positions[$item]] = $files[$positions[$item]];
+        }
 
-            return ($pos_a < $pos_b) ? -1 : 1;
-        });
-
-        return $updated_files;
+        // the files the order does not name are kept, after the sorted ones
+        return array_values($sorted + $files);
     }
 
     /**
@@ -178,7 +192,7 @@ class MultipleFile extends Field
     /**
      * Prepare for saving.
      *
-     * @param UploadedFile|array<mixed> $files
+     * @param UploadedFile|array<mixed>|string $files string: one file, or the new order of the files (_file_sort_)
      *
      * @return mixed|string
      */
