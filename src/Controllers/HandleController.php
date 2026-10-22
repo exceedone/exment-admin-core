@@ -26,6 +26,11 @@ class HandleController extends Controller
             throw new Exception("Form [{$formClass}] not exists.");
         }
 
+        // only resolve a Form subclass: do not let the request instantiate an arbitrary class
+        if (!is_subclass_of($formClass, Form::class)) {
+            throw new Exception("Form [{$formClass}] is not a form.");
+        }
+
         /** @var Form $form */
         $form = app($formClass);
 
