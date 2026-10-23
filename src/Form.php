@@ -48,6 +48,22 @@ class Form implements Renderable
     public const REMOVE_FLAG_NAME = '_remove_';
 
     /**
+     * Input keys not to flash to the session when redirecting with input.
+     */
+    public const DONT_FLASH_INPUT_KEYS = ['password', 'password_confirmation', 'current_password'];
+
+    /**
+     * Get request input to flash to the session when redirecting back. Passwords are removed.
+     * Same input as withInput() flashes: input(), not all(), so that empty file inputs are not flashed as null.
+     *
+     * @return array<mixed>
+     */
+    public static function getFlashInput(): array
+    {
+        return Arr::except(\request()->input(), static::DONT_FLASH_INPUT_KEYS);
+    }
+
+    /**
      * Eloquent model of the form.
      *
      * @var Model|null
@@ -513,7 +529,7 @@ class Form implements Renderable
             ]);
         }
 
-        return back()->withInput()->withErrors($message);
+        return back()->withInput(static::getFlashInput())->withErrors($message);
     }
 
 
@@ -780,7 +796,7 @@ class Form implements Renderable
         // Handle validation errors.
         if ($validationMessages = $this->validationMessages($data)) {
             if (!$isEditable) {
-                return back()->withInput()->withErrors($validationMessages);
+                return back()->withInput(static::getFlashInput())->withErrors($validationMessages);
             }
 
             return response()->json(['errors' => Arr::dot($validationMessages->getMessages())], 422);
@@ -1578,7 +1594,7 @@ class Form implements Renderable
     {
         $message = $this->validationMessages($input);
         if($message !== false){
-            return back()->withInput()->withErrors($message);
+            return back()->withInput(static::getFlashInput())->withErrors($message);
         }
         return true;
     }

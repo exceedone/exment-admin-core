@@ -79,7 +79,7 @@ class Pjax
             'line'    => $exception->getLine(),
         ]);
 
-        return back()->withInput()->withErrors($error, 'exception');
+        return back()->withInput(\ExmentAdminCore\Admin\Form::getFlashInput())->withErrors($error, 'exception');
     }
 
     /**

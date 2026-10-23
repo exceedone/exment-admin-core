@@ -51,7 +51,7 @@ class AuthController extends Controller
             return $this->sendLoginResponse($request);
         }
 
-        return back()->withInput()->withErrors([
+        return back()->withInput(\ExmentAdminCore\Admin\Form::getFlashInput())->withErrors([
             $this->username() => $this->getFailedLoginMessage(),
         ]);
     }

@@ -528,7 +528,7 @@ class Form implements Renderable
     {
         $message = $this->validate($request);
         if($message !== false){
-            return back()->withInput()->withErrors($message);
+            return back()->withInput(BaseForm::getFlashInput())->withErrors($message);
         }
         return true;
     }
