@@ -137,9 +137,12 @@ trait HasAssets
     ];
 
     /**
+     * jQuery is served from the published assets, not a CDN,
+     * so the admin pages and public forms also work on a network without Internet access.
+     *
      * @var string
      */
-    public static $jQuery = 'https://code.jquery.com/jquery-3.7.1.min.js';
+    public static $jQuery = 'vendor/open-admin/AdminLTE/plugins/jQuery/jQuery-3.7.1.min.js';
 
     /**
      * @var array
