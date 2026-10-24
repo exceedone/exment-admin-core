@@ -1280,7 +1280,8 @@ progress {
   .offset-md-0 {
     margin-left: 0;
   }
-  .offset-md-1 {
+  .offset-md-1,
+  .col-md-offset-1 {
     margin-left: 8.33333333%;
   }
   .offset-md-2 {

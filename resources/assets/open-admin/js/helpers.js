@@ -148,6 +148,7 @@ function bindSubmitButtonWithLoading() {
 				e.preventDefault();
 				const firstInvalid = form.find(':invalid')[0];
 				if (firstInvalid) {
+					admin.form.show_invalid_tabs(form[0], firstInvalid);
 					firstInvalid.scrollIntoView({ behavior: 'instant', block: 'center' });
 					firstInvalid.reportValidity();
 				}

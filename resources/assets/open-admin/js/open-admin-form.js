@@ -123,6 +123,34 @@ admin.form = {
         }
     },
 
+    // The browser cannot show its validation message on a field inside a hidden tab,
+    // so mark every tab that has an invalid field and open the tab(s) holding `field`.
+    show_invalid_tabs: function (form, field) {
+        let tabLink = function (pane) {
+            return form.querySelector('.nav-tabs a[href="#' + pane.id + '"]');
+        };
+
+        form.querySelectorAll('.tab-pane :invalid').forEach((invalid) => {
+            let link = tabLink(invalid.closest('.tab-pane'));
+            let icon = link ? link.querySelector('i.text-danger') : null;
+            if (icon) {
+                icon.classList.remove('d-none');
+            }
+        });
+
+        // open from the outermost tab so nested tabs become visible too
+        let panes = [];
+        for (let pane = field.closest('.tab-pane'); pane; pane = pane.parentElement.closest('.tab-pane')) {
+            panes.unshift(pane);
+        }
+        panes.forEach((pane) => {
+            let link = tabLink(pane);
+            if (link && !pane.classList.contains('active')) {
+                bootstrap.Tab.getOrCreateInstance(link).show();
+            }
+        });
+    },
+
     disable_cascaded_forms: function (selector) {
         document.querySelector(selector).addEventListener('submit', function (event) {
             let elems = event.target.querySelectorAll('div.cascade-group.d-none input');
