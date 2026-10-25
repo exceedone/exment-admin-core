@@ -5046,7 +5046,8 @@
           type: self._getFileType(ftype),
           fileindex: ind,
           fileid: fileId || "",
-          filename: filename,
+          // the file name is chosen by the user and lands in the data-filename attribute
+          filename: $h.htmlEncode(filename),
           typeCss: typeCss,
           footer: footer,
           data: zoom && vZoomData ? self.zoomPlaceholder + "{zoomData}" : vData,
