@@ -4,6 +4,7 @@ namespace ExmentAdminCore\Admin\Grid;
 
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model as BaseModel;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
@@ -130,9 +131,15 @@ class Column
     protected $displayCallbacks = [];
 
     /**
+     * Whether the result of the display callbacks is html-escaped.
+     *
+     * Escaping is on by default: the grid prints cells unescaped ({!! !!}), so a
+     * `display()` closure that interpolates stored user input would otherwise be
+     * a stored XSS sink. Call `escape(false)` on columns that return trusted html.
+     *
      * @var bool
      */
-    protected $escape = false;
+    protected $escape = true;
 
 
     /**
@@ -567,13 +574,25 @@ class Column
     /**
      * Mark this column as sortable.
      *
+     * Flips the `$sortable` flag that `sorter()` is gated on, so the sort link
+     * shows up in the grid views. Registering a Grid\Column\Sorter header
+     * instead is not enough: the default view (admin::grid.table) renders
+     * `sorter()`, not `renderHeader()`.
+     *
      * @param null|string $cast
      *
-     * @return Column|string
+     * @return $this
      */
     public function sortable($cast = null)
     {
-        return $this->addSorter($cast);
+        $this->sortable = true;
+
+        // Grid\Model reads the cast off the column, so it has to be stored here.
+        if (!is_null($cast)) {
+            $this->cast = $cast;
+        }
+
+        return $this;
     }
 
     /**
@@ -664,6 +683,24 @@ class Column
     }
 
     /**
+     * Register a display callback whose output is trusted html.
+     *
+     * The built-in displayers render their own markup, so escaping their result
+     * would print the tags as text. Application `display()` closures are not
+     * trusted and stay escaped, see `$escape`.
+     *
+     * @param Closure $callback
+     *
+     * @return $this
+     */
+    protected function displayTrustedHtml(Closure $callback)
+    {
+        $this->escape = false;
+
+        return $this->display($callback);
+    }
+
+    /**
      * Display using display abstract.
      *
      * @param string $abstract
@@ -677,7 +714,7 @@ class Column
 
         $column = $this;
 
-        return $this->display(function ($value) use ($grid, $column, $abstract, $arguments) {
+        return $this->displayTrustedHtml(function ($value) use ($grid, $column, $abstract, $arguments) {
             /** @var AbstractDisplayer $displayer */
             $displayer = new $abstract($value, $grid, $column, $this);
 
@@ -1003,7 +1040,7 @@ class Column
         $class = static::$defined[$this->name];
 
         if ($class instanceof Closure) {
-            $this->display($class);
+            $this->displayTrustedHtml($class);
 
             return;
         }
@@ -1015,7 +1052,7 @@ class Column
         $grid = $this->grid;
         $column = $this;
 
-        $this->display(function ($value) use ($grid, $column, $class) {
+        $this->displayTrustedHtml(function ($value) use ($grid, $column, $class) {
             /** @var AbstractDisplayer $definition */
             $definition = new $class($value, $grid, $column, $this);
 
@@ -1032,15 +1069,29 @@ class Column
      */
     protected function htmlEntityEncode($item)
     {
-        if (is_array($item)) {
-            array_walk_recursive($item, function (&$value) {
-                $value = htmlentities_ex($value ?? '');
-            });
-        } else {
-            $item = htmlentities_ex($item ?? '');
+        // Htmlable is an explicit "this is already html" contract.
+        if ($item instanceof Htmlable) {
+            return $item->toHtml();
         }
 
-        return $item;
+        if (is_array($item)) {
+            array_walk_recursive($item, function (&$value) {
+                if (is_scalar($value) || is_null($value)) {
+                    $value = htmlentities_ex($value ?? '');
+                }
+            });
+
+            return $item;
+        }
+
+        // Views, Renderable displayers and the Column returned by the chained
+        // display callback cannot be escaped as a string; Grid\Row::output()
+        // resolves them later.
+        if (!is_scalar($item) && !is_null($item)) {
+            return $item;
+        }
+
+        return htmlentities_ex($item ?? '');
     }
 
     /**
@@ -1057,10 +1108,12 @@ class Column
         $icon = 'fa-sort';
         $type = -1;
 
-        // If this column is sorted, reverse sort
+        // If this column is sorted, reverse sort. The current type is normalized
+        // first so that an `asc`/`desc` spelled url still toggles correctly.
         if ($this->isSorted()) {
-            $type = $this->sort['type'] == 1 ? -1 : 1;
-            $icon .= "-amount-" . ($type == 1 ? 'desc' : 'asc');
+            $current = Model::normalizeSortDirection($this->sort['type'] ?? null);
+            $type = $current === 'asc' ? -1 : 1;
+            $icon .= "-amount-" . $current;
         }
 
         // set sort value
@@ -1210,7 +1263,7 @@ HELP;
     protected function callBuiltinDisplayer($abstract, $arguments)
     {
         if ($abstract instanceof Closure) {
-            return $this->display(function ($value) use ($abstract, $arguments) {
+            return $this->displayTrustedHtml(function ($value) use ($abstract, $arguments) {
                 return $abstract->call($this, ...array_merge([$value], $arguments));
             });
         }
@@ -1219,7 +1272,7 @@ HELP;
             $grid = $this->grid;
             $column = $this;
 
-            return $this->display(function ($value) use ($abstract, $grid, $column, $arguments) {
+            return $this->displayTrustedHtml(function ($value) use ($abstract, $grid, $column, $arguments) {
                 /** @var AbstractDisplayer $displayer */
                 $displayer = new $abstract($value, $grid, $column, $this);
 

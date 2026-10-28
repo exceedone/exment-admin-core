@@ -86,13 +86,13 @@ class Permission
     protected function shouldPassThrough($request)
     {
         // 下面这些路由不验证权限
+        // The _handle_* routes are not excepted: HandleController instantiates and runs the
+        // class the request names, so skipping the permission check lets any logged-in user
+        // run a form/action they have no permission for. Each handler enforces its own
+        // permission instead.
         $excepts = array_merge(config('admin.auth.excepts', []), [
             'auth/login',
             'auth/logout',
-            '_handle_action_',
-            '_handle_form_',
-            '_handle_selectable_',
-            '_handle_renderable_',
         ]);
 
         /** @phpstan-ignore-next-line Unable to resolve the template type TKey in call to function collect  */

@@ -48,6 +48,22 @@ class Form implements Renderable
     public const REMOVE_FLAG_NAME = '_remove_';
 
     /**
+     * Input keys not to flash to the session when redirecting with input.
+     */
+    public const DONT_FLASH_INPUT_KEYS = ['password', 'password_confirmation', 'current_password'];
+
+    /**
+     * Get request input to flash to the session when redirecting back. Passwords are removed.
+     * Same input as withInput() flashes: input(), not all(), so that empty file inputs are not flashed as null.
+     *
+     * @return array<mixed>
+     */
+    public static function getFlashInput(): array
+    {
+        return Arr::except(\request()->input(), static::DONT_FLASH_INPUT_KEYS);
+    }
+
+    /**
      * Eloquent model of the form.
      *
      * @var Model|null
@@ -494,10 +510,17 @@ class Form implements Renderable
     /**
      * @param MessageBag $message
      *
-     * @return $this|\Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
      */
     protected function responseValidationError(MessageBag $message)
     {
+        if (\request()->wantsJson()) {
+            return response()->json([
+                'message' => $message->first(),
+                'errors'  => $message->getMessages(),
+            ], 422);
+        }
+
         if (\request()->ajax() && !\request()->pjax()) {
             return response()->json([
                 'status'     => false,
@@ -506,7 +529,7 @@ class Form implements Renderable
             ]);
         }
 
-        return back()->withInput()->withErrors($message);
+        return back()->withInput(static::getFlashInput())->withErrors($message);
     }
 
 
@@ -669,7 +692,7 @@ class Form implements Renderable
         // Handle validation errors.
         if ($validationMessages = $this->validationMessages($data)) {
             if (!$isEditable) {
-                return back()->withInput()->withErrors($validationMessages);
+                return $this->responseValidationError($validationMessages);
             }
 
             return response()->json(['errors' => Arr::dot($validationMessages->getMessages())], 422);
@@ -773,7 +796,7 @@ class Form implements Renderable
         // Handle validation errors.
         if ($validationMessages = $this->validationMessages($data)) {
             if (!$isEditable) {
-                return back()->withInput()->withErrors($validationMessages);
+                return back()->withInput(static::getFlashInput())->withErrors($validationMessages);
             }
 
             return response()->json(['errors' => Arr::dot($validationMessages->getMessages())], 422);
@@ -937,6 +960,8 @@ class Form implements Renderable
     {
         $data = $this->handleEditable($data);
 
+        $data = $this->handleFileSort($data);
+
         if ($this->handleOrderable($id, $data)) {
             return response([
                 'status'  => true,
@@ -963,6 +988,38 @@ class Form implements Renderable
             Arr::forget($input, ['pk', 'value', 'name']);
             Arr::set($input, $name, $value);
         }
+
+        return $input;
+    }
+
+    /**
+     * Handle the new order of the files of a multiple file field (as laravel-admin / v6).
+     *
+     * The upload widget posts the order in _file_sort_[column]; it becomes the value of the
+     * column, which MultipleFile::prepare() then sorts the saved files with.
+     *
+     * @param array<mixed> $input
+     *
+     * @return array<mixed>
+     */
+    protected function handleFileSort(array $input = [])
+    {
+        if (!array_key_exists(Form\Field::FILE_SORT_FLAG, $input) || !is_array($input[Form\Field::FILE_SORT_FLAG])) {
+            return $input;
+        }
+
+        $sorts = array_filter($input[Form\Field::FILE_SORT_FLAG], function ($order) {
+            return is_string($order) && $order !== '';
+        });
+        if (empty($sorts)) {
+            return $input;
+        }
+
+        foreach ($sorts as $column => $order) {
+            Arr::set($input, $column, $order);
+        }
+
+        request()->replace($input);
 
         return $input;
     }
@@ -1537,7 +1594,7 @@ class Form implements Renderable
     {
         $message = $this->validationMessages($input);
         if($message !== false){
-            return back()->withInput()->withErrors($message);
+            return back()->withInput(static::getFlashInput())->withErrors($message);
         }
         return true;
     }

@@ -204,7 +204,9 @@ trait HasFormAttributes
 
         $html = [];
         foreach ($attributes as $key => $val) {
-            $html[] = "$key=\"$val\"";
+            // Escape the value: it can carry the request path (e.g. the form action), which a
+            // crafted record id in the URL would otherwise break out of to inject markup.
+            $html[] = "$key=\"" . e($val) . '"';
         }
 
         return implode(' ', $html) ?: '';
