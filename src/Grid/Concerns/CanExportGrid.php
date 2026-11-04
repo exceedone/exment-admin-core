@@ -45,9 +45,8 @@ trait CanExportGrid
      */
     protected function getExporter($scope)
     {
-        if (!empty($this->builder)) {
-            call_user_func($this->builder, $this);
-        }
+        $this->applyBuilder();
+
         return (new Exporter($this))->resolve($this->exporter)->withScope($scope);
     }
 
