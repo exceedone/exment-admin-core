@@ -518,6 +518,24 @@ admin.lazyGrid = {
     },
 
     /**
+     * Dispatches 'admin:lazy-grid:loaded' (bubbling, detail.tbody) once rows and fragment scripts are initialized,
+     * so integrations can bind behavior to the inserted rows. Listener errors are reported, never rethrown.
+     *
+     * @param {HTMLElement} tbody
+     * @returns {void}
+     */
+    notifyLoaded: function (tbody) {
+        try {
+            tbody.dispatchEvent(new CustomEvent('admin:lazy-grid:loaded', {
+                bubbles: true,
+                detail: { tbody: tbody },
+            }));
+        } catch (e) {
+            console.error('A lazy-grid loaded listener failed.', e);
+        }
+    },
+
+    /**
      * Loads one grid's rows. Without a placeholder, picks the next pending grid that has not failed.
      * Requests are serialized; completion advances the queue. Rows of grids removed from the page
      * (e.g. by a later PJAX navigation) are ignored.
@@ -561,6 +579,7 @@ admin.lazyGrid = {
                 }
 
                 let originalRows = null;
+                let initialized = false;
                 try {
                     let fragment = self.parse(response.data);
 
@@ -570,12 +589,18 @@ admin.lazyGrid = {
                     fragment.scripts.forEach(function (script) {
                         (0, eval)(script.text || script.textContent || '');
                     });
+                    initialized = true;
                 } catch (e) {
                     if (originalRows) {
                         tbody.replaceChildren(...originalRows);
                     }
                     self.fail(placeholder);
                     console.error('Unable to initialize lazy-grid rows.', e);
+                }
+
+                // Outside the try block: a listener error must neither roll back the loaded rows nor mark the load as failed.
+                if (initialized && document.contains(tbody)) {
+                    self.notifyLoaded(tbody);
                 }
             })
             .catch(function () {
