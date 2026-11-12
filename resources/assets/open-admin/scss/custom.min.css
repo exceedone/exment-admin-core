@@ -97,7 +97,7 @@
 #main.content-wrapper {
     margin-left: var(--sidebar-width);
     border-left: none;
-    min-height: 87.5vh !important;
+    min-height: 87.5vh;
     background-color: #ecf0f5;
     overflow: auto;
     overflow-x: hidden;
@@ -112,7 +112,15 @@ body > .wrapper:has(> aside.main-sidebar) {
 
 body > .wrapper:has(> aside.main-sidebar) > #main.content-wrapper {
     flex-grow: 1;
-    min-height: 0 !important
+    min-height: 0;
+}
+
+/* Like Exment 6 (.wrapper{overflow:hidden}): clip the sidebar menu where AdminLTE layout.fix()
+   leaves it a little taller than the page, instead of letting open-admin's
+   .wrapper{overflow-y:auto !important} turn it into an empty scrollable band under the footer.
+   clip (not hidden) so .wrapper does not become a scroll container (workflow designer sticky pane). */
+body > .wrapper:has(> aside.main-sidebar) {
+    overflow-y: clip !important;
 }
 
 .fixed-bottom {
@@ -643,7 +651,7 @@ button#search-btn {
 }
 
 div#main {
-    min-height: unset !important
+    min-height: unset
 }
 
 .custom-navbar ul.user-menu {

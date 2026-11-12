@@ -98,7 +98,7 @@
 #main.content-wrapper {
     margin-left: var(--sidebar-width);
     border-left: none;
-    min-height: 87.5vh !important;
+    min-height: 87.5vh;
     background-color: #ecf0f5;
     overflow: auto;
     overflow-x: hidden;
@@ -108,10 +108,11 @@
 /* Sticky footer (2026-09): pin the admin footer to the viewport bottom on short pages.
    Scoped with :has(> aside.main-sidebar) so the other .wrapper layouts
    (public-form / initialize / widget partial) keep their block flow.
-   min-height:0 !important needs this high specificity to out-cascade BOTH legacy
-   rules (min-height:87.5vh above and div#main{min-height:unset} further down) and
-   the inline min-height that AdminLTE app.min.js layout.fix() keeps setting -
-   flex-grow alone must size #main. */
+   min-height:0 (without !important) beats the legacy 87.5vh rule before the scripts run, and the
+   inline min-height that AdminLTE app.min.js layout.fix() sets still wins over it, like Exment 6
+   (the window height, or the sidebar menu height when the menu is taller - also after a menu
+   group opens), so the footer stays below a long menu instead of leaving an empty band under it.
+   That is why the legacy min-height rules (87.5vh above, div#main further down) must not use !important. */
 body > .wrapper:has(> aside.main-sidebar) {
     display: flex;
     flex-direction: column;
@@ -120,7 +121,15 @@ body > .wrapper:has(> aside.main-sidebar) {
 
 body > .wrapper:has(> aside.main-sidebar) > #main.content-wrapper {
     flex-grow: 1;
-    min-height: 0 !important;
+    min-height: 0;
+}
+
+/* Like Exment 6 (.wrapper{overflow:hidden}): clip the sidebar menu where AdminLTE layout.fix()
+   leaves it a little taller than the page, instead of letting open-admin's
+   .wrapper{overflow-y:auto !important} turn it into an empty scrollable band under the footer.
+   clip (not hidden) so .wrapper does not become a scroll container (workflow designer sticky pane). */
+body > .wrapper:has(> aside.main-sidebar) {
+    overflow-y: clip !important;
 }
 
 .fixed-bottom {
@@ -681,7 +690,7 @@ button#search-btn {
 }
 
 div#main {
-    min-height: unset !important;
+    min-height: unset;
 }
 
 .custom-navbar ul.user-menu {
