@@ -1053,4 +1053,26 @@ hr {
   opacity: 1;
 }
 
+/* A read-only select (select2) cannot be changed: the browser keeps a read-only input or
+   textarea as it is, but not a select, so the select2 box must not take a click.
+   (These rules were in open-admin.css, which the admin pages do not load.) */
+.select2-container--default span.select2-readonly {
+  background-color: #eee;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container {
+  pointer-events: none;
+  touch-action: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection {
+  background: #eee;
+  box-shadow: none;
+}
+
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__arrow,
+select[readonly].select2-hidden-accessible + .select2-container .select2-selection__clear {
+  display: none;
+}
+
 /*# sourceMappingURL=custom.css.map */
