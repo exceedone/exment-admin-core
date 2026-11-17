@@ -615,3 +615,43 @@ $.fn.editable.defaults.error = function (data) {
     }
     return msg
 };
+
+/*-------------------------------------------------*/
+/* iCheck on touch screens */
+/*-------------------------------------------------*/
+
+// iCheck (AdminLTE plugin) handles a tap as a touch only when the user agent is a phone or tablet
+// (ipad|iphone|ipod|android|...). On a touch screen with a desktop user agent (Surface, Windows / Linux
+// tablets, Android tablets in desktop mode) its touchend handler returns false, which cancels the click
+// the browser makes from the tap, so the checkbox or radio button does not change (exment#1563).
+// Stop touchend before it reaches the iCheck handlers: the tap becomes a click, and iCheck toggles the
+// input as it does for a mouse click. iCheck uses touchend only for its hover classes.
+(function () {
+    let isICheckTarget = function (target) {
+        if (!target || !target.closest) {
+            return false;
+        }
+        if (target.closest('.iCheck-helper')) {
+            return true;
+        }
+        let label = target.closest('label');
+        if (!label) {
+            return false;
+        }
+        if (label.querySelector('.iCheck-helper')) {
+            return true;
+        }
+        let input = label.htmlFor ? document.getElementById(label.htmlFor) : null;
+        return !!input && !!input.parentElement && !!input.parentElement.querySelector('.iCheck-helper');
+    };
+
+    document.addEventListener(
+        'touchend',
+        function (event) {
+            if (isICheckTarget(event.target)) {
+                event.stopPropagation();
+            }
+        },
+        true
+    );
+})();
