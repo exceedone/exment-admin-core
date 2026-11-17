@@ -190,3 +190,39 @@ admin.form = {
         return res;
     },
 };
+
+/*-------------------------------------------------*/
+/* readonly select2 */
+/*-------------------------------------------------*/
+
+// A select element ignores the readonly attribute, and css (custom.css) only blocks the mouse.
+// Block the keyboard too: the select2 widget can still get focus by Tab and be changed by keys.
+// Registered once on document, so it also covers selects added later (pjax, has-many rows)
+// and selects whose readonly attribute is toggled at runtime.
+(function () {
+    let isReadonlySelect2 = function (target) {
+        let container = target && target.closest ? target.closest('.select2-container') : null;
+        let select = container ? container.previousElementSibling : null;
+        return !!select && select.tagName === 'SELECT' && select.hasAttribute('readonly');
+    };
+
+    // capture phase: runs before the key handlers select2 binds on its own elements.
+    // Tab is kept so that the focus can leave the field.
+    document.addEventListener(
+        'keydown',
+        function (event) {
+            if (event.key !== 'Tab' && isReadonlySelect2(event.target)) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+        },
+        true
+    );
+
+    // opening / selecting / unselecting are preventable select2 events: stop any change that gets through
+    if (window.jQuery) {
+        jQuery(document).on('select2:opening select2:selecting select2:unselecting', 'select[readonly]', function (event) {
+            event.preventDefault();
+        });
+    }
+})();
