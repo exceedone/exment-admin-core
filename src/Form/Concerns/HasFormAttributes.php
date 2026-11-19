@@ -191,7 +191,22 @@ trait HasFormAttributes
      */
     public function formatAttribute($attributes = [])
     {
+        // Add the classes up instead of letting the given class replace the one set with
+        // setClass() / attribute('class', ...), as laravel-admin did (Exment's public form
+        // sets "block_custom_value_form" that way, and its scripts look for it).
+        $classes = [];
+        foreach ([Arr::get($this->attributes, 'class'), Arr::get($attributes, 'class')] as $class) {
+            foreach (explode_ex(' ', $class) as $c) {
+                if (!empty($c) && !in_array($c, $classes, true)) {
+                    $classes[] = $c;
+                }
+            }
+        }
+
         $attributes = array_merge($this->attributes, $attributes);
+        if (!empty($classes)) {
+            $attributes['class'] = implode(' ', $classes);
+        }
 
         if (method_exists($this, 'hasFile') && $this->hasFile()) {
             $attributes['enctype'] = 'multipart/form-data';
