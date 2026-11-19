@@ -2,7 +2,6 @@
 
 namespace ExmentAdminCore\Admin\Form\Field;
 
-
 use ExmentAdminCore\Admin\Form\Field;
 use ExmentAdminCore\Admin\Form\Field\Traits\HasValuePicker;
 use ExmentAdminCore\Admin\Form\Field\Traits\PlainInput;

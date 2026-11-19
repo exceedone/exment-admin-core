@@ -1,0 +1,4591 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Actions\\Interactor\\Interactor\:\:preScript\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Call to function is_null\(\) with ExmentAdminCore\\Admin\\Actions\\Interactor\\Interactor will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Call to function is_null\(\) with ExmentAdminCore\\Admin\\Actions\\Response will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Call to function is_null\(\) with string will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:html\(\) should return string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:initInteractor\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:parameters\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:setName\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:setName\(\) should return string but returns \$this\(ExmentAdminCore\\Admin\\Actions\\Action\)\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Actions\\Action\:\:integer\(\) return type contains unknown class ExmentAdminCore\\Admin\\Form\\Field\\Integer\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Action\:\:\$attributes type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Action\:\:\$parameters type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Action\:\:\$preScriptStr \(string\) does not accept default value of type false\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Action\:\:\$selectors type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Action.php
+
+		-
+			message: '#^Instanceof between Illuminate\\Database\\Eloquent\\Model\|null and Illuminate\\Database\\Eloquent\\Collection will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Actions/Authorizable.php
+
+		-
+			message: '#^Cannot call static method findOrFail\(\) on \(array\<string\>\|string\)\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Actions/BatchAction.php
+
+		-
+			message: '#^Cannot call static method withTrashed\(\) on \(array\<string\>\|string\)\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Actions/BatchAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Action\:\:getElementClass\(\) invoked with 1 parameter, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Actions/BatchAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\BatchAction\:\:setId\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/BatchAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\BatchAction\:\:setId\(\) has parameter \$id with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/BatchAction.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\BatchAction\:\:\$grid has unknown class ExmentAdminCore\\Admin\\Actions\\Grid as its type\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Actions/BatchAction.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Actions\\GridAction\:\:\$resource\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Actions/GridAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\GridAction\:\:modelUseSoftDeletes\(\) has parameter \$modelClass with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/GridAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\GridAction\:\:parameters\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/GridAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:addSettings\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:confirm\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:defaultSettings\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:error\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:info\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:preScript\(\) with return type void returns string but should not return anything\.$#'
+			identifier: return.void
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:question\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:success\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:warning\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Interactor\\Dialog\:\:\$settings type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Dialog.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:\$row\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:\$validateClientSide\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Call to an undefined method DOMNode\:\:setAttribute\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Actions\\Action\:\:getRow\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:addFormClass\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:attribute\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Cannot call method getKey\(\) on array\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:addScript\(\) with return type void returns string but should not return anything\.$#'
+			identifier: return.void
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:addValues\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:addValues\(\) should return array but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:checkUploadFiel\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:checkUploadFiel\(\) has parameter \$field with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:confirm\(\) has parameter \$message with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:enableValidate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:extendsFrom\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:extendsFrom\(\) has parameter \$check with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:extendsFrom\(\) has parameter \$object with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:formatLabel\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:getForm\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:getKey\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:getRow\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:hasTrait\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:hasTrait\(\) has parameter \$object with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:hasTrait\(\) has parameter \$traitName with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:\$fields type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Interactor\\Form\:\:\$form \(object\) in empty\(\) is not falsy\.$#'
+			identifier: empty.property
+			count: 1
+			path: src/Actions/Interactor/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Interactor\\Interactor\:\:\$elements type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Interactor/Interactor.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Response\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Response\:\:open\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\)\: Unexpected token "\\n     ", expected type at offset 15 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Response\:\:\$plugin has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Response\:\:\$then type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Response\:\:\$toastrMethods type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^Unsafe usage of new static\(\)\.$#'
+			identifier: new.static
+			count: 1
+			path: src/Actions/Response.php
+
+		-
+			message: '#^Cannot call static method findOrFail\(\) on \(array\<string\>\|string\)\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Actions/RowAction.php
+
+		-
+			message: '#^Cannot call static method withTrashed\(\) on \(array\<string\>\|string\)\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/Actions/RowAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\RowAction\:\:display\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/RowAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\RowAction\:\:display\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/RowAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\RowAction\:\:getRow\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Actions/RowAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\RowAction\:\:href\(\) should return string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Actions/RowAction.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\SweatAlert2\:\:getOptions\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/SweatAlert2.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:getOptions\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:gravity\(\) has parameter \$position with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:options\(\) has parameter \$option with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:options\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:position\(\) has parameter \$position with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:style\(\) has parameter \$style with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Actions\\Toastr\:\:timeout\(\) has parameter \$timeout with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Actions\\Toastr\:\:\$options type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Actions/Toastr.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:addAdminAssets\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:asset\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:asset\(\) has parameter \$asset with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:component\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:component\(\) has parameter \$component with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:component\(\) has parameter \$data with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:ignoreMinify\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:ignoreMinify\(\) has parameter \$type with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:js_trans\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:script\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Admin\:\:style\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Parameter \#1 \$css of static method ExmentAdminCore\\Admin\\Admin\:\:css\(\) expects array\<mixed\>\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Parameter \#1 \$js of static method ExmentAdminCore\\Admin\\Admin\:\:js\(\) expects array\<mixed\>\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 7
+			path: src/Admin.php
+
+		-
+			message: '#^Parameter \#2 \$assets of static method ExmentAdminCore\\Admin\\Admin\:\:ignoreMinify\(\) expects string, array\<mixed\>\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Admin.php
+
+		-
+			message: '#^Parameter \#2 \$assets of static method ExmentAdminCore\\Admin\\Admin\:\:ignoreMinify\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Admin.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Admin\:\:\$deferredScript type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Admin\:\:\$minifyIgnoresCss type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Admin\:\:\$minifyIgnoresJs has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: src/Admin.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Layout\\Content\:\:component\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/AdminServiceProvider.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\AdminServiceProvider\:\:macroRouter\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AdminServiceProvider.php
+
+		-
+			message: '#^PHPDoc tag @property for property ExmentAdminCore\\Admin\\Auth\\Database\\Administrator\:\:\$roles contains generic class Illuminate\\Database\\Eloquent\\Collection but does not specify its types\: TKey, TModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Auth/Database/Administrator.php
+
+		-
+			message: '#^Unable to resolve the template type TRelatedModel in call to method Illuminate\\Database\\Eloquent\\Model\:\:belongsToMany\(\)$#'
+			identifier: argument.templateType
+			count: 2
+			path: src/Auth/Database/Administrator.php
+
+		-
+			message: '#^Generic type Illuminate\\Database\\Eloquent\\Relations\\HasMany\<static\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\)\> in PHPDoc tag @return does not specify all template types of class Illuminate\\Database\\Eloquent\\Relations\\HasMany\: TRelatedModel, TDeclaringModel$#'
+			identifier: generics.lessTypes
+			count: 1
+			path: src/Auth/Database/Menu.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Auth\\Database\\Menu\:\:children\(\) should return Illuminate\\Database\\Eloquent\\Relations\\HasMany\<static\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\)\> but returns Illuminate\\Database\\Eloquent\\Relations\\HasMany\<static\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\), \$this\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\)\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Auth/Database/Menu.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Auth\\Database\\Menu\:\:parent\(\) should return Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<static\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\), static\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\)\> but returns Illuminate\\Database\\Eloquent\\Relations\\BelongsTo\<static\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\), \$this\(ExmentAdminCore\\Admin\\Auth\\Database\\Menu\)\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Auth/Database/Menu.php
+
+		-
+			message: '#^PHPDoc type array\<int, string\> of property ExmentAdminCore\\Admin\\Auth\\Database\\Menu\:\:\$fillable is not covariant with PHPDoc type list\<string\> of overridden property Illuminate\\Database\\Eloquent\\Model\:\:\$fillable\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: src/Auth/Database/Menu.php
+
+		-
+			message: '#^Unable to resolve the template type TRelatedModel in call to method Illuminate\\Database\\Eloquent\\Model\:\:belongsToMany\(\)$#'
+			identifier: argument.templateType
+			count: 1
+			path: src/Auth/Database/Menu.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Auth\\Database\\OperationLog has PHPDoc tag @method for method create\(\) parameter \#1 \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Auth/Database/OperationLog.php
+
+		-
+			message: '#^PHPDoc type array\<int, string\> of property ExmentAdminCore\\Admin\\Auth\\Database\\OperationLog\:\:\$fillable is not covariant with PHPDoc type list\<string\> of overridden property Illuminate\\Database\\Eloquent\\Model\:\:\$fillable\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: src/Auth/Database/OperationLog.php
+
+		-
+			message: '#^Unable to resolve the template type TRelatedModel in call to method Illuminate\\Database\\Eloquent\\Model\:\:belongsTo\(\)$#'
+			identifier: argument.templateType
+			count: 1
+			path: src/Auth/Database/OperationLog.php
+
+		-
+			message: '#^PHPDoc type array\<int, string\> of property ExmentAdminCore\\Admin\\Auth\\Database\\Permission\:\:\$fillable is not covariant with PHPDoc type list\<string\> of overridden property Illuminate\\Database\\Eloquent\\Model\:\:\$fillable\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: src/Auth/Database/Permission.php
+
+		-
+			message: '#^Unable to resolve the template type TRelatedModel in call to method Illuminate\\Database\\Eloquent\\Model\:\:belongsToMany\(\)$#'
+			identifier: argument.templateType
+			count: 1
+			path: src/Auth/Database/Permission.php
+
+		-
+			message: '#^Unable to resolve the template type TRelatedModel in call to method Illuminate\\Database\\Eloquent\\Model\:\:belongsToMany\(\)$#'
+			identifier: argument.templateType
+			count: 3
+			path: src/Auth/Database/Role.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ActionCommand\:\:generateInteractor\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/ActionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:diff\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:diff\(\) has parameter \$from with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:diff\(\) has parameter \$to with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:handle\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:printDiff\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:printDiff\(\) has parameter \$diff with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:printDiff\(\) has parameter \$error with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\ConfigCommand\:\:printDiff\(\) has parameter \$title with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/ConfigCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\DevLinksCommand\:\:links\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Console/DevLinksCommand.php
+
+		-
+			message: '#^Unable to resolve the template type TKey in call to function collect$#'
+			identifier: argument.templateType
+			count: 1
+			path: src/Console/GenerateMenuCommand.php
+
+		-
+			message: '#^Unable to resolve the template type TValue in call to function collect$#'
+			identifier: argument.templateType
+			count: 1
+			path: src/Console/GenerateMenuCommand.php
+
+		-
+			message: '#^Parameter \#1 \$callback of function call_user_func expects callable\(\)\: mixed, array\{class\-string, ''import''\} given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/ImportCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\MakeCommand\:\:handle\(\) should return bool\|null but return statement is missing\.$#'
+			identifier: return.missing
+			count: 2
+			path: src/Console/MakeCommand.php
+
+		-
+			message: '#^Call to method add\(\) on an unknown class MatthiasMullie\\Minify\\CSS\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Console/MinifyCommand.php
+
+		-
+			message: '#^Call to method add\(\) on an unknown class MatthiasMullie\\Minify\\JS\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Console/MinifyCommand.php
+
+		-
+			message: '#^Call to method minify\(\) on an unknown class MatthiasMullie\\Minify\\CSS\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Console/MinifyCommand.php
+
+		-
+			message: '#^Call to method minify\(\) on an unknown class MatthiasMullie\\Minify\\JS\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Console/MinifyCommand.php
+
+		-
+			message: '#^Instantiated class MatthiasMullie\\Minify\\CSS not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Console/MinifyCommand.php
+
+		-
+			message: '#^Instantiated class MatthiasMullie\\Minify\\JS not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Console/MinifyCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateHttpMethod\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateHttpMethod\(\) has parameter \$permission with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateHttpPath\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateHttpPath\(\) has parameter \$permission with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateHttpPath\(\) has parameter \$table with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateName\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateName\(\) has parameter \$permission_lang with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateName\(\) has parameter \$table with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateSlug\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateSlug\(\) has parameter \$permission with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:generateSlug\(\) has parameter \$table with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:getAllTables\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:getIgnoreTables\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Console\\PermissionCommand\:\:getPermissions\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/PermissionCommand.php
+
+		-
+			message: '#^Call to an undefined method Doctrine\\DBAL\\Schema\\AbstractSchemaManager\:\:getDatabasePlatform\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Console/ResourceGenerator.php
+
+		-
+			message: '#^Call to an undefined method Doctrine\\DBAL\\Types\\Type\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Console/ResourceGenerator.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Connection\:\:isDoctrineAvailable\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Console/ResourceGenerator.php
+
+		-
+			message: '#^Call to function is_string\(\) with class\-string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Console/ResourceGenerator.php
+
+		-
+			message: '#^Method Doctrine\\DBAL\\Schema\\AbstractSchemaManager\<Doctrine\\DBAL\\Platforms\\AbstractPlatform\>\:\:listTableColumns\(\) invoked with 2 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Console/ResourceGenerator.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Controllers\\AuthController\:\:getFailedLoginMessage\(\) has invalid return type Symfony\\Component\\Translation\\TranslatorInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Controllers/AuthController.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 4
+			path: src/Controllers/Dashboard.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Controllers\\ModelForm is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Controllers/ModelForm.php
+
+		-
+			message: '#^Parameter \#1 \$messages of class Illuminate\\Support\\MessageBag constructor expects array\<string, array\<string\>\|Illuminate\\Contracts\\Support\\Arrayable\|string\>, array\<string, int\|string\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Exception/Handler.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Exception/Handler.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Extension\:\:createMenu\(\) has parameter \$children with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Extension\:\:getMenuValidationRules\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Extension\:\:getPermissionValidationRules\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Extension\:\:import\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Parameter \#1 \$title of static method ExmentAdminCore\\Admin\\Extension\:\:createMenu\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Parameter \#2 \$array of function implode expects array, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Parameter \#2 \$uri of static method ExmentAdminCore\\Admin\\Extension\:\:createMenu\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^Parameter \#3 \$icon of static method ExmentAdminCore\\Admin\\Extension\:\:createMenu\(\) expects string, null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Extension.php
+
+		-
+			message: '#^PHPDoc tag @method has invalid value \(static void\)\: Unexpected token "\\n \*", expected ''\('' at offset 2331 on line 24$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Facades/Admin.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Call to method moveOrderDown\(\) on an unknown class Spatie\\EloquentSortable\\Sortable\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Call to method moveOrderUp\(\) on an unknown class Spatie\\EloquentSortable\\Sortable\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Class Spatie\\EloquentSortable\\Sortable not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:addFormClass\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:addFormClass\(\) has parameter \$class with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:callInitCallbacks\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:cascadeGroup\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:cascadeGroup\(\) has parameter \$dependency with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:collectFieldAssets\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:confirm\(\) should return \$this\(ExmentAdminCore\\Admin\\Form\) but empty return statement found\.$#'
+			identifier: return.empty
+			count: 2
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:fields\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:fieldset\(\) should return ExmentAdminCore\\Admin\\Form\\Field\\Fieldset but returns \$this\(ExmentAdminCore\\Admin\\Form\)\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:forget\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:forget\(\) has parameter \$abstract with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:formatAttribute\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:init\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:initFormAttributes\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:initLayout\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:prepareUpdate\(\) has parameter \$isRelationUpdate with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:removeFormClass\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\:\:removeFormClass\(\) has parameter \$class with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^PHPDoc tag @return with type Illuminate\\Database\\Eloquent\\Model\|null is not subtype of native type Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$relation contains generic class Illuminate\\Database\\Eloquent\\Relations\\HasOneOrMany but does not specify its types\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\[\]Closure\)\: Unexpected token "\[", expected type at offset 60 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^PHPDoc tag @var with type ExmentAdminCore\\Admin\\SoftDeletableModel is not subtype of native type Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: varTag.nativeType
+			count: 4
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$attributes type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$availableFields type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$fieldAlias type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$fixedFooter has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$form_classes type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$initCallbacks has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\:\:\$must_prepare type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 2
+			path: src/Form.php
+
+		-
+			message: '#^Call to static method disablePjax\(\) on an unknown class Admin\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Builder.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Builder\:\:addCascadeScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Builder.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Builder\:\:confirm\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Builder.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Builder\:\:options\(\) should return array\<mixed\>\|null but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Form/Builder.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 1
+			path: src/Form/Concerns/HasFormAttributes.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\DatetimeRange referenced with incorrect case\: ExmentAdminCore\\Admin\\Form\\Field\\DateTimeRange\.$#'
+			identifier: class.nameCase
+			count: 1
+			path: src/Form/EmbeddedForm.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Form\\EmbeddedForm\:\:divider\(\) return type contains unknown class ExmentAdminCore\\Admin\\Form\\Field\\Divide\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/EmbeddedForm.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Instanceof between Closure and Closure will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 3
+			path: src/Form/Field.php
+
+		-
+			message: '#^Left side of && is always true\.$#'
+			identifier: booleanAnd.leftAlwaysTrue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:defaultOnEmpty\(\) has parameter \$default_on_empty with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:disabled\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:fieldRender\(\) has parameter \$variables with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:getErrorKey\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:getScript\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:removeAttribute\(\) has parameter \$attribute with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:setInline\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\:\:showAsSection\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Negated boolean expression is always false\.$#'
+			identifier: booleanNot.alwaysFalse
+			count: 2
+			path: src/Form/Field.php
+
+		-
+			message: '#^PHPDoc tag @return with type string is incompatible with native type ExmentAdminCore\\Admin\\Form\\Field\.$#'
+			identifier: return.phpDocType
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\:\:\$form \(ExmentAdminCore\\Admin\\Form\|ExmentAdminCore\\Admin\\Widgets\\Form\) in empty\(\) is not falsy\.$#'
+			identifier: empty.property
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\:\:\$form \(ExmentAdminCore\\Admin\\Form\|ExmentAdminCore\\Admin\\Widgets\\Form\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\:\:\$help type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Right side of && is always true\.$#'
+			identifier: booleanAnd.rightAlwaysTrue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 1
+			path: src/Form/Field.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 2
+			path: src/Form/Field.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\BelongsTo\:\:__construct\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/BelongsTo.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\BelongsTo\:\:addScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/BelongsTo.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\BelongsTo\:\:setSelectable\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/BelongsTo.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$multiple$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/BelongsTo.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\BelongsTo\:\:\$relation_prefix has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/BelongsTo.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\BelongsTo\:\:\$relation_type has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/BelongsTo.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\BelongsToMany\:\:__construct\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\BelongsToMany\:\:addScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\BelongsToMany\:\:setSelectable\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$multiple$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\BelongsToMany\:\:\$multiple has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\BelongsToMany\:\:\$relation_prefix has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\BelongsToMany\:\:\$relation_type has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/BelongsToMany.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Captcha\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Captcha.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\CascadeGroup\:\:__construct\(\) has parameter \$dependency with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/CascadeGroup.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\CascadeGroup\:\:\$dependency type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/CascadeGroup.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Color\:\:format\(\) has parameter \$format with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Color.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$key$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/Color.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$val$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/Color.php
+
+		-
+			message: '#^PHPDoc type array of property ExmentAdminCore\\Admin\\Form\\Field\\Color\:\:\$options is not covariant with PHPDoc type array\<string, mixed\>\|Closure of overridden property ExmentAdminCore\\Admin\\Form\\Field\:\:\$options\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: src/Form/Field/Color.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Color\:\:\$options type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Color.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Color\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Color.php
+
+		-
+			message: '#^Return type \(string\) of method ExmentAdminCore\\Admin\\Form\\Field\\Currency\:\:render\(\) should be compatible with return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Currency.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Date\:\:check_format_options\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Date.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Date\:\:\$defaults has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/Date.php
+
+		-
+			message: '#^Return type \(string\) of method ExmentAdminCore\\Admin\\Form\\Field\\Date\:\:render\(\) should be compatible with return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Date.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\DateMultiple\:\:format\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/DateMultiple.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\DateMultiple\:\:format\(\) has parameter \$format with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/DateMultiple.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\DateMultiple\:\:\$format has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/DateMultiple.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\DateMultiple\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/DateMultiple.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\DateRange\:\:check_format_options\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/DateRange.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\DateRange\:\:\$defaults has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/DateRange.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Decimal\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Decimal.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Email\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Email.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Embeds\:\:resetInputKey\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Embeds.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 182 on line 7$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/Embeds.php
+
+		-
+			message: '#^Instanceof between Closure and Closure will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: src/Form/Field/File.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\File\:\:destroy\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/File.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\File\:\:initStorage\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/File.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 61 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/File.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 70 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/File.php
+
+		-
+			message: '#^Call to function is_null\(\) with ExmentAdminCore\\Admin\\Form\|ExmentAdminCore\\Admin\\Widgets\\Form will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 2
+			path: src/Form/Field/HasMany.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\HasMany\:\:resetInputKey\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/HasMany.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 182 on line 7$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/HasMany.php
+
+		-
+			message: '#^Return type \(string\) of method ExmentAdminCore\\Admin\\Form\\Field\\Icon\:\:render\(\) should be compatible with return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Icon.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:destroyThumbnail\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:destroyThumbnail\(\) has parameter \$delete_all with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:destroyThumbnailFile\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:destroyThumbnailFile\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:destroyThumbnailFile\(\) has parameter \$original with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:setType\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:setType\(\) has parameter \$type with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:thumbnail\(\) has parameter \$name with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:thumbnailFunction\(\) has parameter \$name with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$function with type callable is not subtype of native type Closure\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$image$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 70 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 71 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:\$interventionCalls type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Image\:\:\$thumbnails type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Image.php
+
+		-
+			message: '#^Return type \(string\) of method ExmentAdminCore\\Admin\\Form\\Field\\Ip\:\:render\(\) should be compatible with return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Ip.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\KeyValue\:\:addSortable\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/KeyValue.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\KeyValue\:\:addSortable\(\) has parameter \$pref with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/KeyValue.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\KeyValue\:\:addSortable\(\) has parameter \$suf with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/KeyValue.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\KeyValue\:\:sortable\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/KeyValue.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Form\\Field\\ListField\:\:addSortable\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Form/Field/ListField.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Form\\Field\\Map\:\:\$name\.$#'
+			identifier: property.notFound
+			count: 5
+			path: src/Form/Field/Map.php
+
+		-
+			message: '#^Called ''env'' outside of the config directory which returns null when the config is cached, use ''config''\.$#'
+			identifier: larastan.noEnvCallsOutsideOfConfig
+			count: 2
+			path: src/Form/Field/Map.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Map\:\:useOpenstreetmap\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Map.php
+
+		-
+			message: '#^Return type \(string\) of method ExmentAdminCore\\Admin\\Form\\Field\\Mobile\:\:render\(\) should be compatible with return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Mobile.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$modal\.$#'
+			identifier: property.notFound
+			count: 2
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:addFiles\(\) has parameter \$add with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:addFiles\(\) has parameter \$updated_files with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:addFiles\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:addPickBtn\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:fixIfJsonString\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:fixIfJsonString\(\) has parameter \$arr with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:initStorage\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:pick\(\) has parameter \$path with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$column$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$files$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$picker$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 70 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$multiple has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$must_prepare has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$picker has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$picker_path has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$readonly has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\MultipleFile\:\:\$type has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/MultipleFile.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\MultipleImage\:\:destroyThumbnail\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/MultipleImage.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(void\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 71 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Form/Field/MultipleImage.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Number\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Number.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Password\:\:setupScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Password.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Password\:\:toggleShow\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Password.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Password\:\:toggleShow\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Password.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Password\:\:\$showPasswordToggle has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/Password.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Password\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Password.php
+
+		-
+			message: '#^PHPDoc type array of property ExmentAdminCore\\Admin\\Form\\Field\\PhoneNumber\:\:\$options is not covariant with PHPDoc type array\<string, mixed\>\|Closure of overridden property ExmentAdminCore\\Admin\\Form\\Field\:\:\$options\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: src/Form/Field/PhoneNumber.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\PhoneNumber\:\:\$options type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/PhoneNumber.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\PhoneNumber\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/PhoneNumber.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Form\\Field\\PlainInput is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Form/Field/PlainInput.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Support\\HigherOrderCollectionProxy\<string, ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup, Illuminate\\Support\\Collection\<\(int\|string\), ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\>\>\:\:visible\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Call to method dependsOn\(\) on an unknown class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Call to method index\(\) on an unknown class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\BelongsTo not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\BelongsToMany not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup not found\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\Checkbox not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CheckboxButton not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CheckboxCard not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\MultipleSelect not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\Radio not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\RadioButton not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\RadioCard not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\Select not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Empty array passed to foreach\.$#'
+			identifier: foreach.emptyArray
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:addDependents\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:formatValues\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:getValueByJs\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:when\(\) has parameter \$closure with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:when\(\) has parameter \$operator with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:when\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Parameter \$group of method ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:hitsCondition\(\) has invalid type ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Part \$this\-\>cascadeEvent \(array\<string\>\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:\$cascadeEvent \(array\<string\>\) does not accept default value of type string\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:\$conditions type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:\$stacked has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Variable \$operator might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^Variable \$value might not be defined\.$#'
+			identifier: variable.undefined
+			count: 11
+			path: src/Form/Field/Radio.php
+
+		-
+			message: '#^PHPDoc type string of property ExmentAdminCore\\Admin\\Form\\Field\\RadioButton\:\:\$cascadeEvent is not covariant with PHPDoc type array\<string\> of overridden property ExmentAdminCore\\Admin\\Form\\Field\\Radio\:\:\$cascadeEvent\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: src/Form/Field/RadioButton.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\RadioCard\:\:addStyle\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/RadioCard.php
+
+		-
+			message: '#^Parameter \#2 \$value of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:defaultAttribute\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Form/Field/Rate.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Rate\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Rate.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Support\\HigherOrderCollectionProxy\<string, ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup, Illuminate\\Support\\Collection\<\(int\|string\), ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\>\>\:\:visible\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Call to method dependsOn\(\) on an unknown class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Call to method index\(\) on an unknown class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\BelongsTo not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\BelongsToMany not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup not found\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\Checkbox not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CheckboxButton not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CheckboxCard not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\MultipleSelect not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\Radio not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\RadioButton not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\RadioCard not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\Traits\\Select not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Empty array passed to foreach\.$#'
+			identifier: foreach.emptyArray
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Left side of && is always true\.$#'
+			identifier: booleanAnd.leftAlwaysTrue
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:addDependents\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:allowedChoicesJs\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:choicesObjName\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:choicesObjName\(\) has parameter \$field with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:formatValues\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:getValueByJs\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:when\(\) has parameter \$closure with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:when\(\) has parameter \$operator with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:when\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Parameter \$group of method ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:hitsCondition\(\) has invalid type ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:\$additional_script has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:\$conditions type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Select\:\:\$form \(ExmentAdminCore\\Admin\\Form\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 2
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Right side of && is always true\.$#'
+			identifier: booleanAnd.rightAlwaysTrue
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Variable \$operator might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Variable \$value might not be defined\.$#'
+			identifier: variable.undefined
+			count: 11
+			path: src/Form/Field/Select.php
+
+		-
+			message: '#^Call to function is_null\(\) with ExmentAdminCore\\Admin\\Form\|ExmentAdminCore\\Admin\\Widgets\\Form will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 2
+			path: src/Form/Field/Table.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\NestedForm\:\:fill\(\) invoked with 1 parameter, 2 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: src/Form/Field/Table.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Table\:\:\$save_null_values has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Form/Field/Table.php
+
+		-
+			message: '#^Call to function is_array\(\) with array will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^If condition is always false\.$#'
+			identifier: if.alwaysFalse
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^Instanceof between array and Illuminate\\Contracts\\Support\\Arrayable will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^Instanceof between array and Illuminate\\Support\\Collection will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Tags\:\:separators\(\) has parameter \$separators with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^Parameter \#2 \$callback of function array_filter expects \(callable\(mixed\)\: bool\)\|null, ''strlen'' given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^Result of or is always false\.$#'
+			identifier: logicalOr.alwaysFalse
+			count: 1
+			path: src/Form/Field/Tags.php
+
+		-
+			message: '#^Call to function method_exists\(\) with \$this\(ExmentAdminCore\\Admin\\Form\\Field\\Text\) and ''mountPicker'' will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Form/Field/Text.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:datalist\(\) has parameter \$entries with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/Text.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:pickMany\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Text.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:\$withoutIcon \(bool\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/Form/Field/Text.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Text.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Textarea\:\:addPickBtn\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Textarea.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Textarea\:\:addPickBtn\(\) has parameter \$btn with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Field/Textarea.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\Textarea\:\:pickMany\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/Textarea.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$wrap$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/Textarea.php
+
+		-
+			message: '#^Call to function is_array\(\) with Illuminate\\Support\\Collection will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Form/Field/Traits/CanCascadeFields.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: src/Form/Field/Traits/CanCascadeFields.php
+
+		-
+			message: '#^Instanceof between \*NEVER\* and ExmentAdminCore\\Admin\\Form\\Field\\Traits\\CascadeGroup will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Form/Field/Traits/CanCascadeFields.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: src/Form/Field/Traits/CanCascadeFields.php
+
+		-
+			message: '#^Left side of && is always true\.$#'
+			identifier: booleanAnd.leftAlwaysTrue
+			count: 1
+			path: src/Form/Field/Traits/HasValuePicker.php
+
+		-
+			message: '#^Call to function is_null\(\) with string will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 2
+			path: src/Form/Field/Traits/PlainInput.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Form\\Field\\Traits\\UploadField is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Form/Field/Traits/UploadField.php
+
+		-
+			message: '#^Return type \(string\) of method ExmentAdminCore\\Admin\\Form\\Field\\Url\:\:render\(\) should be compatible with return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Form\\Field\\Text\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Form/Field/Url.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\ValuePicker\:\:addPickBtn\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\ValuePicker\:\:getPreview\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\ValuePicker\:\:getPreview\(\) return type has no value type specified in iterable type array\|Illuminate\\Support\\Collection\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\ValuePicker\:\:getPreview\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Field\\ValuePicker\:\:mount\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$multiple$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Field\\ValuePicker\:\:\$field \(ExmentAdminCore\\Admin\\Form\\Field\\File\|ExmentAdminCore\\Admin\\Form\\Field\\Text\) does not accept ExmentAdminCore\\Admin\\Form\\Field\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: src/Form/Field/ValuePicker.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Footer\:\:fixedFooter\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Footer.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Footer\:\:\$fixedFooter \(string\) does not accept default value of type true\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: src/Form/Footer.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between ''\$\(\\''\.after\-submit\\''\)…'' and null will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: src/Form/Footer.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Form\\HasHooks is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Form/HasHooks.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Column\:\:add\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Layout/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Column\:\:fields\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form/Layout/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Column\:\:removeFields\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Layout/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Column\:\:removeFields\(\) has parameter \$fields with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Form/Layout/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Column\:\:setWidth\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Layout/Column.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Layout\\Column\:\:\$fields with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form/Layout/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Layout\:\:addField\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Layout/Layout.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Layout\:\:column\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Layout/Layout.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Layout\:\:columns\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form/Layout/Layout.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Layout\:\:removeReservedFields\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Form/Layout/Layout.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Form\\Layout\\Layout\:\:removeReservedFields\(\) has parameter \$fields with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Form/Layout/Layout.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Form\\Layout\\Layout\:\:\$columns with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Form/Layout/Layout.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Form/NestedForm.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\DatetimeRange referenced with incorrect case\: ExmentAdminCore\\Admin\\Form\\Field\\DateTimeRange\.$#'
+			identifier: class.nameCase
+			count: 1
+			path: src/Form/NestedForm.php
+
+		-
+			message: '#^Deprecated in PHP 8\.0\: Required parameter \$index follows optional parameter \$data\.$#'
+			identifier: parameter.requiredAfterOptional
+			count: 1
+			path: src/Form/NestedForm.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Form\\NestedForm\:\:divider\(\) return type contains unknown class ExmentAdminCore\\Admin\\Form\\Field\\Divide\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Form/NestedForm.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Form/Row.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Exporters\\AbstractExporter\:\:setCallback\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Grid\\Row constructor invoked with 3 parameters, 2 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Grid\\Tools\\Paginator constructor invoked with 2 parameters, 1 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Generic type Illuminate\\Database\\Eloquent\\Relations\\Relation\<Illuminate\\Database\\Eloquent\\Model\> in PHPDoc tag @param for parameter \$relation does not specify all template types of class Illuminate\\Database\\Eloquent\\Relations\\Relation\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: generics.lessTypes
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:addHotKeyScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:buildRows\(\) has parameter \$collection with generic class Illuminate\\Support\\Collection but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:enableHotKeys\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:export\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:exporter\(\) has parameter \$exporter with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:fixColumns\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:fixHeader\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:fixedFooter\(\) has parameter \$set with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:getColumns\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:handleExportRequest\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:leftVisibleColumns\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:model\(\) return type with generic class Illuminate\\Database\\Eloquent\\Builder does not specify its types\: TModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:renderQuickCreate\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:rightVisibleColumns\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\:\:rows\(\) should return Illuminate\\Support\\Collection\<int\|string, mixed\>\|null but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(\[\]callable\)\: Unexpected token "\[", expected type at offset 16 on line 2$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Parameter \#1 \$scope of static method ExmentAdminCore\\Admin\\Grid\\Exporter\:\:formatExportQuery\(\) expects string, int given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\:\:\$hasQuickCreate has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\:\:\$model with generic class Illuminate\\Database\\Eloquent\\Builder does not specify its types\: TModel$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\:\:\$renderingCallbacks has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: src/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Actions\\Delete\:\:name\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Actions/Delete.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Actions\\Edit\:\:name\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Actions/Edit.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Actions\\Show\:\:name\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Actions/Show.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to function is_null\(\) with \*NEVER\* will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to function is_scalar\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to method call\(\) on an unknown class ExmentAdminCore\\Admin\\Grid\\Column\\Closure\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to static method parse\(\) on an unknown class ExmentAdminCore\\Admin\\Grid\\Carbon\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to static method script\(\) on an unknown class ExmentAdminCore\\Admin\\Grid\\Admin\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Call to static method setLocale\(\) on an unknown class ExmentAdminCore\\Admin\\Grid\\Carbon\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Grid\\Column\\Closure not found\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Instanceof between ExmentAdminCore\\Admin\\Grid\\Model\|null and Illuminate\\Database\\Eloquent\\Model will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Instanceof between array\<mixed\>\|string and Illuminate\\Contracts\\Support\\Htmlable will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:addFilter\(\) has parameter \$formal with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:addFilter\(\) has parameter \$type with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:bindFilterQuery\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:bindSearchQuery\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:bool\(\) has parameter \$map with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:cast\(\) has parameter \$cast with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:checkbox\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:datetime\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:dot\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:getAttributes\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:initAttributes\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:input\(\) has parameter \$mask with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:multipleSelect\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:radio\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:select\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:setAttributes\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:switch\(\) has parameter \$states with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:switchGroup\(\) has parameter \$columns with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\:\:switchGroup\(\) has parameter \$states with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:where\(\) invoked with 2 parameters, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$format$#'
+			identifier: parameter.notFound
+			count: 3
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Parameter \#1 \$model of method ExmentAdminCore\\Admin\\Grid\\Column\:\:setModel\(\) expects ExmentAdminCore\\Admin\\Grid\\Model\|null, Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Parameter \#1 \$row of method ExmentAdminCore\\Admin\\Actions\\RowAction\:\:setRow\(\) expects Illuminate\\Database\\Eloquent\\Model, \$this\(ExmentAdminCore\\Admin\\Grid\\Column\) given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Parameter \$input of method ExmentAdminCore\\Admin\\Grid\\Column\:\:repeat\(\) has invalid type ExmentAdminCore\\Admin\\Grid\\Column\\Closure\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\:\:\$displayers type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\:\:\$headers type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 2
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Variable \$item on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.variable
+			count: 1
+			path: src/Grid/Column.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\CheckFilter\:\:__construct\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/CheckFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\CheckFilter\:\:addBinding\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column/CheckFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\CheckFilter\:\:addBinding\(\) has parameter \$value with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/CheckFilter.php
+
+		-
+			message: '#^Parameter \#1 \$default of method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:getFilterValue\(\) expects string, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Column/CheckFilter.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\\CheckFilter\:\:\$options type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/CheckFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:addBinding\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column/Filter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:getFilterValue\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/Filter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:render\(\) should return string but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Grid/Column/Filter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:setParent\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column/Filter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:trans\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/Filter.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:\$class type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/Filter.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: src/Grid/Column/HasHeader.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Grid\\Column\\InputFilter\:\:\$addition_classes\.$#'
+			identifier: property.notFound
+			count: 3
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:whereDate\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:whereTime\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\InputFilter\:\:addBinding\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:where\(\) invoked with 2 parameters, 0 required\.$#'
+			identifier: arguments.count
+			count: 1
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:where\(\) invoked with 3 parameters, 0 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^PHPDoc tag @param for parameter \$model with type ExmentAdminCore\\Admin\\Grid\\Model\|null is not subtype of native type ExmentAdminCore\\Admin\\Grid\\Model\.$#'
+			identifier: parameter.phpDocType
+			count: 1
+			path: src/Grid/Column/InputFilter.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:whereBetween\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Column/RangeFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\RangeFilter\:\:addBinding\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column/RangeFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Column\\RangeFilter\:\:addScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Column/RangeFilter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:where\(\) invoked with 3 parameters, 0 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: src/Grid/Column/RangeFilter.php
+
+		-
+			message: '#^Parameter \#1 \$default of method ExmentAdminCore\\Admin\\Grid\\Column\\Filter\:\:getFilterValue\(\) expects string, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Column/RangeFilter.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\\Sorter\:\:\$cast \(array\) does not accept string\|null\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: src/Grid/Column/Sorter.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\\Sorter\:\:\$cast type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/Sorter.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Column\\Sorter\:\:\$sort type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Column/Sorter.php
+
+		-
+			message: '#^Call to function is_null\(\) with ExmentAdminCore\\Admin\\Grid\\Tools\\QuickCreate will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Grid/Concerns/HasQuickCreate.php
+
+		-
+			message: '#^PHPDoc tag @property for property ExmentAdminCore\\Admin\\Grid\\Concerns\\HasQuickSearch\:\:\$columns contains generic class Illuminate\\Support\\Collection but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Concerns/HasQuickSearch.php
+
+		-
+			message: '#^Call to function is_null\(\) with ExmentAdminCore\\Admin\\Grid\\Tools\\Selector will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Grid/Concerns/HasSelector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\AbstractDisplayer\:\:getColumn\(\) should return ExmentAdminCore\\Admin\\Grid\\Column but returns Illuminate\\Database\\Eloquent\\Model\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Grid/Displayers/AbstractDisplayer.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\AbstractDisplayer\:\:getPayloadName\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/AbstractDisplayer.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\AbstractDisplayer\:\:trans\(\) has invalid return type Symfony\\Component\\Translation\\TranslatorInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Displayers/AbstractDisplayer.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\AbstractDisplayer\:\:\$column \(Illuminate\\Database\\Eloquent\\Model\) does not accept ExmentAdminCore\\Admin\\Grid\\Column\.$#'
+			identifier: assign.propertyType
+			count: 1
+			path: src/Grid/Displayers/AbstractDisplayer.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\:\:disableDelete\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\:\:disableEdit\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Actions.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(\$this\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 80 on line 5$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Grid/Displayers/Actions.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(\$this\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 82 on line 5$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Grid/Displayers/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:disableDelete\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:disableShow\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:disableView\(\) should return \$this\(ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\) but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:display\(\) should return Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\|string but empty return statement found\.$#'
+			identifier: return.empty
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:prepareAction\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:prependDefaultActions\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:setResource\(\) has parameter \$resource with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:showLabels\(\) has parameter \$default with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(\$this\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 89 on line 6$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Parameter \#1 \$column of method ExmentAdminCore\\Admin\\Actions\\RowAction\:\:setColumn\(\) expects ExmentAdminCore\\Admin\\Grid\\Column, Illuminate\\Database\\Eloquent\\Model given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:\$custom type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:\$default type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:\$defaultClass type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:\$trans type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\Actions\:\:\$view has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Grid/Displayers/Actions/Actions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\ContextMenuActions\:\:\$view has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Grid/Displayers/Actions/ContextMenuActions.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Displayers\\Actions\\DropdownActions\:\:\$view has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Grid/Displayers/Actions/DropdownActions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\BelongsTo\:\:getLoadUrl\(\) has parameter \$selectable with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/BelongsTo.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$arguments$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Grid/Displayers/BelongsTo.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$column$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Grid/Displayers/BelongsTo.php
+
+		-
+			message: '#^Parameter \#2 \$multiple of method ExmentAdminCore\\Admin\\Grid\\Displayers\\BelongsTo\:\:getLoadUrl\(\) expects int, bool given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Displayers/BelongsTo.php
+
+		-
+			message: '#^Parameter \#3 \$column of method ExmentAdminCore\\Admin\\Grid\\Displayers\\AbstractDisplayer\:\:__construct\(\) expects ExmentAdminCore\\Admin\\Grid\\Column, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Displayers/BelongsTo.php
+
+		-
+			message: '#^Cannot assign offset string to string\.$#'
+			identifier: offsetAssign.dimType
+			count: 1
+			path: src/Grid/Displayers/BelongsToMany.php
+
+		-
+			message: '#^Offset string on string in isset\(\) does not exist\.$#'
+			identifier: isset.offset
+			count: 1
+			path: src/Grid/Displayers/BelongsToMany.php
+
+		-
+			message: '#^Static property ExmentAdminCore\\Admin\\Grid\\Displayers\\BelongsToMany\:\:\$otherKey \(string\) does not accept default value of type array\.$#'
+			identifier: property.defaultValue
+			count: 1
+			path: src/Grid/Displayers/BelongsToMany.php
+
+		-
+			message: '#^Variable \$data might not be defined\.$#'
+			identifier: variable.undefined
+			count: 1
+			path: src/Grid/Displayers/BelongsToMany.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Displayers/Carousel.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: src/Grid/Displayers/Checkbox.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Copyable\:\:addScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Copyable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\DateFormat\:\:display\(\) has parameter \$format with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/DateFormat.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Datetime\:\:display\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Datetime.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Downloadable\:\:display\(\) has parameter \$server with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Downloadable.php
+
+		-
+			message: '#^Variable \$value in empty\(\) always exists and is not falsy\.$#'
+			identifier: empty.variable
+			count: 1
+			path: src/Grid/Displayers/Downloadable.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Displayers/Editable.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Displayers/Expand.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Input\:\:display\(\) has parameter \$mask with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Input.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Limit\:\:addScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Limit.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Limit\:\:display\(\) has parameter \$end with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Limit.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Limit\:\:display\(\) has parameter \$limit with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Limit.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\MultipleSelect\:\:display\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/MultipleSelect.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Prefix\:\:display\(\) has parameter \$delimiter with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Prefix.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Prefix\:\:display\(\) has parameter \$prefix with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Prefix.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\QRCode\:\:display\(\) has parameter \$formatter with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/QRCode.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\QRCode\:\:display\(\) has parameter \$height with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/QRCode.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\QRCode\:\:display\(\) has parameter \$width with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/QRCode.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: src/Grid/Displayers/Radio.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Secret\:\:addScript\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Displayers/Secret.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Secret\:\:display\(\) has parameter \$dotCount with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Secret.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Displayers/Select.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Suffix\:\:display\(\) has parameter \$delimiter with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Suffix.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Suffix\:\:display\(\) has parameter \$suffix with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Suffix.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:getName\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Displayers/SwitchDisplay.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Displayers/Table.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Textarea\:\:display\(\) has parameter \$rows with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Textarea.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Displayers\\Upload\:\:display\(\) has parameter \$multiple with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Displayers/Upload.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: src/Grid/Exporter.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Exporter\:\:getExporter\(\) should return ExmentAdminCore\\Admin\\Grid\\Exporters\\CsvExporter but returns ExmentAdminCore\\Admin\\Grid\\Exporters\\AbstractExporter\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Grid/Exporter.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: src/Grid/Exporter.php
+
+		-
+			message: '#^Call to function is_null\(\) with null will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Filter/AbstractFilter.php
+
+		-
+			message: '#^Return type \(array\<string, string\>\) of method ExmentAdminCore\\Admin\\Grid\\Filter\\Between\:\:formatName\(\) should be compatible with return type \(string\|null\) of method ExmentAdminCore\\Admin\\Grid\\Filter\\AbstractFilter\:\:formatName\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Grid/Filter/Between.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Filter/Group.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Linker.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Relations\\BelongsTo&Illuminate\\Database\\Eloquent\\Relations\\Relation\<Illuminate\\Database\\Eloquent\\Model\>\:\:getForeignKey\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Generic type Illuminate\\Database\\Eloquent\\Relations\\Relation\<Illuminate\\Database\\Eloquent\\Model\> in PHPDoc tag @param for parameter \$relation does not specify all template types of class Illuminate\\Database\\Eloquent\\Relations\\Relation\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: generics.lessTypes
+			count: 2
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Generic type Illuminate\\Database\\Eloquent\\Relations\\Relation\<Illuminate\\Database\\Eloquent\\Model\> in PHPDoc tag @return does not specify all template types of class Illuminate\\Database\\Eloquent\\Relations\\Relation\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: generics.lessTypes
+			count: 1
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Generic type Illuminate\\Database\\Eloquent\\Relations\\Relation\<Illuminate\\Database\\Eloquent\\Model\> in PHPDoc tag @var for property ExmentAdminCore\\Admin\\Grid\\Model\:\:\$relation does not specify all template types of class Illuminate\\Database\\Eloquent\\Relations\\Relation\: TRelatedModel, TDeclaringModel, TResult$#'
+			identifier: generics.lessTypes
+			count: 1
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:get\(\) return type with generic class Illuminate\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:handleInvalidPage\(\) has parameter \$paginator with generic class Illuminate\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Model.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Grid/Row.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:getAttribute\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:__construct\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:__construct\(\) has parameter \$multiple with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:appendRemoveBtn\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:appendRemoveBtn\(\) has parameter \$hide with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:display\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:initGrid\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:renderFormGrid\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\:\:renderFormGrid\(\) has parameter \$values with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$multiple$#'
+			identifier: parameter.notFound
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Parameter \#1 \$tool of method ExmentAdminCore\\Admin\\Grid\\Tools\:\:append\(\) expects ExmentAdminCore\\Admin\\Grid\\Tools\\AbstractTool\|string, ExmentAdminCore\\Admin\\Grid\\Selectable\\BrowserBtn given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Selectable.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\\Checkbox\:\:display\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Selectable/Checkbox.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Selectable\\Radio\:\:display\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Selectable/Radio.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Simple\:\:make\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Grid/Simple.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Simple\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Simple.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Tools.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Tools/BatchActions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\BatchEdit\:\:buildBatchUrl\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Tools/BatchEdit.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\BatchEdit\:\:buildBatchUrl\(\) has parameter \$resourcesPath with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Grid/Tools/BatchEdit.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\BatchEdit\:\:script\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Tools/BatchEdit.php
+
+		-
+			message: '#^Parameter \#1 \$scope of method ExmentAdminCore\\Admin\\Grid\:\:getExportUrl\(\) expects int, string given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/Grid/Tools/ExportButton.php
+
+		-
+			message: '#^Parameter \#2 \$args of method ExmentAdminCore\\Admin\\Grid\:\:getExportUrl\(\) expects null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Tools/ExportButton.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\FixColumns\:\:leftColumns\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/FixColumns.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\FixColumns\:\:rightColumns\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/FixColumns.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\FixColumns\:\:\$left with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/FixColumns.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\FixColumns\:\:\$right with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/FixColumns.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Paginator\:\:paginationRanger\(\) has invalid return type Symfony\\Component\\Translation\\TranslatorInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Grid/Tools/Paginator.php
+
+		-
+			message: '#^Access to an undefined property ExmentAdminCore\\Admin\\Grid\\Tools\\QuickCreate\:\:\$form\.$#'
+			identifier: property.notFound
+			count: 2
+			path: src/Grid/Tools/QuickCreate.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\QuickCreate\:\:__call\(\) has parameter \$arguments with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/QuickCreate.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\QuickCreate\:\:render\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/QuickCreate.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\QuickCreate\:\:script\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Grid/Tools/QuickCreate.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Tools/QuickCreate.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\QuickCreate\:\:\$fields with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/QuickCreate.php
+
+		-
+			message: '#^Call to function is_array\(\) with string will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Call to function is_null\(\) with array will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Instanceof between array and Closure will always evaluate to false\.$#'
+			identifier: instanceof.alwaysFalse
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:addSelector\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:getSelectors\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:getSelectors\(\) return type has no value type specified in iterable type array\|Illuminate\\Support\\Collection\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:getSelectors\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:parseSelected\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:select\(\) has parameter \$label with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:select\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:selectOne\(\) has parameter \$options with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:\$selected type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:\$selectors type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:\$selectors type has no value type specified in iterable type array\|Illuminate\\Support\\Collection\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:\$selectors with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Return type \(Illuminate\\Contracts\\View\\Factory\|Illuminate\\View\\View\) of method ExmentAdminCore\\Admin\\Grid\\Tools\\Selector\:\:render\(\) should be compatible with return type \(string\) of method Illuminate\\Contracts\\Support\\Renderable\:\:render\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: src/Grid/Tools/Selector.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Grid/Tools/TotalRow.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Layout/Content.php
+
+		-
+			message: '#^Result of method Symfony\\Component\\HttpFoundation\\Request\:\:setTrustedProxies\(\) \(void\) is used\.$#'
+			identifier: method.void
+			count: 1
+			path: src/Middleware/LogOperation.php
+
+		-
+			message: '#^Parameter \#1 \$messages of class Illuminate\\Support\\MessageBag constructor expects array\<string, array\<string\>\|Illuminate\\Contracts\\Support\\Arrayable\|string\>, array\<string, int\|string\|false\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Middleware/Pjax.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Middleware\\Throttle\:\:getToManyAttemptsMessage\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Middleware/Throttle.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Middleware\\Throttle\:\:\$loginView has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/Middleware/Throttle.php
+
+		-
+			message: '#^Call to function is_callable\(\) with callable\(\)\: mixed will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Show.php
+
+		-
+			message: '#^Call to static method renderException\(\) on an unknown class ExmentAdminCore\\Admin\\Handler\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Show.php
+
+		-
+			message: '#^Instanceof between Closure and Closure will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: src/Show.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Show.php
+
+		-
+			message: '#^Unreachable statement \- code above always terminates\.$#'
+			identifier: deadCode.unreachable
+			count: 1
+			path: src/Show.php
+
+		-
+			message: '#^Parameter \#1 \$relation of method ExmentAdminCore\\Admin\\Grid\:\:setRelation\(\) expects Illuminate\\Database\\Eloquent\\Relations\\Relation\<Illuminate\\Database\\Eloquent\\Model\>, Illuminate\\Database\\Eloquent\\Relations\\BelongsToMany\|Illuminate\\Database\\Eloquent\\Relations\\HasMany\|Illuminate\\Database\\Eloquent\\Relations\\HasManyThrough\|Illuminate\\Database\\Eloquent\\Relations\\MorphMany given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Show/Relation.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Traits\\DefaultDatetimeFormat is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/DefaultDatetimeFormat.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Traits\\FormTrait is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/FormTrait.php
+
+		-
+			message: '#^Call to function is_null\(\) with null will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 3
+			path: src/Traits/HasAssets.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Traits\\HasCustomHooks is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/HasCustomHooks.php
+
+		-
+			message: '#^Trait ExmentAdminCore\\Admin\\Traits\\Resizable is used zero times and is not analysed\.$#'
+			identifier: trait.unused
+			count: 1
+			path: src/Traits/Resizable.php
+
+		-
+			message: '#^Call to function is_bool\(\) with bool will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Traits/ShouldSnakeAttributes.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:withQuery\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Tree.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Widgets\\Alert\:\:\$title has unknown class Symfony\\Component\\Translation\\TranslatorInterface as its type\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Alert.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Widgets\\Box\:\:\$styles type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Widgets/Box.php
+
+		-
+			message: '#^Call to static method script\(\) on an unknown class Admin\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Form\\Field\\DatetimeRange referenced with incorrect case\: ExmentAdminCore\\Admin\\Form\\Field\\DateTimeRange\.$#'
+			identifier: class.nameCase
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Form\:\:addFormClass\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Form\:\:addFormClass\(\) has parameter \$class with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Form\:\:removeFormClass\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Form\:\:removeFormClass\(\) has parameter \$class with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Widgets\\Form\:\:\$attributes type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Widgets\\Form\:\:\$form_classes type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Widgets/Form.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:badge\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Badge\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:button\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Button\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:carousel\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Carousel\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:checkbox\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Checkbox\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:download\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Download\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:editable\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Editable\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:expand\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Expand\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:image\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Image\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:label\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Label\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:link\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Link\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:modal\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Modal\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:orderable\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Orderable\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:progressBar\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\ProgressBar\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:radio\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Radio\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:select\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Select\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:switch\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\SwitchDisplay\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:switchGroup\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\SwitchGroup\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @method for method ExmentAdminCore\\Admin\\Widgets\\Grid\\Column\:\:table\(\) return type contains unknown class ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Table\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Column.php
+
+		-
+			message: '#^PHPDoc tag @property for property ExmentAdminCore\\Admin\\Widgets\\Grid\\Concerns\\HasQuickSearch\:\:\$columns contains generic class Illuminate\\Support\\Collection but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Widgets/Grid/Concerns/HasQuickSearch.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\AbstractDisplayer\:\:trans\(\) has invalid return type Symfony\\Component\\Translation\\TranslatorInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Displayers/AbstractDisplayer.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Actions\:\:disableDelete\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Widgets/Grid/Displayers/Actions.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Displayers\\Actions\:\:disableEdit\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Widgets/Grid/Displayers/Actions.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(\$this\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 52 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Widgets/Grid/Displayers/Actions.php
+
+		-
+			message: '#^PHPDoc tag @return has invalid value \(\$this\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 54 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Widgets/Grid/Displayers/Actions.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:orWhere\(\)\.$#'
+			identifier: method.notFound
+			count: 2
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:orWhereBetween\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:orWhereIn\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:orWhereNotIn\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:whereBetween\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Grid\\Model\:\:whereNotIn\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to an undefined method ExmentAdminCore\\Admin\\Widgets\\Grid\\Grid\:\:getFilter\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to function is_array\(\) with array\<mixed\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Instanceof between Closure and Closure will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Grid\\Model\:\:where\(\) invoked with 3 parameters, 0 required\.$#'
+			identifier: arguments.count
+			count: 2
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Grid\:\:getPaginatorData\(\) return type with generic class Illuminate\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^PHPDoc tag @var does not specify variable name\.$#'
+			identifier: varTag.noVariable
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Widgets\\Grid\\Grid\:\:\$_paginator with generic class Illuminate\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Widgets/Grid/Grid.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: src/Widgets/Grid/Row.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(array\<string\>\.\)\: Unexpected token "\.", expected TOKEN_HORIZONTAL_WS at offset 63 on line 4$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/Widgets/Grid/Tools.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Widgets/Grid/Tools.php
+
+		-
+			message: '#^Parameter \#1 \$view of function view expects view\-string\|null, string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Widgets/Grid/Tools/BatchActions.php
+
+		-
+			message: '#^Instanceof between Illuminate\\Pagination\\LengthAwarePaginator&iterable\<array\<string, mixed\>\> and Illuminate\\Pagination\\LengthAwarePaginator will always evaluate to true\.$#'
+			identifier: instanceof.alwaysTrue
+			count: 1
+			path: src/Widgets/Grid/Tools/Paginator.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Tools\\Paginator\:\:__construct\(\) has parameter \$paginator with generic class Illuminate\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Widgets/Grid/Tools/Paginator.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Tools\\Paginator\:\:initPaginator\(\) has parameter \$paginator with generic class Illuminate\\Pagination\\LengthAwarePaginator but does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Widgets/Grid/Tools/Paginator.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Grid\\Tools\\Paginator\:\:paginationRanger\(\) has invalid return type Symfony\\Component\\Translation\\TranslatorInterface\.$#'
+			identifier: class.notFound
+			count: 1
+			path: src/Widgets/Grid/Tools/Paginator.php
+
+		-
+			message: '#^Property ExmentAdminCore\\Admin\\Widgets\\Grid\\Tools\\Paginator\:\:\$paginator with generic class Illuminate\\Pagination\\LengthAwarePaginator does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Widgets/Grid/Tools/Paginator.php
+
+		-
+			message: '#^Call to protected method title\(\) of class ExmentAdminCore\\Admin\\Widgets\\Form\.$#'
+			identifier: method.protected
+			count: 1
+			path: src/Widgets/Tab.php
+
+		-
+			message: '#^Method ExmentAdminCore\\Admin\\Widgets\\Tab\:\:forms\(\) should return \$this\(ExmentAdminCore\\Admin\\Widgets\\Tab\) but returns static\(ExmentAdminCore\\Admin\\Widgets\\Tab\)\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Widgets/Tab.php
+
+		-
+			message: '#^Class ExmentAdminCore\\Admin\\Widgets\\Widget has PHPDoc tag @method for method class\(\) parameter \#1 \$class with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Widgets/Widget.php
+
+		-
+			message: '#^Function admin_asset\(\) has parameter \$path with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/helpers.php

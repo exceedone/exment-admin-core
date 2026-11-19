@@ -1,7 +1,14 @@
 parameters:
     paths:
         - src
+    # these use optional packages (maatwebsite/excel, spatie/eloquent-sortable) that are only suggested
+    excludePaths:
+        - src/Grid/Exporters/ExcelExporter.php
+        - src/Widgets/Grid/Exporters/ExcelExporter.php
+        - src/SortableModel.php
     level: 6
+    # inline @phpstan-ignore comments written before phpstan ran in CI; some no longer match
+    reportUnmatchedIgnoredErrors: false
     ignoreErrors:
         - '#Call to static method user\(\) on an unknown class Exment.#'
         - '#Call to static method transaction\(\) on an unknown class ExmentDB.#'
@@ -17,4 +24,5 @@ parameters:
         - '#Illuminate\\Database\\Eloquent\\Relations\\BelongsTo does not specify its types#'
 
 includes:
-    - vendor/nunomaduro/larastan/extension.neon
+    - phpstan-baseline.neon
+    - vendor/larastan/larastan/extension.neon
