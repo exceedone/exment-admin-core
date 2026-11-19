@@ -1046,7 +1046,7 @@
     let targetCssName = "all.min.css"; // 解析するCSS名
     const styleSheets = Array.from(document.styleSheets).filter(
     (styleSheet) =>
-        styleSheet.href !== null && styleSheet.href.endsWith(targetCssName)
+        styleSheet.href !== null && styleSheet.href.split(/[?#]/)[0].endsWith(targetCssName)
     );
     if (styleSheets === void 0 || styleSheets.length == 0) {
         throw new Error("error: 指定されたスタイルシートが見つかりません");
