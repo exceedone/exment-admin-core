@@ -113,7 +113,7 @@ class Tree implements Renderable
      *
      * @param Model|null $model
      */
-    public function __construct(Model $model = null, \Closure $callback = null)
+    public function __construct(?Model $model = null, ?\Closure $callback = null)
     {
         $this->model = $model;
 
@@ -188,7 +188,7 @@ class Tree implements Renderable
      * @param Closure|null $get
      * @return $this
      */
-    public function getCallback(\Closure $get = null)
+    public function getCallback(?\Closure $get = null)
     {
         $this->getCallback = $get;
 

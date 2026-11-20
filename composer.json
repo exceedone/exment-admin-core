@@ -17,16 +17,16 @@
       }
     ],
     "require": {
-      "php": "^8.2",
+      "php": "^8.3",
       "symfony/dom-crawler": "~3.1|~4.0|~5.0|~7.1",
       "laravel/framework": ">=7.0",
       "doctrine/dbal": "^4.1"
     },
     "require-dev": {
-      "laravel/laravel": "^12",
+      "laravel/laravel": "^13",
       "fzaninotto/faker": "~1.4",
       "intervention/image": "~2.3",
-      "laravel/browser-kit-testing": "^6.0",
+      "laravel/browser-kit-testing": "^7.2",
       "spatie/phpunit-watcher": "^1.22.0"
     },
     "autoload": {

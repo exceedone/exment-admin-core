@@ -35,7 +35,7 @@ trait AdminBuilder
      *
      * @return Tree
      */
-    public static function tree(\Closure $callback = null)
+    public static function tree(?\Closure $callback = null)
     {
         return new Tree(new static(), $callback);
     }

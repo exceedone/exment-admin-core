@@ -575,9 +575,9 @@ if (!function_exists('json_encode_options')) {
          */
         function str_replace_ex(
             array|string $search,
-            array|string $replace = null,
-            string|array $subject = null,
-            int &$count = null
+            array|string|null $replace = null,
+            string|array|null $subject = null,
+            ?int &$count = null
         ): string|array
         {
             $replace = $replace?? '';
@@ -601,7 +601,7 @@ if (!function_exists('json_encode_options')) {
         function preg_match_ex(
             string $pattern,
             ?string $subject,
-            array &$matches = null,
+            ?array &$matches = null,
             int $flags = 0,
             int $offset = 0
         ): int|false

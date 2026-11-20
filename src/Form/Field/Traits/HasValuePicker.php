@@ -46,7 +46,7 @@ trait HasValuePicker
      *
      * @return $this
      */
-    protected function mountPicker(\Closure $callback = null)
+    protected function mountPicker(?\Closure $callback = null)
     {
         $this->picker && $this->picker->mount($this, $callback);
 

@@ -199,7 +199,7 @@ class Form implements Renderable
      * @param mixed $model
      * @param \Closure $callback
      */
-    public function __construct($model, Closure $callback = null)
+    public function __construct($model, ?Closure $callback = null)
     {
         $this->model = $model;
 
@@ -1442,7 +1442,7 @@ class Form implements Renderable
      *
      * @return Model|Response
      */
-    public function getModelByInputs(array $data = null, ?Model $model = null)
+    public function getModelByInputs(?array $data = null, ?Model $model = null)
     {
         if(is_null($data)){
             $data = request()->all();
@@ -1474,7 +1474,7 @@ class Form implements Renderable
      * @param array<mixed>|null $inputs
      * @return array<mixed>|null
      */
-    public function getRelationModelByInputs(array $inputs = null)
+    public function getRelationModelByInputs(?array $inputs = null)
     {
         if(!is_null($this->relationModels)){
             return $this->relationModels;
@@ -1825,7 +1825,7 @@ class Form implements Renderable
      *
      * @return Form\Tools|void
      */
-    public function header(Closure $callback = null)
+    public function header(?Closure $callback = null)
     {
         if (func_num_args() === 0) {
             return $this->builder->getTools();
@@ -2017,7 +2017,7 @@ class Form implements Renderable
      *
      * @return \ExmentAdminCore\Admin\Form\Footer|void
      */
-    public function footer(Closure $callback = null)
+    public function footer(?Closure $callback = null)
     {
         if (func_num_args() === 0) {
             return $this->builder()->getFooter();

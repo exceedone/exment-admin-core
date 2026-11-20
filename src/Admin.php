@@ -111,7 +111,7 @@ class Admin
      *
      * @return \ExmentAdminCore\Admin\Tree
      */
-    public function tree($model, Closure $callable = null)
+    public function tree($model, ?Closure $callable = null)
     {
         return new Tree($this->getModel($model), $callable);
     }
@@ -136,7 +136,7 @@ class Admin
      *
      * @return \ExmentAdminCore\Admin\Layout\Content
      */
-    public function content(Closure $callable = null)
+    public function content(?Closure $callable = null)
     {
         return new Content($callable);
     }
@@ -286,7 +286,7 @@ class Admin
      *
      * @return Navbar|void
      */
-    public function navbar(Closure $builder = null)
+    public function navbar(?Closure $builder = null)
     {
         if (is_null($builder)) {
             return $this->getNavbar();

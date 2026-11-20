@@ -32,11 +32,11 @@ class CsvExporter extends AbstractExporter
                     $titles = $this->getHeaderRowFromRecords($records);
 
                     // Add CSV headers
-                    fputcsv($handle, $titles);
+                    fputcsv($handle, $titles, escape: '\\');
                 }
 
                 foreach ($records as $record) {
-                    fputcsv($handle, $this->getFormattedRecord($record));
+                    fputcsv($handle, $this->getFormattedRecord($record), escape: '\\');
                 }
             });
 

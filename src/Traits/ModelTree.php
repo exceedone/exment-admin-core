@@ -133,7 +133,7 @@ trait ModelTree
      *
      * @return $this
      */
-    public function withQuery(\Closure $query = null)
+    public function withQuery(?\Closure $query = null)
     {
         $this->queryCallback = $query;
 
@@ -145,7 +145,7 @@ trait ModelTree
      * @param \Closure|null $get
      * @return $this
      */
-    public function getCallback(\Closure $get = null)
+    public function getCallback(?\Closure $get = null)
     {
         $this->getCallback = $get;
 
@@ -269,7 +269,7 @@ trait ModelTree
      *
      * @return array<mixed>
      */
-    public static function selectOptions(\Closure $closure = null, $rootText = 'ROOT')
+    public static function selectOptions(?\Closure $closure = null, $rootText = 'ROOT')
     {
         $options = (new static())->withQuery($closure)->buildSelectOptions();
 

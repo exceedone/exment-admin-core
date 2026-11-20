@@ -35,7 +35,7 @@ trait HasFooter
      *
      * @return $this|Closure
      */
-    public function footer(Closure $closure = null)
+    public function footer(?Closure $closure = null)
     {
         if (!$closure) {
             return $this->footer;

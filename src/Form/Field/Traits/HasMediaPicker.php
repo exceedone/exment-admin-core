@@ -33,7 +33,7 @@ trait HasMediaPicker
     /**
      * @param \Closure|null $callback
      */
-    protected function addPickBtn(\Closure $callback = null)
+    protected function addPickBtn(?\Closure $callback = null)
     {
         $text = admin_trans('admin.choose');
 

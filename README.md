@@ -18,8 +18,8 @@
     <a href="LICENSE">
         <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="License MIT">
     </a>
-    <img src="https://img.shields.io/badge/PHP-%5E8.2-777bb4.svg?style=flat-square" alt="PHP ^8.2">
-    <img src="https://img.shields.io/badge/Laravel-12-ff2d20.svg?style=flat-square" alt="Laravel 12">
+    <img src="https://img.shields.io/badge/PHP-%5E8.3-777bb4.svg?style=flat-square" alt="PHP ^8.3">
+    <img src="https://img.shields.io/badge/Laravel-13-ff2d20.svg?style=flat-square" alt="Laravel 13">
 </p>
 
 <p align="center">
@@ -29,21 +29,21 @@
 
 Requirements
 ------------
-- PHP ^8.2
-- Laravel ^12.0
+- PHP ^8.3 (PHP 8.4 recommended)
+- Laravel ^13.0
 - Fileinfo PHP extension
 
 Installation
 ------------
 
-First install Laravel 12 and make sure the database connection settings are correct.
+First install Laravel 13 and make sure the database connection settings are correct.
 
 Create the framework skeleton:
 ```
 composer create-project laravel/laravel example-app
 ```
 
-Set the application URL, timezone and locale. In Laravel 12 `config/app.php` reads these from the environment, so edit `.env`:
+Set the application URL, timezone and locale. In Laravel 13 `config/app.php` reads these from the environment, so edit `.env`:
 ```
 APP_URL=http://localhost
 APP_TIMEZONE=UTC

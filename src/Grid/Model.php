@@ -122,7 +122,7 @@ class Model
      * @param EloquentModel $model
      * @param Grid          $grid
      */
-    public function __construct(EloquentModel $model, Grid $grid = null)
+    public function __construct(EloquentModel $model, ?Grid $grid = null)
     {
         $this->model = $model;
 
@@ -344,7 +344,7 @@ class Model
      *
      * @return $this
      */
-    public function collection(\Closure $callback = null)
+    public function collection(?\Closure $callback = null)
     {
         $this->collectionCallback = $callback;
 

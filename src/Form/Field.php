@@ -1026,7 +1026,7 @@ class Field implements Renderable
      *
      * @return mixed
      */
-    public function data(array $data = null)
+    public function data(?array $data = null)
     {
         if ($data === null) {
             return $this->data;

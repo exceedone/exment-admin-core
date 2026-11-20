@@ -181,7 +181,7 @@ class Grid
      *
      * @param Closure  $builder
      */
-    public function __construct(Closure $builder = null, Closure $getDataCallback = null)
+    public function __construct(?Closure $builder = null, ?Closure $getDataCallback = null)
     {
         $this->builder = $builder;
         $this->getDataCallback = $getDataCallback;
