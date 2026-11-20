@@ -13,13 +13,6 @@ class UserGridTest extends TestCase
         $this->be(Administrator::first(), 'admin');
     }
 
-    public function testIndexPage()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
     protected function seedsTable($count = 100)
     {
         UserModel::factory()
@@ -60,13 +53,6 @@ class UserGridTest extends TestCase
         $this->assertCount(20, $this->crawler()->filter('td a i[class*=fa-edit]'));
     }
 
-    public function testEqualFilter()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
     public function testLikeFilter()
     {
         $this->seedsTable(50);
@@ -88,13 +74,6 @@ class UserGridTest extends TestCase
         }
     }
 
-    public function testFilterRelation()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
     public function testDisplayCallback()
     {
         $this->seedsTable(1);
@@ -106,13 +85,6 @@ class UserGridTest extends TestCase
             ->seeInElement('th', 'Column2 not in table')
             ->seeInElement('td', "full name:{$user->profile->first_name} {$user->profile->last_name}")
             ->seeInElement('td', "{$user->email}#{$user->profile->color}");
-    }
-
-    public function testHasManyRelation()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
     }
 
     public function testGridActions()

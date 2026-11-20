@@ -42,7 +42,8 @@
     "autoload-dev": {
       "psr-4": {
         "Tests\\Models\\": "tests/models",
-        "Tests\\Controllers\\": "tests/controllers"
+        "Tests\\Controllers\\": "tests/controllers",
+        "Tests\\Factories\\": "tests/factories"
       },
       "classmap": [
         "tests/TestCase.php"
