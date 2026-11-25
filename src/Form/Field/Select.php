@@ -704,7 +704,8 @@ EOT;
 
         // add select2 lang file
         if(in_array(get_called_class(), [Select::class, MultipleSelect::class])){
-            $assets['js'][] = '/vendor/open-admin/AdminLTE/plugins/select2/i18n/' . \App::getLocale() . '.js';
+            // select2 names its files with "-" ("zh-CN.js", "pt-BR.js"), Laravel's locales use "_" ("zh_CN")
+            $assets['js'][] = '/vendor/open-admin/AdminLTE/plugins/select2/i18n/' . str_replace('_', '-', \App::getLocale()) . '.js';
         }
 
         return $assets;
