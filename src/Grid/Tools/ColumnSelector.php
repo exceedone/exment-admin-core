@@ -169,13 +169,19 @@ $('.column-select-submit').on('click', function () {
 });
 
 $('.column-select-all').on('click', function () {
-    $('.column-select-item').iCheck('check');
+    if ($.fn.iCheck) {
+        $('.column-select-item').iCheck('check');
+    } else {
+        $('.column-select-item').prop('checked', true).trigger('change');
+    }
     return false;
 });
 
-$('.column-select-item').iCheck({
-    checkboxClass:'icheckbox_minimal-blue'
-});
+if ($.fn.iCheck) {
+    $('.column-select-item').iCheck({
+        checkboxClass:'icheckbox_minimal-blue'
+    });
+}
 
 SCRIPT;
 

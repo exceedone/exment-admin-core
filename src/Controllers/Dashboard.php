@@ -110,7 +110,8 @@ class Dashboard
 
         $dependencies = json_decode($json, true)['require'];
 
-        Admin::script("$('.dependencies').slimscroll({height:'510px',size:'3px'});");
+        // slimScroll when it is loaded, otherwise a plain CSS scroll box of the same height.
+        Admin::script("if ($.fn.slimscroll) { $('.dependencies').slimscroll({height:'510px',size:'3px'}); } else { $('.dependencies').css({'overflow':'auto','max-height':'510px'}); }");
 
         return view('admin::dashboard.dependencies', compact('dependencies'));
     }

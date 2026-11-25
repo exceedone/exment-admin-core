@@ -166,7 +166,7 @@
   function pjax(options) {
     options = $.extend(true, {}, $.ajaxSettings, pjax.defaults, options)
   
-    if ($.isFunction(options.url)) {
+    if (typeof options.url === 'function') {
       options.url = options.url()
     }
   
@@ -505,7 +505,7 @@
   //
   // Returns nothing since it retriggers a hard form submission.
   function fallbackPjax(options) {
-    var url = $.isFunction(options.url) ? options.url() : options.url,
+    var url = typeof options.url === 'function' ? options.url() : options.url,
         method = options.type ? options.type.toUpperCase() : 'GET'
   
     var form = $('<form>', {

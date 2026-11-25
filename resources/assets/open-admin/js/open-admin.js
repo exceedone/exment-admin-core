@@ -806,22 +806,26 @@ $(document).on('pjax:complete', function (xhr) {
 });
 
 
-$.fn.editable.defaults.params = function (params) {
-    params._token = LA.token;
-    params._editable = 1;
-    params._method = 'PUT';
-    return params;
-};
+// x-editable (Bootstrap 3) may not be loaded on every page, and a later version will drop it.
+// Set its defaults only when it is there, so the rest of this file still runs without it.
+if ($.fn.editable) {
+    $.fn.editable.defaults.params = function (params) {
+        params._token = LA.token;
+        params._editable = 1;
+        params._method = 'PUT';
+        return params;
+    };
 
-$.fn.editable.defaults.error = function (data) {
-    var msg = '';
-    if (data.responseJSON.errors) {
-        $.each(data.responseJSON.errors, function (k, v) {
-            msg += v + "\n";
-        });
-    }
-    return msg
-};
+    $.fn.editable.defaults.error = function (data) {
+        var msg = '';
+        if (data.responseJSON.errors) {
+            $.each(data.responseJSON.errors, function (k, v) {
+                msg += v + "\n";
+            });
+        }
+        return msg
+    };
+}
 
 /*-------------------------------------------------*/
 /* iCheck on touch screens */

@@ -129,36 +129,65 @@ class BatchActions extends AbstractTool
 
         $selected = trans('admin.grid_items_selected');
 
+        // With iCheck the handlers are the iCheck events, as before. Without iCheck they are the native
+        // change event. Only one set is bound, so nothing runs twice (iCheck 1.0.1 never triggers a
+        // native change event: it sets `checked` itself and cancels the click on the input).
         return <<<EOT
         $.admin.grid.selects = {};
-$('.{$allName}').iCheck({checkboxClass:'icheckbox_minimal-blue'});
+(function () {
+    var updateSelectedButtons = function () {
+        var selected = $.admin.grid.selected().length;
 
-$('.{$allName}').on('ifChanged', function(event) {
-    if (this.checked) {
-        $('.{$rowName}-checkbox').iCheck('check');
-    } else {
-        $('.{$rowName}-checkbox').iCheck('uncheck');
-    }
-}).on('ifClicked', function () {
-    if (this.checked) {
-        $.admin.grid.selects = {};
-    } else {
-        $('.{$rowName}-checkbox').each(function () {
-            var id = $(this).data('id');
-            $.admin.grid.select(id);
+        if (selected > 0) {
+            $('.{$allName}-btn').show();
+        } else {
+            $('.{$allName}-btn').hide();
+        }
+
+        $('.{$allName}-btn .selected').html("{$selected}".replace('{n}', selected));
+    };
+
+    if ($.fn.iCheck) {
+        $('.{$allName}').iCheck({checkboxClass:'icheckbox_minimal-blue'});
+
+        $('.{$allName}').on('ifChanged', function(event) {
+            if (this.checked) {
+                $('.{$rowName}-checkbox').iCheck('check');
+            } else {
+                $('.{$rowName}-checkbox').iCheck('uncheck');
+            }
+        }).on('ifClicked', function () {
+            // ifClicked comes before the state changes: this.checked is still the old state.
+            if (this.checked) {
+                $.admin.grid.selects = {};
+            } else {
+                $('.{$rowName}-checkbox').each(function () {
+                    var id = $(this).data('id');
+                    $.admin.grid.select(id);
+                });
+            }
+
+            updateSelectedButtons();
         });
+        return;
     }
 
-    var selected = $.admin.grid.selected().length;
-    
-    if (selected > 0) {
-        $('.{$allName}-btn').show();
-    } else {
-        $('.{$allName}-btn').hide();
-    }
-    
-    $('.{$allName}-btn .selected').html("{$selected}".replace('{n}', selected));
-});
+    $('.{$allName}').on('change', function () {
+        // change comes after the state changes: this.checked is the new state.
+        var checked = this.checked;
+
+        if (!checked) {
+            $.admin.grid.selects = {};
+        }
+
+        // The row checkboxes select / unselect themselves on their own change event (RowSelector).
+        $('.{$rowName}-checkbox').filter(function () {
+            return this.checked !== checked;
+        }).prop('checked', checked).trigger('change');
+
+        updateSelectedButtons();
+    });
+})();
 
 EOT;
     }

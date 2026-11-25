@@ -3,6 +3,7 @@
 namespace ExmentAdminCore\Admin\Grid\Filter;
 
 use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Form\Field\Date as DateField;
 use Illuminate\Support\Arr;
 
 class Between extends AbstractFilter
@@ -115,6 +116,7 @@ class Between extends AbstractFilter
     {
         $options['format'] = Arr::get($options, 'format', 'YYYY-MM-DD HH:mm:ss');
         $options['locale'] = Arr::get($options, 'locale', config('app.locale'));
+        $options['icons'] = Arr::get($options, 'icons', DateField::PICKER_ICONS);
 
         $startOptions = json_encode($options);
         $endOptions = json_encode($options + ['useCurrent' => false]);
