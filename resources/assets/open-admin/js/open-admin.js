@@ -407,6 +407,7 @@ admin.pages = {
         admin.grid.inline_edit.init();
         admin.form.init();
         this.initBootstrap();
+        admin.lazyGrid.schedule();
     },
 
     setTitle: function () {
@@ -439,6 +440,212 @@ admin.collectGarbage = function () {
         cal.remove();
     });
 };
+
+/*-------------------------------------------------*/
+/* lazy grid rows */
+/*-------------------------------------------------*/
+
+/**
+ * Loads deferred grid rows (Grid::lazyLoad()) one grid at a time.
+ * Placeholders are cells carrying data-lazy-grid-rows-url; the response must be
+ * a fragment of <tr> rows followed by a <template data-lazy-grid-fragment> marker.
+ */
+admin.lazyGrid = {
+    selector: '[data-lazy-grid-rows-url]',
+
+    /**
+     * Marks a placeholder as failed, shows its localized error and enables retry.
+     * Failed grids are skipped by the automatic queue until a manual retry is requested.
+     *
+     * @param {HTMLElement} placeholder
+     * @returns {void}
+     */
+    fail: function (placeholder) {
+        placeholder.lazyGridFailed = true;
+        let loading = placeholder.querySelector('.lazy-grid-loading');
+        let error = placeholder.querySelector('.lazy-grid-error');
+        let retry = placeholder.querySelector('.lazy-grid-retry');
+        if (loading) loading.style.display = 'none';
+        if (error) {
+            error.textContent = placeholder.dataset.lazyGridError || '';
+            error.style.display = '';
+        }
+        if (retry) {
+            retry.disabled = false;
+            retry.style.display = '';
+        }
+    },
+
+    /**
+     * Parses and validates a row fragment.
+     *
+     * @param {string} html
+     * @returns {{rows: HTMLElement[], scripts: HTMLScriptElement[]}}
+     */
+    parse: function (html) {
+        if (typeof html !== 'string') {
+            throw new Error('Invalid lazy-grid fragment.');
+        }
+
+        let template = document.createElement('template');
+        template.innerHTML = html;
+
+        let markers = 0;
+        let rows = [];
+        let scripts = [];
+        Array.from(template.content.childNodes).forEach(function (node) {
+            if (node.nodeType !== Node.ELEMENT_NODE) {
+                return;
+            }
+
+            let tag = node.tagName.toLowerCase();
+            if (tag === 'template' && node.hasAttribute('data-lazy-grid-fragment')) {
+                markers++;
+            } else if (tag === 'script') {
+                scripts.push(node);
+            } else if (tag === 'tr') {
+                rows.push(node);
+            } else {
+                throw new Error('Invalid lazy-grid fragment.');
+            }
+        });
+
+        if (markers !== 1) {
+            throw new Error('Invalid lazy-grid fragment.');
+        }
+
+        return { rows: rows, scripts: scripts };
+    },
+
+    /**
+     * Dispatches 'admin:lazy-grid:loaded' (bubbling, detail.tbody) once rows and fragment scripts are initialized,
+     * so integrations can bind behavior to the inserted rows. Listener errors are reported, never rethrown.
+     *
+     * @param {HTMLElement} tbody
+     * @returns {void}
+     */
+    notifyLoaded: function (tbody) {
+        try {
+            tbody.dispatchEvent(new CustomEvent('admin:lazy-grid:loaded', {
+                bubbles: true,
+                detail: { tbody: tbody },
+            }));
+        } catch (e) {
+            console.error('A lazy-grid loaded listener failed.', e);
+        }
+    },
+
+    /**
+     * Loads one grid's rows. Without a placeholder, picks the next pending grid that has not failed.
+     * Requests are serialized; completion advances the queue. Rows of grids removed from the page
+     * (e.g. by a later PJAX navigation) are ignored.
+     *
+     * @param {HTMLElement} [placeholder]
+     * @returns {void}
+     */
+    load: function (placeholder) {
+        let pending = Array.from(document.querySelectorAll(this.selector));
+        if (pending.some((el) => el.lazyGridLoading)) {
+            return;
+        }
+
+        placeholder = placeholder || pending.find((el) => !el.lazyGridFailed);
+        if (!placeholder || !placeholder.dataset.lazyGridRowsUrl) {
+            return;
+        }
+
+        placeholder.lazyGridLoading = true;
+        placeholder.lazyGridFailed = false;
+        let loading = placeholder.querySelector('.lazy-grid-loading');
+        let error = placeholder.querySelector('.lazy-grid-error');
+        let retry = placeholder.querySelector('.lazy-grid-retry');
+        if (loading) loading.style.display = '';
+        if (error) error.style.display = 'none';
+        if (retry) {
+            retry.disabled = true;
+            retry.style.display = 'none';
+        }
+
+        let self = this;
+        axios
+            .get(placeholder.dataset.lazyGridRowsUrl, {
+                headers: { 'X-Requested-With': 'XMLHttpRequest', Accept: 'text/html' },
+                responseType: 'text',
+            })
+            .then(function (response) {
+                let tbody = placeholder.closest('tbody');
+                if (!tbody || !document.contains(tbody)) {
+                    return;
+                }
+
+                let originalRows = null;
+                let initialized = false;
+                try {
+                    let fragment = self.parse(response.data);
+
+                    originalRows = Array.from(tbody.childNodes);
+                    originalRows.forEach((node) => node.remove());
+                    fragment.rows.forEach((row) => tbody.appendChild(row));
+                    fragment.scripts.forEach(function (script) {
+                        (0, eval)(script.text || script.textContent || '');
+                    });
+                    initialized = true;
+                } catch (e) {
+                    if (originalRows) {
+                        tbody.replaceChildren(...originalRows);
+                    }
+                    self.fail(placeholder);
+                    console.error('Unable to initialize lazy-grid rows.', e);
+                }
+
+                // Outside the try block: a listener error must neither roll back the loaded rows nor mark the load as failed.
+                if (initialized && document.contains(tbody)) {
+                    self.notifyLoaded(tbody);
+                }
+            })
+            .catch(function () {
+                self.fail(placeholder);
+            })
+            .then(function () {
+                placeholder.lazyGridLoading = false;
+                self.load();
+            });
+    },
+
+    /**
+     * Schedules lazy rows after initial page display or PJAX navigation.
+     * Uses an idle callback with a 1000 ms timeout, or a 500 ms timer fallback.
+     *
+     * @returns {void}
+     */
+    schedule: function () {
+        if (!document.querySelector(admin.lazyGrid.selector)) {
+            return;
+        }
+
+        if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(() => admin.lazyGrid.load(), { timeout: 1000 });
+        } else {
+            setTimeout(() => admin.lazyGrid.load(), 500);
+        }
+    },
+};
+
+document.addEventListener('click', function (event) {
+    let retry = event.target.closest ? event.target.closest('.lazy-grid-retry') : null;
+    if (!retry) {
+        return;
+    }
+
+    event.preventDefault();
+    let placeholder = retry.closest(admin.lazyGrid.selector);
+    if (placeholder) {
+        placeholder.lazyGridFailed = false;
+        admin.lazyGrid.load(placeholder);
+    }
+});
+
+$(document).on('pjax:end', admin.lazyGrid.schedule);
 
 toastr.options = {
     closeButton: true,
@@ -615,3 +822,43 @@ $.fn.editable.defaults.error = function (data) {
     }
     return msg
 };
+
+/*-------------------------------------------------*/
+/* iCheck on touch screens */
+/*-------------------------------------------------*/
+
+// iCheck (AdminLTE plugin) handles a tap as a touch only when the user agent is a phone or tablet
+// (ipad|iphone|ipod|android|...). On a touch screen with a desktop user agent (Surface, Windows / Linux
+// tablets, Android tablets in desktop mode) its touchend handler returns false, which cancels the click
+// the browser makes from the tap, so the checkbox or radio button does not change (exment#1563).
+// Stop touchend before it reaches the iCheck handlers: the tap becomes a click, and iCheck toggles the
+// input as it does for a mouse click. iCheck uses touchend only for its hover classes.
+(function () {
+    let isICheckTarget = function (target) {
+        if (!target || !target.closest) {
+            return false;
+        }
+        if (target.closest('.iCheck-helper')) {
+            return true;
+        }
+        let label = target.closest('label');
+        if (!label) {
+            return false;
+        }
+        if (label.querySelector('.iCheck-helper')) {
+            return true;
+        }
+        let input = label.htmlFor ? document.getElementById(label.htmlFor) : null;
+        return !!input && !!input.parentElement && !!input.parentElement.querySelector('.iCheck-helper');
+    };
+
+    document.addEventListener(
+        'touchend',
+        function (event) {
+            if (isICheckTarget(event.target)) {
+                event.stopPropagation();
+            }
+        },
+        true
+    );
+})();

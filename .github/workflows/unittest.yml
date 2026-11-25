@@ -8,43 +8,63 @@ on:
       - 'resources/**'
       - 'database/**'
       - 'config/**'
+      - 'composer.json'
+      - 'phpunit.xml'
+      - '.github/workflows/unittest.yml'
 
+# Checks that the package installs on the supported PHP versions, that every PHP file parses,
+# and runs the phpunit tests in tests/ against MySQL 8.0.
+# The tests here cover what exment-admin-core itself provides (login, menu, roles, permissions,
+# operation log, grid, `admin:install`). Exment's own CI checks out exment-admin-core and runs the
+# Exment test suite against it (exceedone/exment#1752), which covers the forms, grids and auth in use.
 jobs:
   unittest:
     runs-on: ubuntu-latest
     # PHP 8.5: experimental - a failure does not block the PR
     continue-on-error: ${{ matrix.php == '8.5' }}
-    services:
-      db:
-        image: mysql:5.7
-        ports:
-          - 3306:3306
-        env:
-          MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: laravel_admin_test
-          MYSQL_USER: mysql
-          MYSQL_PASSWORD: password
-        options: >-
-          --health-cmd "mysqladmin ping"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
     strategy:
       fail-fast: false
       matrix:
         php: [ "8.3", "8.4", "8.5" ]
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: laravel_admin_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 -uroot -ppassword"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
+          extensions: gd, pdo_mysql, zip
+          tools: composer:v2
+
+      - name: Composer validate
+        run: composer validate --no-check-publish --no-check-lock
 
       - name: Composer install
-        run: composer install
+        run: composer install --no-interaction --no-progress
 
-      - name: Composer run test
-        run: composer run test
+      - name: PHP syntax check
+        run: |
+          find src config database tests -name '*.php' -print0 | xargs -0 -n 1 -P 8 php -l -d display_errors=1 > /tmp/lint.log 2>&1 || { grep -v '^No syntax errors' /tmp/lint.log; exit 1; }
+          echo "checked $(grep -c '^No syntax errors' /tmp/lint.log) files"
+
+      - name: Execute phpunit
         env:
           MYSQL_HOST: 127.0.0.1
+          MYSQL_PORT: 3306
+          MYSQL_DATABASE: laravel_admin_test
+          MYSQL_USER: root
+          MYSQL_PASSWORD: password
+        run: ./vendor/bin/phpunit

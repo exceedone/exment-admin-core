@@ -11,7 +11,7 @@
   <link rel="shortcut icon" href="{{$favicon}}">
   @endif
 
-  <!-- Bootstrap 3.3.5 -->
+  <!-- Bootstrap 5.3.3 -->
   <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/font-awesome/css/font-awesome.min.css") }}">
@@ -80,10 +80,10 @@
 </div>
 <!-- /.login-box -->
 
-<!-- jQuery 2.1.4 -->
-<script src="{{ admin_asset("vendor/open-admin/AdminLTE/plugins/jQuery/jQuery-2.1.4.min.js")}} "></script>
-<!-- Bootstrap 3.3.5 -->
-<script src="{{ admin_asset("vendor/open-admin/AdminLTE/bootstrap/js/bootstrap.min.js")}}"></script>
+<!-- jQuery 3.7.1 (the file the other pages load) -->
+<script src="{{ admin_asset("vendor/open-admin/AdminLTE/plugins/jQuery/jQuery-3.7.1.min.js")}}"></script>
+<!-- Bootstrap 5.3.3, as the other pages (the css of AdminLTE/bootstrap is 5.3.3 too) -->
+<script src="{{ admin_asset("vendor/open-admin/open-admin/js/bootstrap.bundle.min.js")}}"></script>
 <!-- iCheck -->
 <script src="{{ admin_asset("vendor/open-admin/AdminLTE/plugins/iCheck/icheck.min.js")}}"></script>
 <script>

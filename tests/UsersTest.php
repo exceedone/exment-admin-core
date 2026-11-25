@@ -20,25 +20,4 @@ class UsersTest extends TestCase
         $this->visit('admin/auth/users')
             ->see('Administrator');
     }
-
-    public function testCreateUser()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
-    public function testUpdateUser()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
-    public function testResetPassword()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
 }
