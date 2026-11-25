@@ -368,9 +368,7 @@ EOT;
             $('#admin-submit').click(function(){setTimeout(function() {waitForElm(".hidden-xs").then(async (elm) => {$('[role="scanButtonDashboard"]').click();})},2000);});
             EOT;
         }
-        if ($script !== null) {
-            Admin::script($script);
-        }
+        Admin::script($script);
     }
     /**
      * Set `view` as default check.
