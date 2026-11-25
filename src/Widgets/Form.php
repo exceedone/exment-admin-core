@@ -707,9 +707,18 @@ class Form implements Renderable
     protected function setupScript()
     {
         $script = <<<'EOT'
-$('.after-submit').iCheck({checkboxClass:'icheckbox_minimal-blue'}).on('ifChecked', function () {
-    $('.after-submit').not(this).iCheck('uncheck');
-});
+// iCheck events with iCheck, native change without it: only one is bound, so it never runs twice.
+if ($.fn.iCheck) {
+    $('.after-submit').iCheck({checkboxClass:'icheckbox_minimal-blue'}).on('ifChecked', function () {
+        $('.after-submit').not(this).iCheck('uncheck');
+    });
+} else {
+    $('.after-submit').on('change', function () {
+        if (this.checked) {
+            $('.after-submit').not(this).prop('checked', false);
+        }
+    });
+}
 EOT;
 
         \Admin::script($script);

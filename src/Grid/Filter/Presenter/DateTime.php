@@ -3,6 +3,7 @@
 namespace ExmentAdminCore\Admin\Grid\Filter\Presenter;
 
 use ExmentAdminCore\Admin\Admin;
+use ExmentAdminCore\Admin\Form\Field\Date as DateField;
 use Illuminate\Support\Arr;
 
 class DateTime extends Presenter
@@ -36,6 +37,7 @@ class DateTime extends Presenter
     {
         $options['format'] = Arr::get($options, 'format', $this->format);
         $options['locale'] = Arr::get($options, 'locale', config('app.locale'));
+        $options['icons'] = Arr::get($options, 'icons', DateField::PICKER_ICONS);
 
         return $options;
     }

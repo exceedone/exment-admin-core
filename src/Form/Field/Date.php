@@ -5,6 +5,25 @@ namespace ExmentAdminCore\Admin\Form\Field;
 class Date extends Text
 {
     /**
+     * Font Awesome icons for the datetimepicker. Its default icons use the Bootstrap 3
+     * glyphicon font, which is not loaded, so the arrows and buttons would be blank.
+     * The grid filters (Between, Presenter\DateTime) use the same icons.
+     *
+     * @var array<string, string>
+     */
+    public const PICKER_ICONS = [
+        'time' => 'fa fa-clock-o',
+        'date' => 'fa fa-calendar',
+        'up' => 'fa fa-chevron-up',
+        'down' => 'fa fa-chevron-down',
+        'previous' => 'fa fa-chevron-left',
+        'next' => 'fa fa-chevron-right',
+        'today' => 'fa fa-calendar-check-o',
+        'clear' => 'fa fa-trash',
+        'close' => 'fa fa-times'
+    ];
+
+    /**
      * @var array<string>
      */
     protected static $css = [
@@ -79,17 +98,7 @@ class Date extends Text
         $this->options['format'] = $this->format;
         $this->options['locale'] = config('app.locale');
         $this->options['allowInputToggle'] = true;
-        $this->options['icons'] = [
-            'time' => 'fa fa-clock-o',
-            'date' => 'fa fa-calendar',
-            'up' => 'fa fa-chevron-up',
-            'down' => 'fa fa-chevron-down',
-            'previous' => 'fa fa-chevron-left',
-            'next' => 'fa fa-chevron-right',
-            'today' => 'fa fa-calendar-check-o',
-            'clear' => 'fa fa-trash',
-            'close' => 'fa fa-times'
-        ];
+        $this->options['icons'] = static::PICKER_ICONS;
 
         $this->script = "$('{$this->getElementClassSelector()}').parent().datetimepicker(".json_encode($this->options).');';
 

@@ -149,6 +149,9 @@ class Box extends Widget implements Renderable
     /**
      *  Set box body scrollable.
      *
+     * Uses slimScroll when it is loaded. Without it, the box body scrolls with CSS
+     * (overflow: auto, max-height: the "height" option, 250px like slimScroll by default).
+     *
      * @param array<mixed> $options
      * @param string $nodeSelector
      *
@@ -161,7 +164,15 @@ class Box extends Widget implements Renderable
         $nodeSelector = $nodeSelector ?: '.box-body';
 
         $this->script = <<<SCRIPT
-$("#{$this->id} {$nodeSelector}").slimScroll({$scrollOptions});
+(function () {
+    var \$node = $("#{$this->id} {$nodeSelector}");
+    var options = {$scrollOptions};
+    if ($.fn.slimScroll) {
+        \$node.slimScroll(options);
+    } else {
+        \$node.css({'overflow': 'auto', 'max-height': options.height || '250px'});
+    }
+})();
 SCRIPT;
 
         return $this;
