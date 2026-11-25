@@ -633,6 +633,27 @@ class Form implements Renderable
     }
 
     /**
+     * The names the form's fields are saved under. A relation is read from the
+     * request only by one of these names: a request key is never taken as the
+     * name of a method of the model to call.
+     *
+     * @return array<string>
+     */
+    protected function getFieldColumnNames(): array
+    {
+        $names = [];
+        foreach ($this->fields() as $field) {
+            foreach ((array)$field->column() as $column) {
+                if (is_string($column) && $column !== '') {
+                    $names[] = $column;
+                    $names[] = Str::camel($column);
+                }
+            }
+        }
+        return array_values(array_unique($names));
+    }
+
+    /**
      * Get inputs for relations.
      *
      * @param array<mixed> $inputs
@@ -642,8 +663,12 @@ class Form implements Renderable
     protected function getRelationInputs($inputs = []): array
     {
         $relations = [];
+        $fieldNames = $this->getFieldColumnNames();
 
         foreach ($inputs as $column => $value) {
+            if (!in_array((string)$column, $fieldNames, true)) {
+                continue;
+            }
             if ((method_exists($this->model, $column)
                 || method_exists($this->model, $column = Str::camel($column)))
                 && !method_exists(Model::class, $column)
@@ -1485,8 +1510,12 @@ class Form implements Renderable
         }
 
         $relations = [];
+        $fieldNames = $this->getFieldColumnNames();
         foreach ($inputs as $column => $value) {
-            
+            // only a relation of the form's own fields, never another method of the model
+            if (!in_array((string)$column, $fieldNames, true)) {
+                continue;
+            }
             if (!method_exists($this->model, $column)) {
                 continue;
             }
