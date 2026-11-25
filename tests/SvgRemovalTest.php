@@ -1,8 +1,6 @@
 <?php
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
-use Exceedone\Exment\Model\Define;
-use Exceedone\Exment\Validator\ImageRule;
 
 /**
  * Unit tests verifying that SVG has been removed from all image allow-lists.
@@ -16,8 +14,8 @@ use Exceedone\Exment\Validator\ImageRule;
  *  B) ExmentAdminCore\Admin\Form\Field\Traits\UploadField::$fileTypes['image'] regex
  *     (the version used by File / MultipleFile via `use UploadField`)
  *  C) alwaysPreviewFileExtensions list
- *  D) Exceedone\Exment\Model\Define::IMAGE_RULE_EXTENSIONS constant
- *  E) Exceedone\Exment\Validator\ImageRule::validateExtension()
+ *
+ * The checks of Exment's own classes (Define::IMAGE_RULE_EXTENSIONS, ImageRule) are in Exment's tests.
  */
 class SvgRemovalTest extends BaseTestCase
 {
@@ -129,77 +127,5 @@ class SvgRemovalTest extends BaseTestCase
             $expected,
             "'alwaysPreviewFileExtensions' must not contain svg after removal."
         );
-    }
-
-    // -----------------------------------------------------------------------
-    // D. Define::IMAGE_RULE_EXTENSIONS (exment package)
-    // -----------------------------------------------------------------------
-
-    public function testDefineImageRuleExtensionsDoesNotContainSvg(): void
-    {
-        $this->assertNotContains(
-            'svg',
-            Define::IMAGE_RULE_EXTENSIONS,
-            'Define::IMAGE_RULE_EXTENSIONS must not contain svg after removal.'
-        );
-    }
-
-    public function testDefineImageRuleExtensionsRetainsStandardFormats(): void
-    {
-        foreach (['jpg', 'jpeg', 'png', 'gif', 'bmp'] as $ext) {
-            $this->assertContains(
-                $ext,
-                Define::IMAGE_RULE_EXTENSIONS,
-                "Define::IMAGE_RULE_EXTENSIONS must still contain '{$ext}'."
-            );
-        }
-    }
-
-    // -----------------------------------------------------------------------
-    // E. ImageRule::validateExtension (exment package)
-    //    Bypasses passes() which requires is_nullorempty() (app helper).
-    // -----------------------------------------------------------------------
-
-    private function validate(string $filename): bool
-    {
-        $rule = new ImageRule();
-        $ref  = new ReflectionMethod(ImageRule::class, 'validateExtension');
-        $ref->setAccessible(true);
-        return (bool) $ref->invoke($rule, 'file', $filename);
-    }
-
-    public function testImageRuleRejectsSvgLowercase(): void
-    {
-        $this->assertFalse($this->validate('photo.svg'), 'Must reject .svg');
-    }
-
-    public function testImageRuleRejectsSvgUppercase(): void
-    {
-        $this->assertFalse($this->validate('photo.SVG'), 'Must reject .SVG (case-insensitive)');
-    }
-
-    public function testImageRuleRejectsSvgMixedCase(): void
-    {
-        $this->assertFalse($this->validate('logo.Svg'), 'Must reject .Svg (mixed case)');
-    }
-
-    public function testImageRuleAcceptsJpg(): void
-    {
-        $this->assertTrue($this->validate('photo.jpg'));
-    }
-
-    public function testImageRuleAcceptsPng(): void
-    {
-        $this->assertTrue($this->validate('photo.png'));
-    }
-
-    public function testImageRuleAcceptsGif(): void
-    {
-        $this->assertTrue($this->validate('animation.gif'));
-    }
-
-    public function testImageRuleAcceptsBmp(): void
-    {
-        $this->assertTrue($this->validate('bitmap.bmp'));
     }
 }

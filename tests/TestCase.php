@@ -2,13 +2,19 @@
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Laravel\BrowserKitTesting\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
     protected $baseUrl = 'http://localhost:8000';
+
+    /**
+     * The assets are published once per test run, not once per test.
+     *
+     * @var bool
+     */
+    protected static $published = false;
 
     /**
      * Boots the application.
@@ -35,14 +41,25 @@ class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $adminConfig = require __DIR__.'/config/admin.php';
+        // Start from the config the package ships and change only what the tests need.
+        // A separate full copy of the config went out of date before (it had no `auth.excepts`,
+        // so the login page redirected to itself forever).
+        $adminConfig = array_replace_recursive(
+            require __DIR__.'/../config/admin.php',
+            require __DIR__.'/config/admin.php'
+        );
 
         $this->app['config']->set('database.default', 'mysql');
         $this->app['config']->set('database.connections.mysql.host', env('MYSQL_HOST', '127.0.0.1'));
-        $this->app['config']->set('database.connections.mysql.database', 'laravel_admin_test');
-        $this->app['config']->set('database.connections.mysql.username', 'root');
-        $this->app['config']->set('database.connections.mysql.password', 'password');
+        $this->app['config']->set('database.connections.mysql.port', env('MYSQL_PORT', '3306'));
+        $this->app['config']->set('database.connections.mysql.database', env('MYSQL_DATABASE', 'laravel_admin_test'));
+        $this->app['config']->set('database.connections.mysql.username', env('MYSQL_USER', 'root'));
+        $this->app['config']->set('database.connections.mysql.password', env('MYSQL_PASSWORD', 'password'));
         $this->app['config']->set('app.key', 'AckfSECXIvnK5r28GVIWUAxmbBSjTsmF');
+        $this->app['config']->set('session.driver', 'array');
+        $this->app['config']->set('cache.default', 'array');
+        // the cheapest bcrypt cost: the tests make up to 100 users at a time
+        $this->app['config']->set('hashing.bcrypt.rounds', 4);
         $this->app['config']->set('filesystems', require __DIR__.'/config/filesystems.php');
         $this->app['config']->set('admin', $adminConfig);
 
@@ -50,9 +67,20 @@ class TestCase extends BaseTestCase
             $this->app['config']->set($key, $value);
         }
 
-        $this->artisan('vendor:publish', ['--provider' => 'ExmentAdminCore\Admin\AdminServiceProvider']);
+        if (!static::$published) {
+            // `admin:install` keeps an app/Admin directory that is already there, so remove the one
+            // an earlier run left: the controllers must come from the stubs under test.
+            (new Filesystem())->deleteDirectory(admin_path());
+
+            $this->artisan('vendor:publish', ['--provider' => 'ExmentAdminCore\Admin\AdminServiceProvider', '--force' => true]);
+
+            static::$published = true;
+        }
 
         Schema::defaultStringLength(191);
+
+        // A test run that was stopped half way leaves its tables behind, so always start empty.
+        Schema::dropAllTables();
 
         $this->artisan('admin:install');
 
@@ -67,11 +95,7 @@ class TestCase extends BaseTestCase
 
     public function tearDown(): void
     {
-        (new CreateAdminTables())->down();
-
-        (new CreateTestTables())->down();
-
-        DB::select("delete from `migrations` where `migration` = '2016_01_04_173148_create_admin_tables'");
+        Schema::dropAllTables();
 
         parent::tearDown();
     }

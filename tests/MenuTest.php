@@ -50,26 +50,17 @@ class MenuTest extends TestCase
             ->assertEquals(7, Menu::count());
     }
 
-    public function testEditMenu()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
-    public function testShowPage()
-    {
-        $this->markTestIncomplete(
-            'Removed due to unmaintained.'
-        );
-    }
-
     public function testEditMenuParent()
     {
-        $this->expectException(InvalidArgumentException::class);
+        // A menu cannot be its own parent: the save is refused and nothing changes.
+        $before = Menu::find(5)->parent_id;
 
-        $this->visit('admin/auth/menu/5/edit')
-            ->see('Menu')
-            ->submitForm('Submit', ['parent_id' => 5]);
+        $this->put('admin/auth/menu/5', ['parent_id' => 5]);
+
+        $this->assertResponseStatus(500);
+        $this->assertInstanceOf(Exception::class, $this->response->exception);
+        $this->assertSame(trans('admin.parent_select_error'), $this->response->exception->getMessage());
+        $this->assertNotEquals(5, $before);
+        $this->assertEquals($before, Menu::find(5)->parent_id);
     }
 }
