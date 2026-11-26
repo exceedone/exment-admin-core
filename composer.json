@@ -58,6 +58,9 @@
       "spatie/eloquent-sortable": "Required to built orderable gird."
     },
     "extra": {
+      "branch-alias": {
+        "dev-2.x": "2.0.x-dev"
+      },
       "laravel": {
         "providers": [
           "ExmentAdminCore\\Admin\\AdminServiceProvider"

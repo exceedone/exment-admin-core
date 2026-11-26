@@ -12,7 +12,7 @@
   @endif
 
   <!-- Bootstrap 5.3.3 -->
-  <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/AdminLTE/bootstrap/css/bootstrap.min.css") }}">
+  <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/AdminLTE4/css/bootstrap.min.css") }}">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/font-awesome/css/font-awesome.min.css") }}">
   <!-- Theme style -->
@@ -42,7 +42,7 @@
         @endif
 
         <input type="text" class="form-control" placeholder="{{ trans('admin.username') }}" name="username" value="{{ old('username') }}">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <span class="fa fa-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback {!! !$errors->has('password') ?: 'has-error' !!}">
 
@@ -53,10 +53,10 @@
         @endif
 
         <input type="password" class="form-control" placeholder="{{ trans('admin.password') }}" name="password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <span class="fa fa-lock form-control-feedback"></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
+        <div class="col-8">
           @if(config('admin.auth.remember'))
           <div class="checkbox icheck">
             <label>
@@ -67,7 +67,7 @@
           @endif
         </div>
         <!-- /.col -->
-        <div class="col-xs-4">
+        <div class="col-4">
           <input type="hidden" name="_token" value="{{ csrf_token() }}">
           <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('admin.login') }}</button>
         </div>
