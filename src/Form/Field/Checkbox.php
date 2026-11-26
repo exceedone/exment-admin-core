@@ -20,16 +20,14 @@ class Checkbox extends MultipleSelect
     /**
      * @var array<string>
      */
-    protected static $css = [
-        '/vendor/open-admin/AdminLTE/plugins/iCheck/all.css',
-    ];
+    protected static $css = [];
 
     /**
+     * 2.0: native check boxes, no iCheck.
+     *
      * @var array<string>
      */
-    protected static $js = [
-        '/vendor/open-admin/AdminLTE/plugins/iCheck/icheck.min.js',
-    ];
+    protected static $js = [];
 
     /**
      * Set options.
@@ -116,7 +114,8 @@ class Checkbox extends MultipleSelect
         Arr::forget($this->attributes, 'required');
         $this->removeRules(['required']);
 
-        $this->script = "if ($.fn.iCheck) { $('{$this->getElementClassSelector()}').iCheck({checkboxClass:'icheckbox_minimal-blue'}); }\n";
+        // 2.0: native check boxes (no iCheck)
+        $this->script = '';
 
         $this->addVariables([
             'checked'     => $this->checked,
@@ -127,22 +126,10 @@ class Checkbox extends MultipleSelect
         if ($this->canCheckAll) {
             $checkAllClass = uniqid('check-all-');
 
-            // iCheck events with iCheck, native change without it: only one is bound, so it never runs
-            // twice (iCheck 1.0.1 never triggers a native change event).
             $this->script .= <<<SCRIPT
-if ($.fn.iCheck) {
-    $('.{$checkAllClass}').iCheck({checkboxClass:'icheckbox_minimal-blue'}).on('ifChanged', function () {
-        if (this.checked) {
-            $('{$this->getElementClassSelector()}').iCheck('check');
-        } else {
-            $('{$this->getElementClassSelector()}').iCheck('uncheck');
-        }
-    });
-} else {
-    $('.{$checkAllClass}').on('change', function () {
-        $('{$this->getElementClassSelector()}').prop('checked', this.checked).trigger('change');
-    });
-}
+$('.{$checkAllClass}').on('change', function () {
+    $('{$this->getElementClassSelector()}').prop('checked', this.checked).trigger('change');
+});
 SCRIPT;
             $this->addVariables(['checkAllClass' => $checkAllClass]);
         }

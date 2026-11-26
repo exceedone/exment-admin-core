@@ -543,7 +543,8 @@ abstract class AbstractFilter
      */
     public function render()
     {
-        $script = "$('.isnull-{$this->column}').iCheck({checkboxClass:'icheckbox_minimal-blue'});";
+        // 2.0: a native check box (no iCheck)
+        $script = '';
         Admin::script($script);
 
         return view($this->view, $this->variables());
