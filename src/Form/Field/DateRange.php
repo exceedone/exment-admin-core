@@ -9,17 +9,12 @@ class DateRange extends Field
     /**
      * @var array<string>
      */
-    protected static $css = [
-        '/vendor/open-admin/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
-    ];
+    protected static $css = [];
 
     /**
      * @var array<string>
      */
-    protected static $js = [
-        '/vendor/open-admin/moment/min/moment-with-locales.min.js',
-        '/vendor/open-admin/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
-    ];
+    protected static $js = [];
 
     /**
      * @var string
@@ -110,23 +105,10 @@ class DateRange extends Field
      */
     public function render()
     {
-        $this->options['locale'] = config('app.locale');
-
-        $startOptions = json_encode($this->options);
-        $endOptions = json_encode($this->options + ['useCurrent' => false]);
-
+        // flatpickr (2.0): the end cannot be before the start, and the start not after the end
         $class = $this->getElementClassSelector();
-
-        $this->script = <<<EOT
-            $('{$class['start']}').datetimepicker($startOptions);
-            $('{$class['end']}').datetimepicker($endOptions);
-            $("{$class['start']}").on("dp.change", function (e) {
-                $('{$class['end']}').data("DateTimePicker").minDate(e.date);
-            });
-            $("{$class['end']}").on("dp.change", function (e) {
-                $('{$class['start']}').data("DateTimePicker").maxDate(e.date);
-            });
-EOT;
+        $config = DatePicker::options($this->options, $this->format, $this->defaults);
+        $this->script = DatePicker::rangeScript($class['start'], $class['end'], $config);
 
         return parent::render();
     }
