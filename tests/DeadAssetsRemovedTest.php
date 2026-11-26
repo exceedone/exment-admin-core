@@ -46,4 +46,30 @@ class DeadAssetsRemovedTest extends TestCase
         $this->assertStringNotContainsString('glyphicon', $view);
         $this->assertFileExists($this->assets() . '/AdminLTE4/css/bootstrap.min.css');
     }
+
+    /**
+     * B6: the old plugins 2.0 stopped loading (iCheck, eonasdan's datetimepicker, moment,
+     * AdminLTE 2's app.min.js) are gone too.
+     */
+    public function testTheOldPluginsAreGone(): void
+    {
+        foreach ([
+            'AdminLTE/plugins/iCheck',
+            'eonasdan-bootstrap-datetimepicker',
+            'moment',
+            'AdminLTE/dist/js/app.min.js',
+        ] as $path) {
+            $this->assertFileDoesNotExist($this->assets() . '/' . $path, $path);
+        }
+
+        foreach (array_merge(Admin::$baseJs, Admin::$baseCss) as $asset) {
+            foreach (['plugins/iCheck/', 'eonasdan', 'vendor/open-admin/moment/', 'AdminLTE/dist/js/'] as $needle) {
+                $this->assertStringNotContainsString($needle, $asset);
+            }
+        }
+
+        $view = (string) file_get_contents(dirname(__DIR__) . '/resources/views/login.blade.php');
+        $this->assertStringNotContainsString('iCheck', $view);
+        $this->assertStringContainsString('name="remember"', $view);
+    }
 }

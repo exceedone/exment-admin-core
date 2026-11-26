@@ -17,8 +17,6 @@
   <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/font-awesome/css/font-awesome.min.css") }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/AdminLTE/dist/css/AdminLTE.min.css") }}">
-  <!-- iCheck -->
-  <link rel="stylesheet" href="{{ admin_asset("vendor/open-admin/AdminLTE/plugins/iCheck/square/blue.css") }}">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,7 +56,7 @@
       <div class="row">
         <div class="col-8">
           @if(config('admin.auth.remember'))
-          <div class="checkbox icheck">
+          <div class="checkbox">
             <label>
               <input type="checkbox" name="remember" value="1" {{ old('remember') ? 'checked' : '' }}>
               {{ trans('admin.remember_me') }}
@@ -84,16 +82,5 @@
 <script src="{{ admin_asset("vendor/open-admin/AdminLTE/plugins/jQuery/jQuery-3.7.1.min.js")}}"></script>
 <!-- Bootstrap 5.3.3, as the other pages (the css of AdminLTE/bootstrap is 5.3.3 too) -->
 <script src="{{ admin_asset("vendor/open-admin/open-admin/js/bootstrap.bundle.min.js")}}"></script>
-<!-- iCheck -->
-<script src="{{ admin_asset("vendor/open-admin/AdminLTE/plugins/iCheck/icheck.min.js")}}"></script>
-<script>
-  $(function () {
-    $('input').iCheck({
-      checkboxClass: 'icheckbox_square-blue',
-      radioClass: 'iradio_square-blue',
-      increaseArea: '20%' // optional
-    });
-  });
-</script>
 </body>
 </html>
