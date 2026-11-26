@@ -60,6 +60,12 @@ class EditableIsInlineEditTest extends TestCase
     public function testTheOtherTypes(): void
     {
         $this->assertStringContainsString('<textarea', $this->render(['textarea']));
+
+        $select = $this->render(['select', ['alice' => 'Alice', 'bob' => 'Bob']]);
+        $this->assertStringContainsString('class="ie"', $select);
+        $this->assertStringContainsString('<span class="ie-display">Alice</span>', $select);
+        $this->assertStringContainsString('value="bob"', $select);
+        $this->assertStringNotContainsString('select2()', $select, 'not the select2 that posts the whole row');
         $this->assertStringContainsString('flatpickr(field', $this->render(['date']));
         $this->assertStringContainsString('"noCalendar":true', $this->render(['time']));
         $this->assertStringContainsString('"enableSeconds":true', $this->render(['combodate', 'YYYY-MM-DD HH:mm:ss']));

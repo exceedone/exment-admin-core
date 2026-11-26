@@ -10,8 +10,8 @@ use Illuminate\Support\Arr;
  * Until 2.1 it was x-editable (bootstrap5-editable). Since 2.1 it is drawn by the inline edit
  * of the grid, the same as ->text(), ->textarea(), ->select() and ->datetime(): the editor
  * sends `_edit_inline`, which Form::update() takes like `_editable`. The types of x-editable
- * map to the inline editors below; one without an editor of its own (year, month, day) is a
- * text box.
+ * map to the inline editors below (a select is the popover select of the grid); one without an
+ * editor of its own (year, month, day) is a text box.
  */
 class Editable extends AbstractDisplayer
 {
@@ -42,7 +42,7 @@ class Editable extends AbstractDisplayer
             case 'textarea':
                 return $this->inline(Textarea::class, []);
             case 'select':
-                return $this->inline(Select::class, [Arr::get($rest, 0, [])]);
+                return $this->select(Arr::get($rest, 0, []));
             case 'date':
             case 'datetime':
             case 'time':
@@ -50,6 +50,33 @@ class Editable extends AbstractDisplayer
         }
 
         return $this->inline(Input::class, ['']);
+    }
+
+    /**
+     * The inline select of the grid: a popover, as the other editors (Displayers\Select is a
+     * select2 that posts without `_edit_inline`, so as the whole row).
+     *
+     * @param array<mixed>|\Closure $options
+     * @return string
+     */
+    protected function select($options)
+    {
+        if ($options instanceof \Closure) {
+            $options = $options->call($this, $this->row);
+        }
+        $options = (array) $options;
+        $value = $this->getValue();
+
+        return strval(\ExmentAdminCore\Admin\Admin::component('admin::grid.inline-edit.select', [
+            'key'      => $this->getKey(),
+            'value'    => $value,
+            'display'  => is_scalar($value) ? Arr::get($options, strval($value), $value) : '',
+            'name'     => $this->getPayloadName(),
+            'resource' => $this->getResource(),
+            'trigger'  => "ie-trigger-{$this->getClassName()}-{$this->getKey()}",
+            'target'   => "ie-content-{$this->getClassName()}-{$this->getKey()}",
+            'options'  => $options,
+        ]));
     }
 
     /**
