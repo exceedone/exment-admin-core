@@ -37,10 +37,11 @@ class EditableIsInlineEditTest extends TestCase
         $row->id = 3;
 
         Admin::$script = [];
+        Admin::$html = [];
         $html = (new Editable('alice', $grid, $column, $row))->display(...$arguments);
 
-        // the scripts of a component are collected for the page
-        return $html . implode("\n", Admin::$script);
+        // the template (the editor) and the scripts of a component are collected for the page
+        return $html . implode("\n", Admin::$html) . implode("\n", Admin::$script);
     }
 
     public function testATextIsTheInlineEditor(): void
