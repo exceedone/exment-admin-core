@@ -74,7 +74,6 @@ trait HasAssets
         'vendor/open-admin/font-awesome/css/all.min.css',
         'vendor/open-admin/font-awesome/css/v4-shims.min.css',
         'vendor/open-admin/sweetalert2/dist/sweetalert2.css',
-        'vendor/open-admin/bootstrap5-editable/css/bootstrap-editable.css',
         'vendor/open-admin/nprogress/nprogress.css',
         'vendor/open-admin/sweetalert2/sweetalert2.min.css',
         'vendor/open-admin/toastify-js/toastify.css',
@@ -112,8 +111,6 @@ trait HasAssets
         'vendor/open-admin/nprogress/nprogress.js',
         'vendor/open-admin/nestable/jquery.nestable.js',
         'vendor/open-admin/toastr/build/toastr.min.js',
-        'vendor/open-admin/bootstrap5-editable/js/bootstrap-editable.min.js',
-        'vendor/open-admin/open-admin/js/editable-init.js',
         'vendor/open-admin/sweetalert2/dist/sweetalert2.min.js',
 
         'vendor/open-admin/nprogress/nprogress.js',
