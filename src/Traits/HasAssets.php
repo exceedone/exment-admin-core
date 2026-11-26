@@ -103,7 +103,6 @@ trait HasAssets
         "vendor/open-admin/open-admin/js/popper.min.js",
         'vendor/open-admin/bootstrap-fileinput/js/fileinput.min.js',
         "vendor/open-admin/bootstrap-fileinput/js/ja.min.js",
-        'vendor/open-admin/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js',
         'vendor/open-admin/bootstrap-duallistbox/dist/jquery.bootstrap-duallistbox.min.js?v=4.0.2',
         
         // the parts of AdminLTE 2's app.js still used (2.0: no slimScroll, no FastClick)

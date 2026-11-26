@@ -3,7 +3,7 @@
 namespace ExmentAdminCore\Admin\Grid\Filter;
 
 use ExmentAdminCore\Admin\Admin;
-use ExmentAdminCore\Admin\Form\Field\Date as DateField;
+use ExmentAdminCore\Admin\Form\Field\DatePicker;
 use Illuminate\Support\Arr;
 
 class Between extends AbstractFilter
@@ -116,21 +116,10 @@ class Between extends AbstractFilter
     {
         $options['format'] = Arr::get($options, 'format', 'YYYY-MM-DD HH:mm:ss');
         $options['locale'] = Arr::get($options, 'locale', config('app.locale'));
-        $options['icons'] = Arr::get($options, 'icons', DateField::PICKER_ICONS);
 
-        $startOptions = json_encode($options);
-        $endOptions = json_encode($options + ['useCurrent' => false]);
-
-        $script = <<<EOT
-            $('#{$this->id['start']}').datetimepicker($startOptions);
-            $('#{$this->id['end']}').datetimepicker($endOptions);
-            $("#{$this->id['start']}").on("dp.change", function (e) {
-                $('#{$this->id['end']}').data("DateTimePicker").minDate(e.date);
-            });
-            $("#{$this->id['end']}").on("dp.change", function (e) {
-                $('#{$this->id['start']}').data("DateTimePicker").maxDate(e.date);
-            });
-EOT;
+        // flatpickr (2.0): the end cannot be before the start, and the start not after the end
+        $config = DatePicker::options($options, $options['format']);
+        $script = DatePicker::rangeScript('#' . $this->id['start'], '#' . $this->id['end'], $config, $options['locale']);
 
         Admin::script($script);
     }

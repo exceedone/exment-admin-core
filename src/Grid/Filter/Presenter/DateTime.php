@@ -3,7 +3,7 @@
 namespace ExmentAdminCore\Admin\Grid\Filter\Presenter;
 
 use ExmentAdminCore\Admin\Admin;
-use ExmentAdminCore\Admin\Form\Field\Date as DateField;
+use ExmentAdminCore\Admin\Form\Field\DatePicker;
 use Illuminate\Support\Arr;
 
 class DateTime extends Presenter
@@ -37,7 +37,6 @@ class DateTime extends Presenter
     {
         $options['format'] = Arr::get($options, 'format', $this->format);
         $options['locale'] = Arr::get($options, 'locale', config('app.locale'));
-        $options['icons'] = Arr::get($options, 'icons', DateField::PICKER_ICONS);
 
         return $options;
     }
@@ -48,7 +47,9 @@ class DateTime extends Presenter
      */
     protected function prepare()
     {
-        $script = "$('#{$this->filter->getId()}').datetimepicker(".json_encode($this->options).');';
+        // flatpickr (2.0)
+        $config = DatePicker::options($this->options, $this->format);
+        $script = DatePicker::script('#' . $this->filter->getId(), $config, strval($this->options['locale']));
 
         Admin::script($script);
     }

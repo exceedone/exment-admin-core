@@ -28,9 +28,7 @@ EOT;
 
         $selected = trans('admin.grid_items_selected');
 
-        // With iCheck the handlers are the iCheck events, as before. Without iCheck they are the native
-        // change event. Only one set is bound, so nothing runs twice (iCheck 1.0.1 never triggers a
-        // native change event: it sets `checked` itself and cancels the click on the input).
+        // 2.0: native check boxes, the change event (no iCheck)
         return <<<EOT
 (function () {
     var updateSelectedButtons = function () {
@@ -44,34 +42,6 @@ EOT;
 
         $('.{$allName}-btn .selected').html("{$selected}".replace('{n}', selected));
     };
-
-    if ($.fn.iCheck) {
-        $('.{$rowName}-checkbox').iCheck({checkboxClass:'icheckbox_minimal-blue'}).on('ifChanged', function () {
-
-            var id = $(this).data('id');
-
-            if (this.checked) {
-                \$.admin.grid.select(id);
-                $(this).closest('tr').css('background-color', '#ffffd5');
-            } else {
-                \$.admin.grid.unselect(id);
-                $(this).closest('tr').css('background-color', '');
-            }
-        }).on('ifClicked', function () {
-
-            var id = $(this).data('id');
-
-            // ifClicked comes before the state changes: this.checked is still the old state.
-            if (this.checked) {
-                $.admin.grid.unselect(id);
-            } else {
-                $.admin.grid.select(id);
-            }
-
-            updateSelectedButtons();
-        });
-        return;
-    }
 
     $('.{$rowName}-checkbox').on('change', function () {
 

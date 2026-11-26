@@ -179,17 +179,17 @@ class Editable extends AbstractDisplayer
      */
     public function combodate($format = 'YYYY-MM-DD')
     {
-        $this->type = 'combodate';
-
-        $this->addOptions([
-            'format'     => $format,
-            'viewformat' => $format,
-            'template'   => $format,
-            'combodate'  => [
-                'maxYear' => 2035,
-            ],
-        ]);
+        // 2.0: a text box with a flatpickr picker (the combodate type needed moment)
+        $this->type = 'text';
+        $this->datePickerFormat = $format;
     }
+
+    /**
+     * The moment format of the date picker of the editor, null: no picker.
+     *
+     * @var string|null
+     */
+    protected $datePickerFormat = null;
 
     /**
      * @param array<mixed> $arguments
@@ -216,6 +216,11 @@ class Editable extends AbstractDisplayer
         $options = json_encode($this->options);
 
         Admin::script("$('.$class').editable($options);");
+        if (isset($this->datePickerFormat)) {
+            // the input of the editor is made when it opens
+            $config = json_encode(\ExmentAdminCore\Admin\Form\Field\DatePicker::options([], $this->datePickerFormat)) ?: '{}';
+            Admin::script("$('.$class').on('shown', function (e, editable) { var el = editable && editable.input && editable.input.\$input ? editable.input.\$input[0] : null; if (el && typeof window.flatpickr === 'function' && !el._flatpickr) { window.flatpickr(el, $config); } });");
+        }
 
         $this->value = htmlentities($this->value);
 

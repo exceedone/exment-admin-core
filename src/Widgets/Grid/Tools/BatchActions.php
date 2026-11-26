@@ -129,9 +129,7 @@ class BatchActions extends AbstractTool
 
         $selected = trans('admin.grid_items_selected');
 
-        // With iCheck the handlers are the iCheck events, as before. Without iCheck they are the native
-        // change event. Only one set is bound, so nothing runs twice (iCheck 1.0.1 never triggers a
-        // native change event: it sets `checked` itself and cancels the click on the input).
+        // 2.0: native check boxes, the change event (no iCheck)
         return <<<EOT
         $.admin.grid.selects = {};
 (function () {
@@ -146,31 +144,6 @@ class BatchActions extends AbstractTool
 
         $('.{$allName}-btn .selected').html("{$selected}".replace('{n}', selected));
     };
-
-    if ($.fn.iCheck) {
-        $('.{$allName}').iCheck({checkboxClass:'icheckbox_minimal-blue'});
-
-        $('.{$allName}').on('ifChanged', function(event) {
-            if (this.checked) {
-                $('.{$rowName}-checkbox').iCheck('check');
-            } else {
-                $('.{$rowName}-checkbox').iCheck('uncheck');
-            }
-        }).on('ifClicked', function () {
-            // ifClicked comes before the state changes: this.checked is still the old state.
-            if (this.checked) {
-                $.admin.grid.selects = {};
-            } else {
-                $('.{$rowName}-checkbox').each(function () {
-                    var id = $(this).data('id');
-                    $.admin.grid.select(id);
-                });
-            }
-
-            updateSelectedButtons();
-        });
-        return;
-    }
 
     $('.{$allName}').on('change', function () {
         // change comes after the state changes: this.checked is the new state.

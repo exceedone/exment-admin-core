@@ -5,10 +5,10 @@ namespace ExmentAdminCore\Admin\Form\Field;
 class Date extends Text
 {
     /**
-     * Font Awesome icons for the datetimepicker. Its default icons use the Bootstrap 3
-     * glyphicon font, which is not loaded, so the arrows and buttons would be blank.
-     * The grid filters (Between, Presenter\DateTime) use the same icons.
+     * The icons of the old picker (eonasdan's bootstrap-datetimepicker, before 2.0). flatpickr
+     * draws its own arrows; kept for the code that still passes them.
      *
+     * @deprecated 2.0 the pickers are flatpickr (DatePicker)
      * @var array<string, string>
      */
     public const PICKER_ICONS = [
@@ -24,19 +24,16 @@ class Date extends Text
     ];
 
     /**
+     * flatpickr is in the base assets.
+     *
      * @var array<string>
      */
-    protected static $css = [
-        '/vendor/open-admin/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css',
-    ];
+    protected static $css = [];
 
     /**
      * @var array<string>
      */
-    protected static $js = [
-        '/vendor/open-admin/moment/min/moment-with-locales.min.js',
-        '/vendor/open-admin/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
-    ];
+    protected static $js = [];
 
     /**
      * @var string
@@ -96,11 +93,9 @@ class Date extends Text
     public function render()
     {
         $this->options['format'] = $this->format;
-        $this->options['locale'] = config('app.locale');
-        $this->options['allowInputToggle'] = true;
-        $this->options['icons'] = static::PICKER_ICONS;
 
-        $this->script = "$('{$this->getElementClassSelector()}').parent().datetimepicker(".json_encode($this->options).');';
+        // flatpickr (2.0): the format stays a moment one, DatePicker turns it into flatpickr's
+        $this->script = DatePicker::script($this->getElementClassSelector(), DatePicker::options($this->options, $this->format, $this->defaults));
 
         $this->prepend('<i class="fa fa-calendar fa-fw"></i>')
             ->defaultAttribute('style', 'width: 110px !important; flex: 0 0 auto !important;')

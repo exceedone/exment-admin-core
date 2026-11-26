@@ -50,7 +50,8 @@ class Radio extends Presenter
      */
     protected function prepare()
     {
-        $script = "$('.{$this->filter->getId()}').iCheck({radioClass:'iradio_minimal-blue'});";
+        // 2.0: native radio buttons (no iCheck)
+        $script = '';
 
         Admin::script($script);
     }
