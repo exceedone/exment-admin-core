@@ -54,9 +54,14 @@
                 admin.grid.inline_edit.trigger = this;
                 admin.grid.inline_edit.popover = popover;
                 admin.grid.inline_edit.hide_ohter_popovers(popover)
-
-                if (typeof(popover.eventsAdded) == 'undefined'){
-                    popover.tip.addEventListener("click",function(event){
+            })
+            // Bootstrap 5.3 makes the tip after show.bs.popover, and a new one at each show:
+            // the buttons of the editor are bound once per tip, when it is in the page
+            el.addEventListener('inserted.bs.popover', function (event) {
+                let popover = bootstrap.Popover.getInstance(this);
+                let tip = popover.tip;
+                if (tip && typeof(tip.dataset.ieEvents) == 'undefined'){
+                    tip.addEventListener("click",function(event){
 
                         if (event.target.classList.contains("ie-cancel")){
                             popover.hide();
@@ -67,9 +72,8 @@
                         event.stopPropagation();
                         return false;
                     })
-                    popover.eventsAdded = true;
+                    tip.dataset.ieEvents = '1';
                 }
-
             })
             el.addEventListener('shown.bs.popover', function (event) {
                 let popover = bootstrap.Popover.getInstance(this);
@@ -123,7 +127,8 @@
                 if (result.status){
                     trigger.dataset.original = valueObject.val;
                     trigger.querySelector(".ie-display").innerHTML = valueObject.label;
-                    admin.toastr.success(result.data);
+                    // the form answers {status, message}
+                    admin.toastr.success((result.data && typeof(result.data) == 'object') ? result.data.message : result.data);
                     popover.hide();
                 }else{
                     admin.toastr.warning(result.data);
