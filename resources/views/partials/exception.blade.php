@@ -1,3 +1,5 @@
+{{-- included by content.blade.php (and Exment's pages) without isShowDetail: as Handler::renderException decides it --}}
+@php($isShowDetail = $isShowDetail ?? boolval(config('app.debug', false)))
 @if($errors->hasBag('exception'))
     <?php $error = $errors->getBag('exception');?>
     <div class="alert alert-warning alert-dismissable">
