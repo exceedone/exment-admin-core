@@ -544,8 +544,8 @@ class Form implements Renderable
     {
         $request = Request::capture();
 
-        // ajax but not pjax
-        if ($request->ajax() && !$request->pjax()) {
+        // ajax but not pjax; the inline edit of the grid sends the pjax header too
+        if ($request->ajax() && (!$request->pjax() || $request->has('_edit_inline'))) {
             return response()->json([
                 'status'  => true,
                 'message' => $message,
