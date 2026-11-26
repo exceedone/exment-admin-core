@@ -330,18 +330,12 @@ class Footer implements Renderable
     {
         $redirectCamera = request()->get('redirect-camera');
         $script = <<<'EOT'
-// iCheck events with iCheck, native change without it: only one is bound, so it never runs twice.
-if ($.fn.iCheck) {
-    $('.after-submit').iCheck({checkboxClass:'icheckbox_minimal-blue'}).on('ifChecked', function () {
-        $('.after-submit').not(this).iCheck('uncheck');
-    });
-} else {
-    $('.after-submit').on('change', function () {
-        if (this.checked) {
-            $('.after-submit').not(this).prop('checked', false);
-        }
-    });
-}
+// one "after saving" choice at a time (native check boxes, no iCheck)
+$('.after-submit').on('change', function () {
+    if (this.checked) {
+        $('.after-submit').not(this).prop('checked', false);
+    }
+});
 EOT;
         if ($redirectCamera) {
             $script .= <<<'EOT'

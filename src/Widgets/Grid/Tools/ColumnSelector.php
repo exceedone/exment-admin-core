@@ -171,19 +171,10 @@ $('.column-select-submit').on('click', function () {
 });
 
 $('.column-select-all').on('click', function () {
-    if ($.fn.iCheck) {
-        $('.column-select-item').iCheck('check');
-    } else {
-        $('.column-select-item').prop('checked', true).trigger('change');
-    }
+    $('.column-select-item').prop('checked', true).trigger('change');
     return false;
 });
 
-if ($.fn.iCheck) {
-    $('.column-select-item').iCheck({
-        checkboxClass:'icheckbox_minimal-blue'
-    });
-}
 
 SCRIPT;
 
