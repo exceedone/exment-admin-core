@@ -155,6 +155,23 @@ Updating to a new version of exment-admin-core may require republishing the asse
 php artisan vendor:publish --tag=open-admin-assets --force
 ```
 
+Messages (alerts and toastr)
+------------
+The title and the message of `admin_success()`, `admin_error()`, `admin_warning()`, `admin_info()` (and their `*_once()`), and the message of `admin_toastr()`, are shown as text: `<b>` is shown as `<b>`.
+
+To show HTML, mark it as HTML with an `Illuminate\Contracts\Support\Htmlable`, such as `Illuminate\Support\HtmlString`. Escape the variable parts in it with `e()`:
+```php
+use Illuminate\Support\HtmlString;
+
+admin_info('Update', new HtmlString(e($text) . '<br><a href="' . e($url) . '">' . e($label) . '</a>'));
+admin_toastr(new HtmlString('Saved: <b>' . e($name) . '</b>'));
+```
+
+The versions before this one print the messages as they are, and keep only a string or an array: there, `new HtmlString(...)` alone is lost. A package that supports both passes the `HtmlString` in an array of one, which every version shows as HTML:
+```php
+admin_error($title, [new HtmlString($html)]);
+```
+
 RTL (right-to-left) support
 ------------
 Go to `<YOUR_PROJECT_PATH>\vendor\exceedone\exment-admin-core\src\Traits\HasAssets.php` and edit the `$baseCss` array to load the right-to-left (rtl) versions of the Bootstrap and AdminLTE CSS files.    

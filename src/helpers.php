@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\MessageBag;
 
 if (!function_exists('admin_path')) {
@@ -102,11 +103,32 @@ if (!function_exists('admin_base_path')) {
     }
 }
 
+if (!function_exists('admin_message_value')) {
+    /**
+     * The title or message of admin_toastr(), admin_info() and its siblings, as the message bag keeps it.
+     *
+     * The messages are shown as text. One marked as HTML - an Htmlable such as
+     * Illuminate\Support\HtmlString - is shown as it is. A message bag turns a lone object into an
+     * array of its properties, so an Htmlable is kept in an array of one.
+     *
+     * @param string|Htmlable|array<int, string|Htmlable>|null $value
+     *
+     * @return string|array<int, string|Htmlable>|null
+     */
+    function admin_message_value($value)
+    {
+        return $value instanceof Htmlable ? [$value] : $value;
+    }
+}
+
 if (!function_exists('admin_toastr')) {
     /**
      * Flash a toastr message bag to session.
      *
-     * @param string $message
+     * The message is shown as text. To show HTML, pass it as an Htmlable, e.g.
+     * admin_toastr(new HtmlString('Saved. <a href="'.e($url).'">Open</a>')), with its variable parts escaped with e().
+     *
+     * @param string|Htmlable|array<int, string|Htmlable> $message
      * @param string $type
      * @param array<mixed>  $options
      *
@@ -114,6 +136,8 @@ if (!function_exists('admin_toastr')) {
      */
     function admin_toastr($message = '', $type = 'success', $options = [])
     {
+        $message = admin_message_value($message);
+
         $toastr = new MessageBag(get_defined_vars());
 
         session()->flash('toastr', $toastr);
@@ -124,8 +148,8 @@ if (!function_exists('admin_success')) {
     /**
      * Flash a success message bag to session.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message shown as text, unless an Htmlable (see admin_info())
      *
      * @return void
      */
@@ -139,8 +163,8 @@ if (!function_exists('admin_error')) {
     /**
      * Flash a error message bag to session.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message shown as text, unless an Htmlable (see admin_info())
      *
      * @return void
      */
@@ -154,8 +178,8 @@ if (!function_exists('admin_warning')) {
     /**
      * Flash a warning message bag to session.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message shown as text, unless an Htmlable (see admin_info())
      *
      * @return void
      */
@@ -169,14 +193,21 @@ if (!function_exists('admin_info')) {
     /**
      * Flash a message bag to session.
      *
-     * @param string $title
-     * @param string $message
+     * The title and the message are shown as text. To show HTML, pass it as an Htmlable, e.g.
+     * admin_info($title, new HtmlString(e($text).'<br><a href="'.e($url).'">'.e($label).'</a>')),
+     * with its variable parts escaped with e().
+     *
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message
      * @param string $type
      *
      * @return void
      */
     function admin_info($title, $message = '', $type = 'info')
     {
+        $title = admin_message_value($title);
+        $message = admin_message_value($message);
+
         $message = new MessageBag(get_defined_vars());
 
         session()->now($type, $message);
@@ -189,8 +220,8 @@ if (!function_exists('admin_error_once')) {
     /**
      * Flash a error message bag to session once.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message shown as text, unless an Htmlable (see admin_info())
      *
      * @return void
      */
@@ -205,8 +236,8 @@ if (!function_exists('admin_warning_once')) {
     /**
      * Flash a warning message bag to session once.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message shown as text, unless an Htmlable (see admin_info())
      *
      * @return void
      */
@@ -221,14 +252,17 @@ if (!function_exists('admin_info_once')) {
     /**
      * Flash a message bag to session once.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|Htmlable|array<int, string|Htmlable> $title
+     * @param string|Htmlable|array<int, string|Htmlable> $message shown as text, unless an Htmlable (see admin_info())
      * @param string $type
      *
      * @return void
      */
     function admin_info_once($title, $message = '', $type = 'info')
     {
+        $title = admin_message_value($title);
+        $message = admin_message_value($message);
+
         $message = new MessageBag(get_defined_vars());
 
         View::share("alert_$type", $message);

@@ -37,13 +37,16 @@ class Handler
     /**
      * Flash a error message to content.
      *
-     * @param string $title
-     * @param string $message
+     * @param string|\Illuminate\Contracts\Support\Htmlable $title
+     * @param string|\Illuminate\Contracts\Support\Htmlable $message shown as text, unless an Htmlable
      *
      * @return void
      */
     public static function error($title = '', $message = '')
     {
+        $title = admin_message_value($title);
+        $message = admin_message_value($message);
+
         $error = new MessageBag(compact('title', 'message'));
 
         session()->flash('error', $error);
