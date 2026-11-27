@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\HtmlString;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\MessageBag;
 use Illuminate\Support\Str;
@@ -2195,7 +2196,8 @@ class Form implements Renderable
             return $element;
         }
 
-        admin_error('Error', 'Field type [' . e($method) . '] does not exist.');
+        // HTML, with the name escaped
+        admin_error('Error', new HtmlString('Field type [' . e($method) . '] does not exist.'));
 
         return new Field\Nullable();
     }
